@@ -196,6 +196,12 @@ db["ingredient_instructions"].insert({
   "modified": "Sun, 13 Feb 2011 13:27:02 -0500",
   "created": "Sun, 13 Feb 2011 13:27:02 -0500"
 });
+db["ingredient_instructions"].insert({
+  "_id": ObjectId("4d5ed3433d3f95c00f000002"),
+  "instruction": "drained and dried",
+  "modified": "Fri, 18 Feb 2011 15:14:59 -0500",
+  "created": "Fri, 18 Feb 2011 15:14:59 -0500"
+});
 
 /** ingredient_types records **/
 db["ingredient_types"].insert({
@@ -676,6 +682,20 @@ db["ingredients"].insert({
   "modified": "Sun, 13 Feb 2011 13:29:29 -0500",
   "type": "produce"
 });
+db["ingredients"].insert({
+  "_id": ObjectId("4d5ed3433d3f95c00f000000"),
+  "ingredient": "green olives",
+  "type": "",
+  "modified": "Fri, 18 Feb 2011 15:14:59 -0500",
+  "created": "Fri, 18 Feb 2011 15:14:59 -0500"
+});
+db["ingredients"].insert({
+  "_id": ObjectId("4d5ed3433d3f95c00f000001"),
+  "ingredient": "parmesan cheese",
+  "type": "",
+  "modified": "Fri, 18 Feb 2011 15:14:59 -0500",
+  "created": "Fri, 18 Feb 2011 15:14:59 -0500"
+});
 
 /** menus records **/
 db["menus"].insert({
@@ -710,50 +730,9 @@ db["menus"].insert({
 
 /** recipes records **/
 db["recipes"].insert({
-  "_id": ObjectId("4d5603a83d3f95180f000000"),
-  "created": "Fri, 11 Feb 2011 22:51:04 -0500",
-  "description": "Healthy and fast",
-  "ingredients": {
-    "1": {
-      "whole": "1",
-      "fraction": "1\/8",
-      "unit": "C",
-      "ingredient": "broccoli",
-      "instruction": "julienned"
-    },
-    "2": {
-      "whole": "1",
-      "fraction": "",
-      "unit": "tbsp.",
-      "ingredient": "garlic",
-      "instruction": "chopped finely"
-    },
-    "3": {
-      "whole": "",
-      "fraction": "1\/4",
-      "unit": "C",
-      "ingredient": "olive oil",
-      "instruction": "cold"
-    },
-    "4": {
-      "whole": "2",
-      "fraction": "",
-      "unit": "C",
-      "ingredient": "pasta",
-      "instruction": "cooked according to directions"
-    }
-  },
-  "instructions": "Cook some stuff",
-  "modified": "Sat, 12 Feb 2011 11:48:53 -0500",
-  "name": "Pasta Olio",
-  "tags": "Italian, "
-});
-db["recipes"].insert({
   "_id": ObjectId("4d56b81f3d3f951c0a000000"),
-  "name": "Grilled Cheese",
-  "tags": "Basic",
+  "created": "Sat, 12 Feb 2011 11:41:03 -0500",
   "description": "cheesey crispy goodness",
-  "instructions": "take bread toast with cheese",
   "ingredients": {
     "1": {
       "whole": "4",
@@ -770,15 +749,19 @@ db["recipes"].insert({
       "instruction": ""
     }
   },
-  "modified": "Sat, 12 Feb 2011 14:40:42 -0500",
-  "created": "Sat, 12 Feb 2011 11:41:03 -0500"
+  "instructions": {
+    "1": "take bread toast with cheese"
+  },
+  "modified": "Fri, 18 Feb 2011 15:16:14 -0500",
+  "name": "Grilled Cheese",
+  "prep_time": "10",
+  "servings": "",
+  "tags": "Basic"
 });
 db["recipes"].insert({
   "_id": ObjectId("4d56c37d3d3f95a40c000000"),
-  "name": "Bombdiggity Meatloaf",
-  "tags": "Hearty, Protein",
+  "created": "Sat, 12 Feb 2011 12:29:33 -0500",
   "description": "",
-  "instructions": "1. Pre-heat oven to 325\r\n2. Thaw out the Quorn grounds\r\n3. Toast the bread twice\r\n4. Mix the spices together in a large bowl\r\n5. Break up the bread into crumbs and mix in the bowl\r\n6. Mix in the Quorn grounds\r\n7. Mix in everything else and make sure its mixed well\r\n8. Spoon it into a loaf pan and pack it in tightly. The more densely you pack it the better your meatloaf will hold together.\r\n9. Coat the top liberally with ketchup\r\n10. Bake for 2 hours or until internal temp is 155",
   "ingredients": {
     "1": {
       "whole": "",
@@ -851,8 +834,23 @@ db["recipes"].insert({
       "instruction": "toasted "
     }
   },
-  "modified": "Sat, 12 Feb 2011 16:20:07 -0500",
-  "created": "Sat, 12 Feb 2011 12:29:33 -0500"
+  "instructions": {
+    "1": "Pre-heat oven to 325",
+    "2": "Thaw out the Quorn grounds",
+    "3": "Toast the bread twice",
+    "4": "Mix the spices together in a large bowl",
+    "5": "Break up the bread into crumbs and mix in the bowl",
+    "6": "Mix in the Quorn grounds",
+    "7": "Mix in everything else and make sure its mixed well",
+    "8": "Spoon it into a loaf pan and pack it in tightly. The more densel",
+    "9": "Coat the top liberally with ketchup",
+    "10": "Bake for 2 hours or until internal temp is 155"
+  },
+  "modified": "Fri, 18 Feb 2011 10:13:33 -0500",
+  "name": "Bombdiggity Meatloaf",
+  "prep_time": "150",
+  "servings": "4",
+  "tags": "Hearty, Protein"
 });
 db["recipes"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a000005"),
@@ -951,17 +949,24 @@ db["recipes"].insert({
       "instruction": ""
     }
   },
-  "instructions": "1. Preheat the oven to 350\r\n\r\n2. Coat the thawed Quorn chunks in olive oil, salt, and pepper.\r\n\r\n3. Combine the mayonnaise, wine, chutney, curry powder, and 1 1\/2 teaspoons of salt in a food processor \r\n\r\n4. Combine the chicken with enough dressing to make it moist. Add the celery, scallions, and raisins. Refrigerate for a few hours.\r\n\r\n5. Mix in the cashews.\r\n\r\n6. Cook the tortillas\r\n\r\n7. Make the wraps",
-  "modified": "Sun, 13 Feb 2011 09:15:08 -0500",
+  "instructions": {
+    "1": "Preheat the oven to 350",
+    "2": "Coat the thawed Quorn chunks in olive oil, salt, and pepper.",
+    "3": "Combine the mayonnaise, wine, chutney, curry powder, and 1 1\/2 teaspoons of salt in a food processor",
+    "4": "Combine the chicken with enough dressing to make it moist. Add the celery, scallions, and raisins. Refrigerate for a few hours.",
+    "5": "Mix in the cashews.",
+    "6": "Cook the tortillas and make the wraps"
+  },
+  "modified": "Fri, 18 Feb 2011 15:07:58 -0500",
   "name": "Curried Chicken Wraps",
+  "prep_time": "",
+  "servings": "",
   "tags": "Protein, "
 });
 db["recipes"].insert({
   "_id": ObjectId("4d5735283d3f95880a000011"),
-  "name": "Easy Black Beans and Rice",
-  "tags": "Protein",
+  "created": "Sat, 12 Feb 2011 20:34:32 -0500",
   "description": "",
-  "instructions": "1. Cook the rice according to instructions\r\n\r\n2. Heat oil in a large skillet on medium high.\r\n\r\n3. Saute onions and bell peppers for 3-4 minutes\r\n\r\n4. Add garlic and cook for another minute\r\n\r\n5. Add the black beans, vinegar, and Tabasco or cayenne.\r\n\r\n6. Bring to a boil, reduce heat, cover and simmer for 5 minutes.\r\n\r\n7. Stir in rice and oregano. Add salt and pepper to taste",
   "ingredients": {
     "1": {
       "whole": "",
@@ -1048,15 +1053,25 @@ db["recipes"].insert({
       "instruction": ""
     }
   },
-  "modified": "Sat, 12 Feb 2011 20:34:32 -0500",
-  "created": "Sat, 12 Feb 2011 20:34:32 -0500"
+  "instructions": {
+    "1": "Cook the rice according to instructions",
+    "2": "Heat oil in a large skillet on medium high.",
+    "3": "Saute onions and bell peppers for 3-4 minutes",
+    "4": "Add garlic and cook for another minute",
+    "5": "Add the black beans, vinegar, and Tabasco or cayenne.",
+    "6": "Bring to a boil, reduce heat, cover and simmer for 5 minutes.",
+    "7": "Stir in rice and oregano. Add salt and pepper to taste"
+  },
+  "modified": "Fri, 18 Feb 2011 15:06:16 -0500",
+  "name": "Easy Black Beans and Rice",
+  "prep_time": "",
+  "servings": "",
+  "tags": "Protein"
 });
 db["recipes"].insert({
   "_id": ObjectId("4d581ab23d3f95480a000000"),
-  "name": "Falafel and Cucumber Sauce",
-  "tags": "",
+  "created": "Sun, 13 Feb 2011 12:53:54 -0500",
   "description": "",
-  "instructions": "1. In a small bowl combine yogurt, cucumber, dill, salt, pepper and mayonnaise. Chill for at least 30 minutes.\r\n2. In a large bowl mash chickpeas until thin and pasty; dont use a blender.\r\n3. In a blender process onion, parsley, and garlic until smooth. Stir into mashed chickpeas.\r\n4. In a small bowl combine egg, cumin, coriander, salt, pepper, cayenne, lemon juice and baking powder. \r\n5. Stir into chickpeas along with olive oil.\r\n6. Slowly stir in breadcrumbs until mixture will hold together but is not sticky.\r\n7. Form 8 balls and flatten into patties.\r\n8. Heat an inch of oil in a pan and fry patties until golden brown on both sides.\r\n\r\n",
   "ingredients": {
     "1": {
       "whole": "15",
@@ -1192,15 +1207,26 @@ db["recipes"].insert({
       "instruction": ""
     }
   },
-  "modified": "Sun, 13 Feb 2011 12:53:54 -0500",
-  "created": "Sun, 13 Feb 2011 12:53:54 -0500"
+  "instructions": {
+    "1": "In a small bowl combine yogurt, cucumber, dill, salt, pepper and mayonnaise. Chill for at least 30 minutes.",
+    "2": "In a large bowl mash chickpeas until thin and pasty; dont use a blender.",
+    "3": "In a blender process onion, parsley, and garlic until smooth. Stir into mashed chickpeas.",
+    "4": "In a small bowl combine egg, cumin, coriander, salt, pepper, cayenne, lemon juice and baking powder. ",
+    "5": "Stir into chickpeas along with olive oil.",
+    "6": "Slowly stir in breadcrumbs until mixture will hold together but is not sticky.",
+    "7": "Form 8 balls and flatten into patties.",
+    "8": "Heat an inch of oil in a pan and fry patties until golden brown on both sides."
+  },
+  "modified": "Fri, 18 Feb 2011 15:04:37 -0500",
+  "name": "Falafel and Cucumber Sauce",
+  "prep_time": "",
+  "servings": "",
+  "tags": ""
 });
 db["recipes"].insert({
   "_id": ObjectId("4d5822753d3f951c0a000013"),
-  "name": "Chik'n with Peanut-Ginger Sauce",
-  "tags": "Asian, Protein, Quorn, Chik'n",
+  "created": "Sun, 13 Feb 2011 13:27:01 -0500",
   "description": "",
-  "instructions": "1. To prepare sauce: Whisk water, peanut butter, rice vinegar, soy sauce, honey, ginger and garlic in a small bowl.\r\n2. Fry the mushrooms until tender and put aside\r\n3. To prepare Chik'n: fry in oil until browned\r\n4. Add the spinach in small bunches and cook until wilted\r\n5. Add the peanut sauce, scallions and mushrooms. Heat through and mix well. ",
   "ingredients": {
     "1": {
       "whole": "5",
@@ -1294,8 +1320,88 @@ db["recipes"].insert({
       "instruction": "sliced"
     }
   },
-  "modified": "Sun, 13 Feb 2011 13:27:01 -0500",
-  "created": "Sun, 13 Feb 2011 13:27:01 -0500"
+  "instructions": {
+    "1": "To prepare sauce: Whisk water, peanut butter, rice vinegar, soy ",
+    "2": "Fry the mushrooms until tender and put aside",
+    "3": "To prepare Chik'n: fry in oil until browned",
+    "4": "Add the spinach in small bunches and cook until wilted",
+    "5": "Add the peanut sauce, scallions and mushrooms. Heat through and"
+  },
+  "modified": "Fri, 18 Feb 2011 15:16:03 -0500",
+  "name": "Chik'n with Peanut-Ginger Sauce",
+  "prep_time": "45",
+  "servings": "4",
+  "tags": "Asian, Protein, Quorn, Chik'n"
+});
+db["recipes"].insert({
+  "_id": ObjectId("4d5603a83d3f95180f000000"),
+  "created": "Fri, 11 Feb 2011 22:51:04 -0500",
+  "description": "Healthy and fast",
+  "ingredients": {
+    "1": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "C",
+      "ingredient": "broccoli",
+      "instruction": "julienned"
+    },
+    "2": {
+      "whole": "4",
+      "fraction": "",
+      "unit": "cloves",
+      "ingredient": "garlic",
+      "instruction": "chopped finely"
+    },
+    "3": {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "C",
+      "ingredient": "olive oil",
+      "instruction": "cold"
+    },
+    "4": {
+      "whole": "2",
+      "fraction": "",
+      "unit": "C",
+      "ingredient": "pasta",
+      "instruction": "cooked according to directions"
+    },
+    "5": {
+      "whole": "6",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "green olives",
+      "instruction": "drained and dried"
+    },
+    "6": {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "ground black pepper",
+      "instruction": "to taste"
+    },
+    "7": {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "parmesan cheese",
+      "instruction": "to taste"
+    }
+  },
+  "instructions": {
+    "1": "Pour the oil into a cold pan and add the garlic and red pepper",
+    "2": "Turn the heat on low, you want to the oil to heat slowly, the garlic must not fry",
+    "3": "As the pasta is about 1 minute from being cooked throw the broccoli into the boilng water",
+    "4": "When the pasta is cooked plunge the pasta and broccoli into ice water quickly to stop the cooking process but not cool it off",
+    "5": "Mix the pasta, broccoli, oil and garlic in a large bowl.",
+    "6": "Divide into bowls and garnish with green olives.",
+    "7": "Serve immediately"
+  },
+  "modified": "Fri, 18 Feb 2011 15:15:15 -0500",
+  "name": "Pasta Olio",
+  "prep_time": "20",
+  "servings": "2",
+  "tags": "Italian, "
 });
 
 /** tags records **/
@@ -1438,6 +1544,12 @@ db["units"].insert({
   "l_name": "bag",
   "s_name": "bag",
   "created": "Sun, 13 Feb 2011 13:27:02 -0500"
+});
+db["units"].insert({
+  "_id": ObjectId("4d5ed0d53d3f954403000001"),
+  "l_name": "ounces",
+  "s_name": "ounces",
+  "created": "Fri, 18 Feb 2011 15:04:37 -0500"
 });
 
 /** users records **/
