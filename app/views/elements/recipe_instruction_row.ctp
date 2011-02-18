@@ -6,7 +6,7 @@
         <?php
         echo $this->Form->input('Recipe.instructions.' . $rowNum,
                 array(
-                    'maxLength' => 64,
+                    'maxLength' => 128,
                     'size' => 64,
                     'label' => false,
                     'div' => false,
