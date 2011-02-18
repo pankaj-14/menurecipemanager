@@ -52,7 +52,7 @@
                     'class' => 'ingredientInstructionInput ui-widget-content'));
         ?>
     </td>
-    <td class="ui-widget-content">
+    <td class="ui-widget-content control">
         <?php if ($rowNum > 1): ?>
             <div class = "ui-icon ui-icon-close deleteRow"></div>
         <?php endif; ?>

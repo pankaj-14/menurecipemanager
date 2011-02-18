@@ -11,11 +11,11 @@
 <label>Tags</label>
 <div><?php echo $Recipe['tags']; ?></div>
 <label>Instructions</label>
-<div>
-    <textarea cols="75" rows="10" class="ui-widget-content" disabled="disabled">
-        <?php echo $Recipe['instructions']; ?>
-    </textarea>
-</div>
+<ol>
+<?php  foreach($Recipe['instructions'] as $instruction): ?>
+    <li><?php echo $instruction; ?></li>
+<?php endforeach; ?>
+</ol>
 <label>Ingredient List</label>
 <table class="ui-widget grid">
     <thead>

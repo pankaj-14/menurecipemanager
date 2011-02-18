@@ -7,8 +7,8 @@
 /* GRID */
 table.grid { width:100%; }
 table.grid td { vertical-align: top; }
-table.grid td.control{ text-align:center; width:50px; }
-table.grid td.control *{ margin: auto; }
+table.grid .control{ text-align:center; width:50px; }
+table.grid .control *{ margin: auto; }
 table.grid tfoot tr td { text-align:center; }
 /* TEXT */
 label { display:block; font-weight:bold; }

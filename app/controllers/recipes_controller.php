@@ -32,7 +32,7 @@ class RecipesController extends AppController
 
     public function beforeFilter()
     {
-         $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index', 'view');
     }
 
     /**
@@ -247,6 +247,12 @@ class RecipesController extends AppController
     {
         $mongo = ConnectionManager::getDataSource($this->Recipe->useDbConfig);
         $mongo->ensureIndex($this->Recipe, array('title' => 1));
+    }
+
+    public function getNewRecipeInstructionRow()
+    {
+        $this->set('rowNum', $this->params['url']['rowCount']);
+        $this->render('../elements/recipe_instruction_row', 'ajax');
     }
 
 }

@@ -15,7 +15,7 @@ class Recipe extends AppModel
         'prep_time' => array('type' => 'string'),
         'tags' => array('type' => 'array'),
         'description' => array('type' => 'string'),
-        'instructions' => array('type' => 'string'),
+        'instructions' => array('type' => 'array'),
         'ingredients' => array('type' => 'array'),
         'created' => array('type' => 'datetime'),
         'modified' => array('type' => 'datetime')

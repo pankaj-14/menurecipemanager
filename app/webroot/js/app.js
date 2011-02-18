@@ -26,7 +26,7 @@ jQuery(document).ready( function() {
         $.get('/recipes/getNewIngredientRow', {
             rowCount: rowCount + 1
         }, function(data){
-            $(data).insertAfter('#row_' + rowCount);
+            $(data).insertAfter('#row_' + rowCount + '.ingredientRow');
             $.createIngredientRowInputs();
             $('input[id="RecipeIngredients'+ (rowCount + 1) +'Whole"]').focus();
         });
@@ -53,6 +53,18 @@ jQuery(document).ready( function() {
             rowCount: rowCount + 1
         }, function(data){
             $(data).insertAfter('#row_' + rowCount)
+        });
+        return false;
+    });
+    /*
+     * Recipe Instruction Row Handler
+     */
+    $('#addRecipeInstructionRow').click(function(){
+        rowCount = ($('.recipeInstructionRow').length);
+        $.get('/recipes/getNewRecipeInstructionRow', {
+            rowCount: rowCount + 1
+        }, function(data){
+            $(data).insertAfter('#row_' + rowCount + '.recipeInstructionRow')
         });
         return false;
     });
