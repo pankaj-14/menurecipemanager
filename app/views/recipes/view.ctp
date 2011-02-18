@@ -2,6 +2,10 @@
 
 <label>Name</label>
 <div><?php echo $Recipe['name']; ?></div>
+<label>Servings</label>
+<div><?php echo $Recipe['servings']; ?></div>
+<label>Prep Time (minutes)</label>
+<div><?php echo $Recipe['prep_time']; ?></div>
 <label>Description</label>
 <div><?php echo $Recipe['description']; ?></div>
 <label>Tags</label>

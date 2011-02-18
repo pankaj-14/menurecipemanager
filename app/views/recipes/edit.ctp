@@ -1,6 +1,9 @@
 <?php
 echo $this->Form->create();
-echo $this->Form->input('name', array('class' => 'ui-widget-content', 'size' => 32));
+echo $this->Form->input('name', array(
+    'class' => 'ui-widget-content',
+    'size' => 32)
+        );
 echo $this->Form->input('servings', array(
     'class' => 'ui-widget-content',
     'size' => 32,
@@ -9,11 +12,24 @@ echo $this->Form->input('servings', array(
 echo $this->Form->input('prep_time', array(
     'class' => 'ui-widget-content',
     'size' => 32,
-    'maxlength' => 12)
+    'maxlength' => 3,
+    'label' => 'Prep Time (minutes)')
 );
-echo $this->Form->input('tags', array('type' => 'textarea', 'class' => 'ui-widget-content', 'rows' => 2));
-echo $this->Form->input('description', array('type' => 'textarea', 'class' => 'ui-widget-content', 'rows' => 2));
-echo $this->Form->input('instructions', array('type' => 'textarea', 'class' => 'ui-widget-content', 'cols' => 60));
+echo $this->Form->input('tags', array(
+    'type' => 'textarea',
+    'class' => 'ui-widget-content',
+    'rows' => 2)
+        );
+echo $this->Form->input('description', array(
+    'type' => 'textarea',
+    'class' => 'ui-widget-content',
+    'rows' => 2)
+        );
+echo $this->Form->input('instructions', array(
+    'type' => 'textarea',
+    'class' => 'ui-widget-content',
+    'cols' => 60)
+        );
 ?>
 <label>Ingredients List</label>
 <table class="ui-widget grid">

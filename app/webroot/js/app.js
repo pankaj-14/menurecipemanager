@@ -211,6 +211,18 @@ jQuery(document).ready( function() {
     }
     $.createFractionAmountInput();
 
+    $.createPrepTimeInput = function() {
+        $('#RecipePrepTime').keyup(function(){
+            $(this).removeClass('ui-state-error');
+            if ($(this).val() != '') {
+                if( ! $(this).val().match(/^[0-9]{1,3}$/) ){
+                    $(this).addClass('ui-state-error');
+                }
+            }
+        });
+    }
+    $.createPrepTimeInput();
+
 
     $('#print').click(function(){
         
