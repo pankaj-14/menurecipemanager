@@ -44,10 +44,6 @@ class MenusController extends AppController
 
     public function shoppingList($id = null)
     {
-
-
-
-
         $recipes = array();
         $ingredientsToType = $this->Menu->Recipe->Ingredient->find('list',
                         array('fields' => array('ingredient', 'type'))
@@ -67,18 +63,33 @@ class MenusController extends AppController
          */
         foreach ($menu['Menu']['recipes'] as $r)
         {
-            $recipes[] = $this->Menu->Recipe->read(null, $r['name']); // TODO ??id
+            $recipe = $this->Menu->Recipe->read(null, $r['name']);
+            $recipe['Recipe']['desired_servings'] = $r['servings'];
+            $recipes[] = $recipe;
         }
-
+        // var_dump($recipes);
+        /*
+         * divide the ingredient amount by the recipe's servings and
+         * multiply the result by the desired number of servings
+         */
         $ingredientList = array();
         /*
          * Get each ingredient for each recipe and put it in the shopping list
          */
         foreach ($recipes as $recipe)
         {
-            foreach ($recipe['Recipe']['ingredients'] as $ingredient)
+            $recipe_servings = $recipe['Recipe']['servings'];
+            $desired_servings = $recipe['Recipe']['desired_servings'];
+            foreach ($recipe['Recipe']['ingredients'] as $i)
             {
-                $ingredientList[$ingredient['ingredient']][] = $ingredient;
+                if (!$decimal = array_search($i['fraction'], $fractionsToDecimals))
+                {
+                    $decimal = 0;
+                }
+                $amount = $i['whole'] + $decimal;
+                $adjustedAmount = ($amount / $recipe_servings) * $desired_servings;
+                $i['adjusted_amount'] = $adjustedAmount;
+                $ingredientList[$i['ingredient']][] = $i;
             }
         }
 
@@ -95,16 +106,9 @@ class MenusController extends AppController
             foreach ($list as $i)
             {
                 $item->unit = $i['unit'];
-                /*
-                 * Convert the fraction to decimal to do the math. We can then
-                 * use the convert on the UI to put it back
-                 */
-                if (!$decimal = array_search($i['fraction'], $fractionsToDecimals))
-                {
-                    $decimal = 0;
-                }
-
-                $item->amount = $item->amount + $i['whole'] + $decimal;
+                // This is alredy converted to a decimal in the code block
+                // above.
+                $item->amount = $item->amount + $i['adjusted_amount'];
             }
 
             if (!empty($ingredientsToType[$ingredient]))

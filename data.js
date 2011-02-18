@@ -700,32 +700,51 @@ db["ingredients"].insert({
 /** menus records **/
 db["menus"].insert({
   "_id": ObjectId("4d5823bc3d3f957c0000000e"),
-  "name": "Weekly",
+  "created": "Sun, 13 Feb 2011 13:32:28 -0500",
   "description": "",
+  "modified": "Fri, 18 Feb 2011 16:31:18 -0500",
+  "name": "Weekly",
   "recipes": {
     "1": {
       "name": "4d5603a83d3f95180f000000",
+      "servings": "3",
       "description": "Monday"
     },
     "2": {
       "name": "4d56c37d3d3f95a40c000000",
+      "servings": "2",
       "description": "Tuesday"
     },
     "3": {
       "name": "4d5732a43d3f951c0a000005",
+      "servings": "2",
       "description": "Wednesday"
     },
     "4": {
       "name": "4d581ab23d3f95480a000000",
+      "servings": "2",
       "description": "Thursday"
     },
     "5": {
       "name": "4d5822753d3f951c0a000013",
+      "servings": "2",
       "description": "Friday"
     }
+  }
+});
+db["menus"].insert({
+  "_id": ObjectId("4d5eed803d3f959008000000"),
+  "name": "test",
+  "description": "",
+  "recipes": {
+    "1": {
+      "name": "4d56c37d3d3f95a40c000000",
+      "servings": "6",
+      "description": ""
+    }
   },
-  "modified": "Sun, 13 Feb 2011 13:32:28 -0500",
-  "created": "Sun, 13 Feb 2011 13:32:28 -0500"
+  "modified": "Fri, 18 Feb 2011 17:08:33 -0500",
+  "created": "Fri, 18 Feb 2011 17:06:56 -0500"
 });
 
 /** recipes records **/
