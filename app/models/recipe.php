@@ -13,6 +13,7 @@ class Recipe extends AppModel
         'name' => array('type' => 'string'),
         'servings' => array('type' => 'string'),
         'prep_time' => array('type' => 'string'),
+        'cook_time' => array('type' => 'string'),
         'tags' => array('type' => 'array'),
         'description' => array('type' => 'string'),
         'instructions' => array('type' => 'array'),

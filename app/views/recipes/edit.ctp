@@ -15,6 +15,12 @@ echo $this->Form->input('prep_time', array(
     'maxlength' => 3,
     'label' => 'Prep Time (minutes)')
 );
+echo $this->Form->input('cook_time', array(
+    'class' => 'ui-widget-content',
+    'size' => 32,
+    'maxlength' => 3,
+    'label' => 'Cook Time (minutes)')
+);
 echo $this->Form->input('tags', array(
     'type' => 'textarea',
     'class' => 'ui-widget-content',
@@ -30,19 +36,19 @@ echo $this->Form->input('description', array(
 <label>Recipe Instructions</label>
 <table class="ui-widget grid">
     <?php echo $this->element('recipe_instruction_row_header'); ?>
-                <tbody>
+    <tbody>
         <?php
-                $ingredientRowCount = count($this->data['Recipe']['instructions']);
-                for ($rowNum = 0; $rowNum < $ingredientRowCount; $rowNum++)
-                {
-                    echo $this->element('recipe_instruction_row', array('rowNum' => $rowNum + 1));
-                }
+        $ingredientRowCount = count($this->data['Recipe']['instructions']);
+        for ($rowNum = 0; $rowNum < $ingredientRowCount; $rowNum++)
+        {
+            echo $this->element('recipe_instruction_row', array('rowNum' => $rowNum + 1));
+        }
         ?>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td class="ui-widget-content" style="text-align:right;">
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td class="ui-widget-content" style="text-align:right;">
                 <?php echo $this->Form->button('Add Instruction', array('id' => 'addRecipeInstructionRow', 'class' => 'ui-button ui-widget ui-state-default')); ?>
             </td>
         </tr>

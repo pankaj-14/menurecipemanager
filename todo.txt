@@ -7,3 +7,8 @@ TODO
 6. Add nutritional information
 8. Create javascript input filter
 9. Identify which DB collections must be lost. IE fractions to amounts
+
+
+Input issues
+The typeaheads dont take the position of the element so they appear below the edge of the screen
+The typeahead for ingredients is not working properly

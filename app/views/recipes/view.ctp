@@ -6,6 +6,8 @@
 <div><?php echo $Recipe['servings']; ?></div>
 <label>Prep Time (minutes)</label>
 <div><?php echo $Recipe['prep_time']; ?></div>
+<label>Cook Time (minutes)</label>
+<div><?php echo $Recipe['cook_time']; ?></div>
 <label>Description</label>
 <div><?php echo $Recipe['description']; ?></div>
 <label>Tags</label>
