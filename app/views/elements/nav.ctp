@@ -29,7 +29,8 @@
     <?php
             if (!empty($Auth['User']['username']))
             {
-                echo $html->link('logout', array('controller' => 'users', 'action' => 'logout'));
+                echo 'Welcome ' . $Auth['User']['username'] . ' ';
+                echo $html->link('(logout)', array('controller' => 'users', 'action' => 'logout'));
             }
             else
             {
