@@ -1,3 +1,4 @@
+<div class="grid_12">
 <?php
 echo $this->Form->create();
 echo $this->Form->input('name', array(
@@ -86,6 +87,7 @@ echo $this->Form->input('description', array(
                 echo $this->Form->button('Edit Recipe', array('class' => 'ui-button ui-widget ui-state-default'));
                 echo $this->Form->end();
 ?>
+</div>
 <?php
 //var_dump($this->data['Recipe']);
 ?>

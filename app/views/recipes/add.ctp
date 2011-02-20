@@ -1,4 +1,4 @@
-<div class="ui-widget">
+<div class="grid_12 ui-widget">
     <?php
     echo $this->Form->create();
     echo $this->Form->input('name', array(
