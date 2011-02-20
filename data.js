@@ -202,6 +202,12 @@ db["ingredient_instructions"].insert({
   "modified": "Fri, 18 Feb 2011 15:14:59 -0500",
   "created": "Fri, 18 Feb 2011 15:14:59 -0500"
 });
+db["ingredient_instructions"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000009"),
+  "instruction": "grated (optional)",
+  "modified": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500"
+});
 
 /** ingredient_types records **/
 db["ingredient_types"].insert({
@@ -259,6 +265,10 @@ db["ingredient_types"].insert({
 db["ingredient_types"].insert({
   "_id": ObjectId("4d5827273d3f951c0a000020"),
   "ingredient_type": "asian"
+});
+db["ingredient_types"].insert({
+  "_id": ObjectId("4d61269c3d3f954403000002"),
+  "ingredient_type": "other"
 });
 
 /** ingredients records **/
@@ -406,8 +416,8 @@ db["ingredients"].insert({
   "_id": ObjectId("4d56c37d3d3f95a40c000009"),
   "created": "Sat, 12 Feb 2011 12:29:33 -0500",
   "ingredient": "bread",
-  "modified": "Sat, 12 Feb 2011 16:28:28 -0500",
-  "type": "bakery"
+  "modified": "Sun, 20 Feb 2011 09:30:41 -0500",
+  "type": "baking supplies"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a000006"),
@@ -439,10 +449,10 @@ db["ingredients"].insert({
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a00000a"),
+  "created": "Sat, 12 Feb 2011 20:23:48 -0500",
   "ingredient": "chutney",
-  "type": "",
-  "modified": "Sat, 12 Feb 2011 20:23:48 -0500",
-  "created": "Sat, 12 Feb 2011 20:23:48 -0500"
+  "modified": "Sun, 20 Feb 2011 09:37:04 -0500",
+  "type": "other"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a00000b"),
@@ -467,24 +477,24 @@ db["ingredients"].insert({
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a00000e"),
+  "created": "Sat, 12 Feb 2011 20:23:48 -0500",
   "ingredient": "raisins",
-  "type": "",
-  "modified": "Sat, 12 Feb 2011 20:23:48 -0500",
-  "created": "Sat, 12 Feb 2011 20:23:48 -0500"
+  "modified": "Sun, 20 Feb 2011 09:09:56 -0500",
+  "type": "bakery"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a00000f"),
+  "created": "Sat, 12 Feb 2011 20:23:48 -0500",
   "ingredient": "whole roasted cashews",
-  "type": "",
-  "modified": "Sat, 12 Feb 2011 20:23:48 -0500",
-  "created": "Sat, 12 Feb 2011 20:23:48 -0500"
+  "modified": "Sun, 20 Feb 2011 09:01:17 -0500",
+  "type": "baking supplies"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5732a43d3f951c0a000010"),
+  "created": "Sat, 12 Feb 2011 20:23:48 -0500",
   "ingredient": "tortillas",
-  "type": "",
-  "modified": "Sat, 12 Feb 2011 20:23:48 -0500",
-  "created": "Sat, 12 Feb 2011 20:23:48 -0500"
+  "modified": "Sun, 20 Feb 2011 09:02:19 -0500",
+  "type": "bakery"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5735283d3f95880a000012"),
@@ -516,10 +526,10 @@ db["ingredients"].insert({
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5735283d3f95880a000016"),
+  "created": "Sat, 12 Feb 2011 20:34:32 -0500",
   "ingredient": "tabasco sauce",
-  "type": "",
-  "modified": "Sat, 12 Feb 2011 20:34:32 -0500",
-  "created": "Sat, 12 Feb 2011 20:34:32 -0500"
+  "modified": "Sun, 20 Feb 2011 09:23:39 -0500",
+  "type": "bakery"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5735283d3f95880a000017"),
@@ -579,24 +589,24 @@ db["ingredients"].insert({
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d581ab23d3f95480a000006"),
+  "created": "Sun, 13 Feb 2011 12:53:54 -0500",
   "ingredient": "lemon juice",
-  "type": "",
-  "modified": "Sun, 13 Feb 2011 12:53:54 -0500",
-  "created": "Sun, 13 Feb 2011 12:53:54 -0500"
+  "modified": "Sun, 20 Feb 2011 09:36:39 -0500",
+  "type": "other"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d581ab23d3f95480a000007"),
   "created": "Sun, 13 Feb 2011 12:53:54 -0500",
   "ingredient": "baking powder",
-  "modified": "Sun, 13 Feb 2011 13:47:27 -0500",
+  "modified": "Sun, 20 Feb 2011 09:34:19 -0500",
   "type": "baking supplies"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d581ab23d3f95480a000008"),
+  "created": "Sun, 13 Feb 2011 12:53:54 -0500",
   "ingredient": "bread crumbs",
-  "type": "",
-  "modified": "Sun, 13 Feb 2011 12:53:54 -0500",
-  "created": "Sun, 13 Feb 2011 12:53:54 -0500"
+  "modified": "Sun, 20 Feb 2011 09:46:01 -0500",
+  "type": "dried herbs and spices"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d581ab23d3f95480a000009"),
@@ -628,17 +638,17 @@ db["ingredients"].insert({
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5822753d3f951c0a000014"),
+  "created": "Sun, 13 Feb 2011 13:27:01 -0500",
   "ingredient": "water",
-  "type": "",
-  "modified": "Sun, 13 Feb 2011 13:27:01 -0500",
-  "created": "Sun, 13 Feb 2011 13:27:01 -0500"
+  "modified": "Sun, 20 Feb 2011 09:35:18 -0500",
+  "type": "other"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5822763d3f951c0a000015"),
+  "created": "Sun, 13 Feb 2011 13:27:02 -0500",
   "ingredient": "smooth natural peanut butter",
-  "type": "",
-  "modified": "Sun, 13 Feb 2011 13:27:02 -0500",
-  "created": "Sun, 13 Feb 2011 13:27:02 -0500"
+  "modified": "Sun, 20 Feb 2011 09:21:45 -0500",
+  "type": "bakery"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5822763d3f951c0a000016"),
@@ -651,15 +661,15 @@ db["ingredients"].insert({
   "_id": ObjectId("4d5822763d3f951c0a000017"),
   "created": "Sun, 13 Feb 2011 13:27:02 -0500",
   "ingredient": "reduced-sodium soy sauce",
-  "modified": "Sun, 13 Feb 2011 13:47:15 -0500",
-  "type": "asian"
+  "modified": "Sun, 20 Feb 2011 08:58:52 -0500",
+  "type": "canned fruits"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5822763d3f951c0a000018"),
+  "created": "Sun, 13 Feb 2011 13:27:02 -0500",
   "ingredient": "honey",
-  "type": "",
-  "modified": "Sun, 13 Feb 2011 13:27:02 -0500",
-  "created": "Sun, 13 Feb 2011 13:27:02 -0500"
+  "modified": "Sun, 20 Feb 2011 09:36:50 -0500",
+  "type": "other"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5822763d3f951c0a000019"),
@@ -684,17 +694,52 @@ db["ingredients"].insert({
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5ed3433d3f95c00f000000"),
+  "created": "Fri, 18 Feb 2011 15:14:59 -0500",
   "ingredient": "green olives",
-  "type": "",
-  "modified": "Fri, 18 Feb 2011 15:14:59 -0500",
-  "created": "Fri, 18 Feb 2011 15:14:59 -0500"
+  "modified": "Sun, 20 Feb 2011 09:36:52 -0500",
+  "type": "other"
 });
 db["ingredients"].insert({
   "_id": ObjectId("4d5ed3433d3f95c00f000001"),
+  "created": "Fri, 18 Feb 2011 15:14:59 -0500",
   "ingredient": "parmesan cheese",
-  "type": "",
-  "modified": "Fri, 18 Feb 2011 15:14:59 -0500",
-  "created": "Fri, 18 Feb 2011 15:14:59 -0500"
+  "modified": "Sun, 20 Feb 2011 09:20:39 -0500",
+  "type": "bakery"
+});
+db["ingredients"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000004"),
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "ingredient": "zucchini",
+  "modified": "Sun, 20 Feb 2011 08:58:21 -0500",
+  "type": "produce"
+});
+db["ingredients"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000005"),
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "ingredient": "yellow squash",
+  "modified": "Sun, 20 Feb 2011 08:56:07 -0500",
+  "type": "produce"
+});
+db["ingredients"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000006"),
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "ingredient": "tomato",
+  "modified": "Sun, 20 Feb 2011 09:35:31 -0500",
+  "type": "produce"
+});
+db["ingredients"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000007"),
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "ingredient": "sun dried tomatoes",
+  "modified": "Sun, 20 Feb 2011 09:17:58 -0500",
+  "type": "bakery"
+});
+db["ingredients"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000008"),
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "ingredient": "mixed Italian herbs",
+  "modified": "Sun, 20 Feb 2011 08:54:47 -0500",
+  "type": "dried herbs and spices"
 });
 
 /** menus records **/
@@ -779,6 +824,7 @@ db["recipes"].insert({
 });
 db["recipes"].insert({
   "_id": ObjectId("4d56c37d3d3f95a40c000000"),
+  "cook_time": "",
   "created": "Sat, 12 Feb 2011 12:29:33 -0500",
   "description": "",
   "ingredients": {
@@ -861,11 +907,11 @@ db["recipes"].insert({
     "5": "Break up the bread into crumbs and mix in the bowl",
     "6": "Mix in the Quorn grounds",
     "7": "Mix in everything else and make sure its mixed well",
-    "8": "Spoon it into a loaf pan and pack it in tightly. The more densel",
+    "8": "Spoon it into a loaf pan and pack it in tightly. The more densely packed the better.",
     "9": "Coat the top liberally with ketchup",
     "10": "Bake for 2 hours or until internal temp is 155"
   },
-  "modified": "Fri, 18 Feb 2011 10:13:33 -0500",
+  "modified": "Sun, 20 Feb 2011 07:43:14 -0500",
   "name": "Bombdiggity Meatloaf",
   "prep_time": "150",
   "servings": "4",
@@ -1422,6 +1468,113 @@ db["recipes"].insert({
   "servings": "2",
   "tags": "Italian, "
 });
+db["recipes"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f000003"),
+  "name": "Veggie Pasta",
+  "servings": "2",
+  "prep_time": "15",
+  "cook_time": "15",
+  "tags": "Italian, ",
+  "description": "A nice country style dinner with lots of tasty vegetables.",
+  "instructions": {
+    "1": "Heat the olive oil in a skillet over medium to medium high heat, taking care not to let the oil smoke. ",
+    "2": "Add garlic, lower heat and cook briefly.",
+    "3": "Add onion and cook until it becomes clear. ",
+    "4": "Add the remaining vegetables to the skillet and saute until tender. ",
+    "5": "Add the fresh herbs and saute for 1 or 2 minutes more. ",
+    "6": "Toss the veggies and pasta. ",
+    "7": "Season to taste. ",
+    "8": "Add cheese as desired. "
+  },
+  "ingredients": {
+    "1": {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "olive oil",
+      "instruction": ""
+    },
+    "2": {
+      "whole": "2",
+      "fraction": "",
+      "unit": "cloves",
+      "ingredient": "garlic",
+      "instruction": ""
+    },
+    "3": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "small",
+      "ingredient": "onion",
+      "instruction": ""
+    },
+    "4": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "small",
+      "ingredient": "green bell pepper",
+      "instruction": ""
+    },
+    "5": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "medium",
+      "ingredient": "zucchini",
+      "instruction": ""
+    },
+    "6": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "medium",
+      "ingredient": "yellow squash",
+      "instruction": ""
+    },
+    "7": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "small",
+      "ingredient": "tomato",
+      "instruction": ""
+    },
+    "8": {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "sun dried tomatoes",
+      "instruction": ""
+    },
+    "9": {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "mixed Italian herbs",
+      "instruction": ""
+    },
+    "10": {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": "to taste"
+    },
+    "11": {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "pepper",
+      "instruction": "to taste"
+    },
+    "12": {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "parmesan cheese",
+      "instruction": "grated (optional)"
+    }
+  },
+  "modified": "Sat, 19 Feb 2011 09:48:58 -0500",
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500"
+});
 
 /** tags records **/
 db["tags"].insert({
@@ -1465,12 +1618,6 @@ db["tags"].insert({
   "tag": "Protein",
   "modified": "Sat, 12 Feb 2011 12:29:33 -0500",
   "created": "Sat, 12 Feb 2011 12:29:33 -0500"
-});
-db["tags"].insert({
-  "_id": ObjectId("4d581ab23d3f95480a00000d"),
-  "tag": "",
-  "modified": "Sun, 13 Feb 2011 12:53:54 -0500",
-  "created": "Sun, 13 Feb 2011 12:53:54 -0500"
 });
 db["tags"].insert({
   "_id": ObjectId("4d5822763d3f951c0a00001c"),
@@ -1569,6 +1716,12 @@ db["units"].insert({
   "l_name": "ounces",
   "s_name": "ounces",
   "created": "Fri, 18 Feb 2011 15:04:37 -0500"
+});
+db["units"].insert({
+  "_id": ObjectId("4d5fd85a3d3f95c00f00000a"),
+  "l_name": "medium",
+  "s_name": "medium",
+  "created": "Sat, 19 Feb 2011 09:48:58 -0500"
 });
 
 /** users records **/
