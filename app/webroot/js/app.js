@@ -19,6 +19,25 @@ jQuery(document).ready( function() {
         }
     });
     /*
+     * DEFAULT DIALOG
+     */
+    $('#dialog').dialog({
+        autoOpen:false,
+        draggable:false,
+        modal:true,
+        resizable:false
+    });
+    $.popDialog = function (response, close_func) {
+        $('#dialog').dialog('option', 'title', response.title);
+        $('#dialog').dialog('option', 'dialogClass', 'ui-state-'+response.status);
+        $('#dialog').dialog('option', 'open', $('#dialog').html('<div class="ui-state-'+response.status+'-text">'+response.msg+'</div>'));
+        if(close_func != null){
+            $('#dialog').dialog('option', 'close', close_func);
+        }
+        $('#dialog').dialog('open');
+    }
+
+    /*
      * Ingredient Row Handler
      */
     $.createIngredientRow = function(){
@@ -250,6 +269,24 @@ jQuery(document).ready( function() {
         });
 
         $('.printable').jqprint();
+    });
+
+    $('#ingredientList select').change(function(){
+        if($(this).val()){
+            el = $(this);
+            $.getJSON('updateIngredientType', {
+                ingredient_type:$(this).val(),
+                ingredient_id:$(this).parent('td').attr('title')
+            }, function(response){
+                if(response.status == 'success'){
+                    $(el).addClass('ui-state-' + response.status, 'slow', function(){
+                        $(this).removeClass('ui-state-' + response.status, 'fast');
+                    });
+                } else {
+                    $.popDialog(response, null);
+                }
+            });
+        }
     });
 
 });

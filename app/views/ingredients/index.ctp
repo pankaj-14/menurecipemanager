@@ -1,4 +1,4 @@
-<table class="ui-widget grid">
+<table id="ingredientList" class="ui-widget grid">
     <thead>
         <tr>
             <th class="ui-widget-header"><?php echo $paginator->sort('Ingredient', 'ingredient'); ?></th>
@@ -10,9 +10,20 @@
     <tbody>
         <?php foreach ($results as $res): ?>
             <tr>
-                <td class="ui-widget-content"><?php echo $res['Ingredient']['ingredient']; ?></td>
-                <td class="ui-widget-content"><?php echo $res['Ingredient']['type']; ?></td>
-                <td class="ui-widget-content control">
+                <td class="ui-widget-content" style="width:100%;"><?php echo $res['Ingredient']['ingredient']; ?></td>
+                <td class="ui-widget-content"  title="<?php echo $res['Ingredient']['_id']; ?>">
+                <?php
+                echo $this->Form->input('Ingredient.ingredient_type',
+                        array('options' => $ingredientTypes,
+                            'empty' => '(Choose One)',
+                            'selected' => $res['Ingredient']['type'],
+                            'div' => false,
+                            'label' => false,
+                            'class' => "ui-widget-content"));
+                ?>
+
+            </td>
+            <td class="ui-widget-content control">
                 <?php
                 echo $html->link('delete',
                         array('action' => 'delete/' . $res['Ingredient']['_id']),
@@ -30,6 +41,6 @@
             </td>
         </tr>
         <?php endforeach; ?>
-    </tbody>
+            </tbody>
     <?php echo $this->element('pagination_controls', array('colspan' => 4)); ?>
 </table>

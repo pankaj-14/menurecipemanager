@@ -39,6 +39,16 @@ class IngredientsController extends AppController
      */
     public function index()
     {
+        $ingredientTypesList = array();
+        $ingredientTypes = $this->Ingredient->IngredientType->find('list', array(
+                    'order' => array(
+                        'IngredientType.ingredient_type' => 'ASC'
+                        )));
+        foreach ($ingredientTypes as $type)
+        {
+            $ingredientTypesList[$type] = $type;
+        }
+        $this->set('ingredientTypes', $ingredientTypesList);
         $results = $this->paginate('Ingredient');
         $this->set(compact('results'));
     }
@@ -210,11 +220,27 @@ class IngredientsController extends AppController
         }
 
         ksort($temp);
-        foreach($temp as $v)
+        foreach ($temp as $v)
         {
             $response = array_merge($response, $v);
         }
 
+        $this->set('response', $response);
+        $this->render('/elements/ajax_response', 'ajax');
+    }
+
+    public function updateIngredientType()
+    {
+        $data['Ingredient']['type'] = $this->params['url']['ingredient_type'];
+        $data['Ingredient']['_id'] = new MongoId($this->params['url']['ingredient_id']);
+        if ($this->Ingredient->save($data))
+        {
+            $response = array('title' => 'Success', 'status' => 'success', 'msg' => 'ingredient type updated');
+        }
+        else
+        {
+            $response = array('title' => 'Error', 'status' => 'error', 'msg' => 'could not update ingredient');
+        }
         $this->set('response', $response);
         $this->render('/elements/ajax_response', 'ajax');
     }

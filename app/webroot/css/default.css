@@ -20,6 +20,7 @@ td.ui-widget-content { padding:2px; }
 .center { margin : auto; }
 /* FORMS */
 td.ui-widget-content input{ border:none; width:100%; }
+.ui-state-success{ border: 1px solid greenyellow; background: greenyellow; }
 /* NAVIGATION */
 #navigation ul { margin: auto 0 0 auto; }
 #navigation ul li { padding: 0 10px 0 10px; }

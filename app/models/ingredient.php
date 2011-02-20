@@ -4,7 +4,6 @@ class Ingredient extends AppModel
 {
 
     public $displayField = 'ingredient';
-
     public $hasOne = 'IngredientType';
 
     public $mongoSchema = array(
