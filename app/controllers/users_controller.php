@@ -35,17 +35,13 @@ class UsersController extends AppController
     {
         if (!empty($this->data))
         {
-
-            $this->User->create();
-var_dump($this->data);
-exit();
-            if ($this->User->save($this->data))
+            if ($this->data['User']['password'] == $this->Auth->password($this->data['User']['password_confirm']))
             {
-                $this->flash(__('User saved.', true), array('action' => 'index'));
-            }
-            else
-            {
-
+                $this->User->create();
+                if ($this->User->save($this->data))
+                {
+                    $this->flash(__('Account Created.', true), array('action' => 'login'));
+                }
             }
         }
     }

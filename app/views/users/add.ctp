@@ -4,6 +4,7 @@
     echo $this->Form->create('User');
     echo $this->Form->input('username', array('class' => 'ui-widget-content'));
     echo $this->Form->input('password', array('class' => 'ui-widget-content') );
+    echo $this->Form->input('password_confirm', array('class' => 'ui-widget-content', 'type' => 'password') );
     echo $this->Form->end('Create Account');
     echo $html->link('Login', array('controller' => 'users/login'));
     echo $html->link('Retrieve Password', array('controller' => 'users/retrievePassword'));
