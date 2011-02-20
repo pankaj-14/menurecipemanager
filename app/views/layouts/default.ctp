@@ -4,10 +4,10 @@
     <head>
         <title><?php echo $title_for_layout ?></title>
         <?php
-        echo $html->css('ui-lightness/jquery-ui-1.8.9.custom');
         echo $html->css('reset');
         echo $html->css('text');
         echo $html->css('960');
+        echo $html->css('ui-lightness/jquery-ui-1.8.9.custom');
         echo $html->css('default');
         echo $javascript->link('jquery-1.5.min');
         echo $javascript->link('jquery-ui-1.8.9.custom.min');
