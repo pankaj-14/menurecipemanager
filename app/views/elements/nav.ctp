@@ -25,17 +25,4 @@
         </li>
     </ul>
 </div>
-<div class="grid_4">
-    <?php
-            if (!empty($Auth['User']['username']))
-            {
-                echo 'Welcome ' . $Auth['User']['username'] . ' ';
-                echo $html->link('(logout)', array('controller' => 'users', 'action' => 'logout'));
-            }
-            else
-            {
-                echo $html->link('login', array('controller' => 'users', 'action' => 'login'));
-            }
-    ?>
-</div>
 <div class="clear"></div>

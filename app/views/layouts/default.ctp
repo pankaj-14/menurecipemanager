@@ -17,13 +17,29 @@
     </head>
     <body>
         <div id="header" class="container_12">
-            <h3>Recipe Manager</h3>
+            <div class="grid_8">
+                <h3>Recipe Manager</h3>
+            </div>
+            <div class="grid_4" style="text-align:right;">
+                <?php
+                if (!empty($Auth['User']['username']))
+                {
+                    echo 'Welcome ' . $Auth['User']['username'] . ' ';
+                    echo $html->link('(logout)', array('controller' => 'users', 'action' => 'logout'));
+                }
+                else
+                {
+                    echo $html->link('login', array('controller' => 'users', 'action' => 'login'));
+                }
+                ?>
+            </div>
         </div>
+
         <div id="navigation" class="container_12">
             <?php echo $this->element('nav'); ?>
-        </div>
-        <div id="body" class="container_12">
-                <?php echo $content_for_layout ?>
+            </div>
+            <div id="body" class="container_12">
+            <?php echo $content_for_layout ?>
         </div>
         <div id="footer" class="container_12"></div>
         <div id="dialog"></div>
