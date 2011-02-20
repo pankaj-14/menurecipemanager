@@ -24,6 +24,7 @@ class AppController extends Controller
     {
         parent::beforeFilter();
         Security::setHash('md5');
+        $this->Auth->loginRedirect = array('controller' => 'recipes', 'action' => 'index');
     }
 
     public function beforeRender()
