@@ -6,6 +6,12 @@
         'size' => 32,
         'maxlength' => 32)
     );
+    echo $this->Form->input('access', array(
+        'options' => array('public' => 'public', 'private' => 'private'),
+        'default' => 'private',
+        'class' => 'ui-widget-content'
+            )
+    );
     echo $this->Form->input('servings', array(
         'class' => 'ui-widget-content',
         'size' => 32,
@@ -59,13 +65,13 @@
     <label>Ingredients List</label>
     <table class="ui-widget grid">
         <?php echo $this->element('ingredient_row_header'); ?>
-        <tbody>
+                    <tbody>
             <?php echo $this->element('ingredient_row', array('rowNum' => '1')); ?>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="4"></td>
-                <td class="ui-widget-content" style="text-align:right;">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td class="ui-widget-content" style="text-align:right;">
                     <?php
                     echo $this->Form->button('Add Ingredient', array(
                         'id' => 'addIngredientRow',

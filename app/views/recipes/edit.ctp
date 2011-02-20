@@ -4,6 +4,12 @@ echo $this->Form->input('name', array(
     'class' => 'ui-widget-content',
     'size' => 32)
 );
+echo $this->Form->input('access', array(
+    'options' => array('public' => 'public', 'private' => 'private'),
+    'default' => 'private',
+    'class' => 'ui-widget-content'
+    )
+);
 echo $this->Form->input('servings', array(
     'class' => 'ui-widget-content',
     'size' => 32,
