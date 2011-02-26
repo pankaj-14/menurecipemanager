@@ -87,8 +87,8 @@ class DATABASE_CONFIG
         'database' => 'recipe_manager',
         'host' => 'flame.mongohq.com',
         'port' => 27058,
-        'login' => 'webuser',
-        'password' => 'webpassword'
+        'login' => 'w3bus3r',
+        'password' => 'w3bpassw0rd'
     );
     public $mysql = array(
         'driver' => 'mysql',
