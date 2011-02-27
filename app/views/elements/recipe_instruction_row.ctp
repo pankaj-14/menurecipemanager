@@ -4,10 +4,8 @@
     </td>
     <td class="ui-widget-content">
         <?php
-        echo $this->Form->input('Recipe.instructions.' . $rowNum,
+        echo $this->Form->textarea('Recipe.instructions.' . $rowNum,
                 array(
-                    'maxLength' => 128,
-                    'size' => 64,
                     'label' => false,
                     'div' => false,
                     'class' => 'ui-widget-content recipeInstructionInput'));
