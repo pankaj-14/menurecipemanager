@@ -43,8 +43,29 @@ class RecipesController extends AppController
      */
     public function index()
     {
+        if (!empty($this->data['Recipe']['searchParams']))
+        {
+            $searchParams = $this->getSearchParams();
+            $this->paginate['conditions'] = array(
+                'ingredients.ingredient' => array(
+                    '$in' => $searchParams
+                )
+            );
+        }
+
         $results = $this->paginate('Recipe');
         $this->set(compact('results'));
+    }
+
+    private function getSearchParams()
+    {
+        $searchParams = array();
+        $ar = explode(',', $this->data['Recipe']['searchParams']);
+        foreach ($ar as $a)
+        {
+            $searchParams[] = trim($a);
+        }
+        return $searchParams;
     }
 
     public function getRecipeList()
@@ -105,6 +126,7 @@ class RecipesController extends AppController
         }
         if (!empty($this->data))
         {
+
             $this->removeEmptyIngredient();
 
             if ($this->Recipe->save($this->data))

@@ -35,6 +35,8 @@
 class AppModel extends Model
 {
 
-    public $useDbConfig = 'mongo_hq';
+    public $useDbConfig = 'mongo';
+
+
 
 }

@@ -1,4 +1,7 @@
 <div class="grid_12">
+    <?php echo $this->element('search'); ?>
+</div>
+<div class="grid_12">
     <table class="ui-widget grid">
         <thead>
             <tr>
