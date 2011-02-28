@@ -14,7 +14,7 @@ class Recipe extends AppModel
         'servings' => array('type' => 'string'),
         'prep_time' => array('type' => 'string'),
         'cook_time' => array('type' => 'string'),
-        'tags' => array('type' => 'array'),
+        'tags' => array('type' => 'array'), // TODO change to a string
         'description' => array('type' => 'string'),
         'instructions' => array('type' => 'array'),
         'ingredients' => array('type' => 'array'),
@@ -22,6 +22,28 @@ class Recipe extends AppModel
         'created' => array('type' => 'datetime'),
         'modified' => array('type' => 'datetime')
     );
+
+    public function beforeSave()
+    {
+        //var_dump($this->data['Recipe']);
+        /*
+         * This hack is because any sub document that is a an array of objects
+         * seems to be associative array where the keys are string integers. Notice that
+         * the arrays start their numbering at '1' and not '0'. I'm not sure where
+         * this is coming from but I suspect its in cake somewhere. I tested the
+         * theory by manually inserting a recipe using PHP's Mongo driver. The result
+         * was correct in that the arrays were numeric and not associative.
+         *
+         * If you dont do the below conversions you end up with an object of objects
+         * where the property names are string integers. What you want is a numeric
+         * array of objects.
+         */
+        $this->data['Recipe']['ingredients'] = array_values($this->data['Recipe']['ingredients']);
+        $this->data['Recipe']['instructions'] = array_values($this->data['Recipe']['instructions']);
+
+        //var_dump($this->data['Recipe']);
+        return true;
+    }
 
     public function afterSave($created)
     {
