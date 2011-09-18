@@ -82,22 +82,6 @@ class DATABASE_CONFIG
         'host' => 'localhost',
         'port' => 27017,
     );
-    public $mongo_hq = array(
-        'driver' => 'mongodb.mongodbSource',
-        'database' => 'recipe_manager',
-        'host' => 'flame.mongohq.com',
-        'port' => 27058,
-        'login' => 'w3bus3r',
-        'password' => 'w3bpassw0rd'
-    );
-    public $mysql = array(
-        'driver' => 'mysql',
-        'persistent' => false,
-        'host' => 'localhost',
-        'login' => 'recipe_manager',
-        'password' => 'password',
-        'database' => 'recipe_manager',
-        'prefix' => '',
-    );
+
 
 }
