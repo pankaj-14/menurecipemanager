@@ -1,0 +1,34 @@
+/* MAIN BLOCKS */
+#header {}
+#navigation { padding-bottom:10px;}
+#body {}
+#footer{}
+
+/* GRID */
+table.grid { width:100%; }
+table.grid td { vertical-align: top; }
+table.grid .control{ text-align:center; width:50px; }
+table.grid .control *{ margin: auto; }
+table.grid tfoot tr td { text-align:center; }
+/* TEXT */
+label { display:block; font-weight:bold; }
+.capitalize { text-transform: capitalize; }
+/* LAYOUT */
+.inline { display:inline; }
+.inline-list li{ display:inline; }
+td.ui-widget-content { padding:2px; }
+.center { margin : auto; }
+.column{ margin: 0 5px 0 5px; }
+/* FORMS */
+td.ui-widget-content input{ border:none; width:100%; }
+.ui-state-success{ border: 1px solid greenyellow; background: greenyellow; }
+.recipeInstructionInput { width:100%; height: 60px;}
+/* NAVIGATION */
+#navigation ul { margin: auto 0 0 auto; }
+#navigation ul li { padding: 0 10px 0 10px; }
+/* VISUAL CUES */
+.ui-autocomplete-category { font-weight: bold; line-height: 1.5; margin: 0.8em 0 0.2em; padding: 0.2em 0.4em; text-transform: capitalize; }
+#addIngredientRow{ border:none; padding:5px; }
+/* PAGINATION */
+ul.paginate { margin: auto; }
+ul.paginate li { display: inline; margin: 0 40px 0 40px; list-style: none; }

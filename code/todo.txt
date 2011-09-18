@@ -1,0 +1,14 @@
+TODO
+
+1. Fix the shopping list layout to take up less space
+2. Force all input to lower case
+3. Show text with correct case from lower case
+4. Input auto suggests must only once per page
+6. Add nutritional information
+8. Create javascript input filter
+9. Identify which DB collections must be lost. IE fractions to amounts
+
+
+Input issues
+The typeaheads dont take the position of the element so they appear below the edge of the screen
+The typeahead for ingredients is not working properly
