@@ -12,7 +12,7 @@ class RecipesController extends AppController
 
     public $Recipe;
     public $paginate = array(
-        'limit' => 15,
+        'limit' => 12,
         'order' => array(
             'Recipe.name' => 'asc'
         )
