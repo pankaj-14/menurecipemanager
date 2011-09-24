@@ -39,27 +39,14 @@
         'class' => 'ui-widget-content',
         'rows' => 2)
     );
+    echo $this->Form->input('instructions', array(
+    'type' => 'textarea',
+    'class' => 'ui-widget-content',
+    'rows' => 10,
+    'cols' => 100)
+    );
     ?>
-    <label>Recipe Instructions</label>
-    <table class="ui-widget grid">
-        <?php echo $this->element('recipe_instruction_row_header'); ?>
-        <tbody>
-            <?php echo $this->element('recipe_instruction_row', array('rowNum' => '1')); ?>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td></td>
-                <td class="ui-widget-content" style="text-align:right;">
-                    <?php
-                    echo $this->Form->button('Add Instruction', array(
-                        'id' => 'addRecipeInstructionRow',
-                        'class' => 'ui-button ui-widget ui-state-default')
-                    );
-                    ?>
-                </td>
-            </tr>
-        </tfoot>
-    </table>
+
 
 
     <label>Ingredients List</label>

@@ -79,7 +79,7 @@ class DATABASE_CONFIG
     public $mongo = array(
         'driver' => 'mongodb.mongodbSource',
         'database' => 'recipe_manager',
-        'host' => 'localhost',
+        'host' => '192.168.1.77',
         'port' => 27017,
     );
 

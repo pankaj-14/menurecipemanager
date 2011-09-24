@@ -16,7 +16,7 @@ class Recipe extends AppModel
         'cook_time' => array('type' => 'string'),
         'tags' => array('type' => 'array'), // TODO change to a string
         'description' => array('type' => 'string'),
-        'instructions' => array('type' => 'array'),
+        'instructions' => array('type' => 'string'),
         'ingredients' => array('type' => 'array'),
         'access' => array('type' => 'string'),
         'created' => array('type' => 'datetime'),
@@ -39,7 +39,6 @@ class Recipe extends AppModel
          * array of objects.
          */
         $this->data['Recipe']['ingredients'] = array_values($this->data['Recipe']['ingredients']);
-        $this->data['Recipe']['instructions'] = array_values($this->data['Recipe']['instructions']);
 
         //var_dump($this->data['Recipe']);
         return true;

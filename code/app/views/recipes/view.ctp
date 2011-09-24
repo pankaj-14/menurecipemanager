@@ -14,11 +14,7 @@
     <label>Tags</label>
     <div><?php echo $Recipe['tags']; ?></div>
     <label>Instructions</label>
-    <ol>
-        <?php foreach ($Recipe['instructions'] as $instruction): ?>
-            <li><?php echo $instruction; ?></li>
-        <?php endforeach; ?>
-        </ol>
+    <div><?php echo nl2br($Recipe['instructions']); ?></div>
         <label>Ingredient List</label>
         <table class="ui-widget grid">
             <thead>
