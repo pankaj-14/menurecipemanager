@@ -29,7 +29,7 @@ class AppController extends Controller
 
     public function beforeRender()
     {
-        //$this->set('Auth', $this->Session->read('Auth'));
+        $this->set('Auth', $this->Session->read('Auth'));
     }
 
     public function ajaxMessage($args)
