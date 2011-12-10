@@ -25,6 +25,11 @@ class AppController extends Controller
         parent::beforeFilter();
         Security::setHash('md5');
         $this->Auth->loginRedirect = array('controller' => 'recipes', 'action' => 'index');
+        /*
+         * Convenience var so that I can dynamically set the model for the search
+         * form
+         */
+        $this->set('modelName', $this->modelClass);
     }
 
     public function beforeRender()
