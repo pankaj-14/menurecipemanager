@@ -18,6 +18,7 @@ class IngredientsController extends AppController
             'Ingredient.type' => 'asc'
         )
     );
+
     /**
      * name property
      *
@@ -31,6 +32,33 @@ class IngredientsController extends AppController
         parent::__construct();
     }
 
+    public function test()
+    {
+
+         //'Ingredient.ingredient'
+        $conditions = array();
+        //$conditions[] = array('Ingredient.ingredient' => array('$regex' => new MongoRegex('/^arug/i')));
+        //$conditions[] = array('Ingredient.ingredient' => array('$regex' => new MongoRegex('/^bro/i')));
+        
+        $conditions[] = array('Ingredient.ingredient' => 'asparagus');
+        $conditions[] = array('Ingredient.ingredient' => 'broccoli');
+        
+        
+        $query = array(
+            'limit' => 15,
+            'order' => array(
+                'Ingredient.ingredient' => 'asc',
+                'Ingredient.type' => 'asc'),
+            'conditions' => array('$or' => $conditions)
+        );
+
+        var_dump($query);
+
+        $ingredients = $this->Ingredient->find('all', $query);
+        var_dump($ingredients);
+        exit();
+    }
+
     /**
      * index method
      *
@@ -39,16 +67,36 @@ class IngredientsController extends AppController
      */
     public function index()
     {
+
+        $conditions = array();
+        /*
+        if (!empty($this->data['Ingredient']['searchParams']))
+        {
+            foreach (explode(',', $this->data['Ingredient']['searchParams']) as $item)
+            {
+                $conditions['$in'][] = '/^' . trim($item) . '/';
+            }
+        }
+    */
+        /**
+         * Get the ingredient types for the inplace editor.
+         */
         $ingredientTypesList = array();
-        $ingredientTypes = $this->Ingredient->IngredientType->find('list', array(
-                    'order' => array(
-                        'IngredientType.ingredient_type' => 'ASC'
-                        )));
+        $ingredientTypes = $this->Ingredient->IngredientType->find(
+                'list', array(
+            'order' => array(
+                'IngredientType.ingredient_type' => 'ASC'
+            )
+                )
+        );
         foreach ($ingredientTypes as $type)
         {
             $ingredientTypesList[$type] = $type;
         }
         $this->set('ingredientTypes', $ingredientTypesList);
+
+        //$this->paginate['conditions']['Ingredient.ingredient'] = $conditions;
+  
         $results = $this->paginate('Ingredient');
         $this->set(compact('results'));
     }
@@ -71,7 +119,7 @@ class IngredientsController extends AppController
             }
             else
             {
-
+                
             }
         }
 
@@ -107,7 +155,7 @@ class IngredientsController extends AppController
             }
             else
             {
-
+                
             }
         }
         if (empty($this->data))
