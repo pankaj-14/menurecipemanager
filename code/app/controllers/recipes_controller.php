@@ -17,6 +17,7 @@ class RecipesController extends AppController
             'Recipe.name' => 'asc'
         )
     );
+
     /**
      * name property
      *
@@ -34,7 +35,6 @@ class RecipesController extends AppController
     {
         parent::beforeFilter();
         $this->Auth->allow('index', 'view');
-        
     }
 
     /**
@@ -47,12 +47,22 @@ class RecipesController extends AppController
     {
         if (!empty($this->data['Recipe']['searchParams']))
         {
+            
             $searchParams = $this->getSearchParams();
-            $this->paginate['conditions'] = array(
+
+            $conditions[] = array(
                 'ingredients.ingredient' => array(
                     '$in' => $searchParams
                 )
             );
+
+            $conditions[] = array(
+                'Recipe.name' => array(
+                    '$in' => $searchParams
+                )
+            );
+            
+            $this->paginate['conditions'] = array('$or' => $conditions);
         }
 
         $results = $this->paginate('Recipe');
@@ -108,7 +118,7 @@ class RecipesController extends AppController
             }
             else
             {
-
+                
             }
         }
     }
@@ -137,7 +147,7 @@ class RecipesController extends AppController
             }
             else
             {
-
+                
             }
         }
         if (empty($this->data))
