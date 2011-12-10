@@ -14,8 +14,8 @@ class IngredientsController extends AppController
     public $paginate = array(
         'limit' => 15,
         'order' => array(
-            'Ingredient.type' => 'asc',
-            'Ingredient.ingredient' => 'asc'
+            'Ingredient.ingredient' => 'asc',
+            'Ingredient.type' => 'asc'
         )
     );
     /**
