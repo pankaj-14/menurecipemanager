@@ -17,13 +17,13 @@
             <?php foreach ($results as $res): ?>
                 <tr>
                     <td class="ui-widget-content"><?php
-                echo $html->link($res['Recipe']['name'],
+                echo $html->link(ucwords ($res['Recipe']['name']),
                         array('action' => 'view/' . $res['Recipe']['_id'])
                 );
             ?></td>
                 <td class="ui-widget-content"><?php echo $res['Recipe']['servings']; ?></td>
                 <td class="ui-widget-content"><?php echo $res['Recipe']['prep_time']; ?></td>
-                <td class="ui-widget-content"><?php echo $res['Recipe']['tags']; ?></td>
+                <td class="ui-widget-content"><?php echo ucfirst($res['Recipe']['tags']); ?></td>
                 <td class="ui-widget-content control">
                     <?php
                     echo $html->link('delete',

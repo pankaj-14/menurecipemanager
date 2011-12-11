@@ -2,7 +2,7 @@
     <?php $Recipe = $this->data['Recipe']; ?>
 
     <label>Name</label>
-    <div><?php echo $Recipe['name']; ?></div>
+    <div><?php echo ucwords($Recipe['name']); ?></div>
     <label>Servings</label>
     <div><?php echo $Recipe['servings']; ?></div>
     <label>Prep Time (minutes)</label>
@@ -10,9 +10,9 @@
     <label>Cook Time (minutes)</label>
     <div><?php echo $Recipe['cook_time']; ?></div>
     <label>Description</label>
-    <div><?php echo $Recipe['description']; ?></div>
+    <div><?php echo ucfirst($Recipe['description']); ?></div>
     <label>Tags</label>
-    <div><?php echo $Recipe['tags']; ?></div>
+    <div><?php echo ucwords($Recipe['tags']); ?></div>
     <label>Instructions</label>
     <div><?php echo nl2br($Recipe['instructions']); ?></div>
         <label>Ingredient List</label>
