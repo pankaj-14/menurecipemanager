@@ -55,13 +55,16 @@ class UnitsController extends AppController
         {
 
             $this->Unit->create();
-            if ($this->Unit->save($this->data))
+            if ($this->Unit->validates())
             {
-                $this->flash(__('Unit saved.', true), array('action' => 'index'));
-            }
-            else
-            {
-                
+                if ($this->Unit->save($this->data))
+                {
+                    $this->flash(__('Unit saved.', true), array('action' => 'index'));
+                }
+                else
+                {
+                    
+                }
             }
         }
     }

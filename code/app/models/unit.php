@@ -15,5 +15,11 @@ class Unit extends AppModel
             )
         )
     );
+    public $validate = array(
+        'l_name' => array(
+            'rule' => 'multiFieldUnique', 'fields' => array('l_name', 's_name'),
+            'message' => 'Unit can only be used once'
+        )
+    );
 
 }
