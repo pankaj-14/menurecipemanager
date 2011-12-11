@@ -301,8 +301,8 @@ db.getCollection("ingredient_instructions").insert({
 db.getCollection("ingredient_instructions").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000006"),
   "instruction": "peeled",
-  "modified": ISODate("2011-10-07T19:25:54.90Z"),
-  "created": ISODate("2011-10-07T19:25:54.90Z")
+  "modified": ISODate("2011-10-07T19:25:54.900Z"),
+  "created": ISODate("2011-10-07T19:25:54.900Z")
 });
 db.getCollection("ingredient_instructions").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000007"),
@@ -1125,7 +1125,7 @@ db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f53eb7f8b9a410b00000d"),
   "created": ISODate("2011-10-07T19:32:59.124Z"),
   "ingredient": "swiss chard",
-  "modified": ISODate("2011-12-10T16:08:54.84Z"),
+  "modified": ISODate("2011-12-10T16:08:54.840Z"),
   "type": "produce"
 });
 db.getCollection("ingredients").insert({
@@ -1144,7 +1144,7 @@ db.getCollection("ingredients").insert({
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000002"),
-  "created": ISODate("2011-10-07T19:25:54.59Z"),
+  "created": ISODate("2011-10-07T19:25:54.590Z"),
   "ingredient": "buffalo mozzarella",
   "modified": ISODate("2011-12-10T16:05:42.457Z"),
   "type": "dairy"
@@ -1153,12 +1153,12 @@ db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f41ea7f8b9a410b000007"),
   "created": ISODate("2011-10-07T18:16:10.598Z"),
   "ingredient": "crushed tomatoes",
-  "modified": ISODate("2011-12-10T16:05:48.95Z"),
+  "modified": ISODate("2011-12-10T16:05:48.950Z"),
   "type": "canned vegetables"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000001"),
-  "created": ISODate("2011-10-07T19:25:54.49Z"),
+  "created": ISODate("2011-10-07T19:25:54.490Z"),
   "ingredient": "ciabatta bread",
   "modified": ISODate("2011-12-10T16:05:58.138Z"),
   "type": "bakery"
@@ -1172,7 +1172,7 @@ db.getCollection("ingredients").insert({
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000003"),
-  "created": ISODate("2011-10-07T19:25:54.66Z"),
+  "created": ISODate("2011-10-07T19:25:54.660Z"),
   "ingredient": "fresh ground black pepper",
   "modified": ISODate("2011-12-10T16:06:13.683Z"),
   "type": "dried herbs and spices"
@@ -1228,7 +1228,7 @@ db.getCollection("ingredients").insert({
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000004"),
-  "created": ISODate("2011-10-07T19:25:54.71Z"),
+  "created": ISODate("2011-10-07T19:25:54.710Z"),
   "ingredient": "red chili",
   "modified": ISODate("2011-12-10T16:07:14.449Z"),
   "type": "produce"
@@ -1240,57 +1240,64 @@ db.getCollection("ingredients").insert({
   "modified": ISODate("2011-12-10T16:07:20.408Z"),
   "type": "bakery"
 });
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee49e14527cb1943c000008"),
+  "ingredient": "black pepper",
+  "type": "",
+  "modified": ISODate("2011-12-11T12:12:04.290Z"),
+  "created": ISODate("2011-12-11T12:12:04.293Z")
+});
 
 /** menus records **/
 
 /** recipes records **/
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e69678abad4a2bc2100000a"),
-  "name": "Baked New Potatoes with Sea Salt and Rosemary",
-  "servings": "4",
-  "prep_time": "45",
-  "tags": "Starch",
+  "created": "Thu, 08 Sep 2011 21:10:34 -0400",
   "description": "",
-  "instructions": "1. Pre heat the oven to 425F\r\n2. Wash the potatoes and parboil\r\n3. When done drain them\r\n4. Give the potatoes an even amount of olive oil\r\n5. Roll the potatoes in sea salt, black pepper, and rosemary\r\n6. Bake for 20 minutes or until golden ",
-  "ingredients": {
-    "1": {
+  "ingredients": [
+    {
       "whole": "2",
       "fraction": "",
       "unit": "lbs.",
       "ingredient": "yukon gold potatoes",
       "instruction": ""
     },
-    "2": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "olive oil",
       "instruction": ""
     },
-    "3": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "sea salt",
       "instruction": ""
     },
-    "4": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "ground black pepper",
       "instruction": ""
     },
-    "5": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "fresh rosemary",
       "instruction": "bashed in a mortar and pestle"
     }
-  },
+  ],
+  "instructions": "1. Pre heat the oven to 425F\r\n2. Wash the potatoes and parboil\r\n3. When done drain them\r\n4. Give the potatoes an even amount of olive oil\r\n5. Roll the potatoes in sea salt, black pepper, and rosemary\r\n6. Bake for 20 minutes or until golden ",
   "modified": "Thu, 08 Sep 2011 21:10:34 -0400",
-  "created": "Thu, 08 Sep 2011 21:10:34 -0400"
+  "name": "baked new potatoes with sea salt and rosemary",
+  "prep_time": "45",
+  "servings": "4",
+  "tags": "Starch"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d56b81f3d3f951c0a000000"),
@@ -1316,14 +1323,14 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "take bread toast with cheese",
   "modified": ISODate("2011-09-24T16:52:22.439Z"),
-  "name": "Grilled Cheese",
+  "name": "grilled cheese",
   "prep_time": "5",
   "servings": "2",
   "tags": "Basic"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f43167f8b9a410b00000a"),
-  "name": "Basic Pasta",
+  "name": "basic pasta",
   "access": "public",
   "servings": "2",
   "prep_time": "5",
@@ -1354,123 +1361,123 @@ db.getCollection("recipes").insert({
   "_id": ObjectId("4e67cb60bad4a2bc1b000000"),
   "created": "Wed, 07 Sep 2011 15:52:00 -0400",
   "description": "Simple pasta dinner with olive oil and fresh veggies",
-  "ingredients": {
-    "1": {
+  "ingredients": [
+    {
       "whole": "2",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "olive oil",
       "instruction": ""
     },
-    "2": {
+    {
       "whole": "2",
       "fraction": "",
       "unit": "cloves",
       "ingredient": "garlic",
       "instruction": "chopped"
     },
-    "3": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "small",
       "ingredient": "onion",
       "instruction": "sliced"
     },
-    "4": {
+    {
       "whole": "",
       "fraction": "1\/2",
       "unit": "cup ",
       "ingredient": "carrots",
       "instruction": "sliced"
     },
-    "5": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "small",
       "ingredient": "red bell pepper",
       "instruction": "chopped"
     },
-    "6": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "medium",
       "ingredient": "zucchini",
       "instruction": "sliced"
     },
-    "7": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "medium",
       "ingredient": "squash",
       "instruction": "sliced"
     },
-    "8": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "small",
       "ingredient": "tomato",
       "instruction": "chopped"
     },
-    "9": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "basil",
       "instruction": "chopped"
     },
-    "10": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "oregano",
       "instruction": "chopped"
     },
-    "11": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "rosemary",
       "instruction": "smashed"
     },
-    "12": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "tsp.",
       "ingredient": "parsley",
       "instruction": "smashed"
     },
-    "13": {
+    {
       "whole": "16",
       "fraction": "",
       "unit": "ounces",
       "ingredient": "pasta",
       "instruction": "cooked according to directions"
     },
-    "14": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "sea salt",
       "instruction": "to taste"
     },
-    "15": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "ground black pepper",
       "instruction": "to taste"
     },
-    "16": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "parmesan cheese",
       "instruction": "grated"
     }
-  },
+  ],
   "instructions": "1. Cook pasta according to directions.\r\n2. Heat olive oil in a non-stick skillet over medium heat.\r\n3. Add garlic\r\n4. Add onions cook until clear\r\n5. Add remaining vegetables  and saute until tender\r\n6. Add herbs and cook a little more\r\n7. Toss with cooked pasta\r\n8. Sprinkle with cheese and pepper ",
   "modified": "Wed, 07 Sep 2011 16:01:16 -0400",
-  "name": "Fresh Vegetable Pasta",
+  "name": "fresh vegetable pasta",
   "prep_time": "30",
   "servings": "4",
   "tags": "Veggie, Pasta"
@@ -1479,340 +1486,340 @@ db.getCollection("recipes").insert({
   "_id": ObjectId("4e67d0a9bad4a2bc1b00000d"),
   "created": "Wed, 07 Sep 2011 16:14:33 -0400",
   "description": "",
-  "ingredients": {
-    "1": {
+  "ingredients": [
+    {
       "whole": "11",
       "fraction": "",
       "unit": "ounces",
       "ingredient": "wild mushrooms",
       "instruction": "torn apart"
     },
-    "2": {
+    {
       "whole": "4",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "olive oil",
       "instruction": ""
     },
-    "3": {
+    {
       "whole": "2",
       "fraction": "",
       "unit": "cloves",
       "ingredient": "garlic",
       "instruction": "chopped finely"
     },
-    "4": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "small",
       "ingredient": "chili",
       "instruction": "seeded and finely chopped"
     },
-    "5": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "salt",
       "instruction": "to taste"
     },
-    "6": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "pepper",
       "instruction": "to taste"
     },
-    "7": {
+    {
       "whole": "",
       "fraction": "1\/2",
       "unit": "",
       "ingredient": "lemon",
       "instruction": ""
     },
-    "8": {
+    {
       "whole": "16",
       "fraction": "",
       "unit": "ounces",
       "ingredient": "pasta",
       "instruction": "cooked according to directions"
     },
-    "9": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "parmesan cheese",
       "instruction": "grated"
     },
-    "10": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "handful",
       "ingredient": "fresh parsley",
       "instruction": "roughly chopped"
     },
-    "11": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "ounces",
       "ingredient": "butter",
       "instruction": ""
     }
-  },
+  ],
   "instructions": "1. Cook pasta\r\n2. Heat olive oil very hot but not smoking\r\n3. Add mushrooms, salt and pepper. Fry quickly.\r\n4. Add garlic and chili and cook for a couple of minutes\r\n5. Turn off the heat\r\n6. Add butter, parsley, and some lemon juice\r\n7. Toss and add parmesan\r\n8. Add in the pasta and a little bit of pasta water to keep the sauce moist.\r\n9. Plate and sprinkle with parsley and cheese.\r\n10. Garnish with lemon.",
   "modified": "Wed, 07 Sep 2011 16:29:26 -0400",
-  "name": "Spaghetti with Wild Mushrooms",
+  "name": "spaghetti with wild mushrooms",
   "prep_time": "25",
   "servings": "4",
   "tags": "Italian, Dinner\r\n"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e67df25bad4a2c415000001"),
-  "name": "Squashed Cherry Tomato and Smashed Olive Pasta",
-  "servings": "6",
-  "prep_time": "10",
-  "tags": "Fresh, Italian",
+  "created": "Wed, 07 Sep 2011 17:16:21 -0400",
   "description": "",
-  "instructions": "1. Cook the pasta\r\n2. Squash the tomatoes into a bowl, tear them into pieces\r\n3. Pit the olives and tear them up into the bowl\r\n4. Add some oil, oregano, vinegar, crumbled chili, and basil\r\n5. Season with salt and pepper\r\n6. Toss with the pasta",
-  "ingredients": {
-    "1": {
+  "ingredients": [
+    {
       "whole": "2",
       "fraction": "",
       "unit": "handfuls",
       "ingredient": "cherry tomatoes",
       "instruction": ""
     },
-    "2": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "handful",
       "ingredient": "black olives",
       "instruction": ""
     },
-    "3": {
+    {
       "whole": "5",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "olive oil",
       "instruction": ""
     },
-    "4": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "dried oregano",
       "instruction": ""
     },
-    "5": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "",
       "ingredient": "dried chili",
       "instruction": ""
     },
-    "6": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "handful",
       "ingredient": "fresh basil",
       "instruction": ""
     },
-    "7": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "sea salt",
       "instruction": ""
     },
-    "8": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "ground black pepper",
       "instruction": ""
     },
-    "9": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "parmesan cheese",
       "instruction": ""
     }
-  },
+  ],
+  "instructions": "1. Cook the pasta\r\n2. Squash the tomatoes into a bowl, tear them into pieces\r\n3. Pit the olives and tear them up into the bowl\r\n4. Add some oil, oregano, vinegar, crumbled chili, and basil\r\n5. Season with salt and pepper\r\n6. Toss with the pasta",
   "modified": "Wed, 07 Sep 2011 17:16:21 -0400",
-  "created": "Wed, 07 Sep 2011 17:16:21 -0400"
+  "name": "squashed cherry tomato and smashed olive pasta",
+  "prep_time": "10",
+  "servings": "6",
+  "tags": "Fresh, Italian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e6961a3bad4a2841a000000"),
-  "name": "Lemon Rice",
-  "servings": "4",
-  "prep_time": "15",
-  "tags": "Indian",
+  "created": "Thu, 08 Sep 2011 20:45:23 -0400",
   "description": "Lemony rice for a side dish",
-  "instructions": "1. Cook the rice according to directions\r\n2. Heat the oil in a pan\r\n3. Add the mustard seeds and heat until the pop\r\n4. Add the split peas (urad dhal) and strips of lemon peel\r\n5. Cook until you see a little color\r\n6. Put the cooked rice and the spices together in a bowl\r\n7. Add lemon juice and cilantro\r\n8. Season to taste",
-  "ingredients": {
-    "1": {
+  "ingredients": [
+    {
       "whole": "1",
       "fraction": "",
       "unit": "lbs.",
       "ingredient": "basmati rice",
       "instruction": "cooked according to directions"
     },
-    "2": {
+    {
       "whole": "5",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "cooking oil",
       "instruction": ""
     },
-    "3": {
+    {
       "whole": "2",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "mustard seeds",
       "instruction": ""
     },
-    "4": {
+    {
       "whole": "2",
       "fraction": "",
       "unit": "tsp.",
       "ingredient": "urad dhal",
       "instruction": ""
     },
-    "5": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "handful",
       "ingredient": "curry leaves",
       "instruction": ""
     },
-    "6": {
+    {
       "whole": "2",
       "fraction": "",
       "unit": "",
       "ingredient": "lemon",
       "instruction": "juiced and rind saved"
     },
-    "7": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "bunch",
       "ingredient": "cilantro",
       "instruction": "chopped"
     },
-    "8": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "sea salt",
       "instruction": ""
     },
-    "9": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "ground black pepper",
       "instruction": ""
     }
-  },
+  ],
+  "instructions": "1. Cook the rice according to directions\r\n2. Heat the oil in a pan\r\n3. Add the mustard seeds and heat until the pop\r\n4. Add the split peas (urad dhal) and strips of lemon peel\r\n5. Cook until you see a little color\r\n6. Put the cooked rice and the spices together in a bowl\r\n7. Add lemon juice and cilantro\r\n8. Season to taste",
   "modified": "Thu, 08 Sep 2011 20:45:23 -0400",
-  "created": "Thu, 08 Sep 2011 20:45:23 -0400"
+  "name": "lemon rice",
+  "prep_time": "15",
+  "servings": "4",
+  "tags": "Indian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e69654bbad4a2bc21000001"),
-  "name": "Pasta Salad",
-  "servings": "4",
-  "prep_time": "30",
-  "tags": "Italian",
+  "created": "Thu, 08 Sep 2011 21:00:59 -0400",
   "description": "",
-  "instructions": "1. Cook the pasta and garlic cloves together until the pasta is al dente\r\n2. Drain under cold water to cool\r\n3. Remove the garlic and save\r\n4. Add the pasta, tomatoes, olives, chives, basil, and cucumber to a bowl.\r\n5. Squeeze garlic from it's skin in a mortor\r\n6. Add olive oil, vinegar and seasoning and bash\r\n7. Mix with the salad",
-  "ingredients": {
-    "1": {
+  "ingredients": [
+    {
       "whole": "11",
       "fraction": "",
       "unit": "ounces",
       "ingredient": "pasta shells",
       "instruction": ""
     },
-    "2": {
+    {
       "whole": "3",
       "fraction": "",
       "unit": "cloves",
       "ingredient": "garlic",
       "instruction": ""
     },
-    "3": {
+    {
       "whole": "",
       "fraction": "1\/2",
       "unit": "pint",
       "ingredient": "yellow cherry tomatoes",
       "instruction": "chopped"
     },
-    "4": {
+    {
       "whole": "",
       "fraction": "1\/2",
       "unit": "pint",
       "ingredient": "red cherry tomatoes",
       "instruction": "chopped"
     },
-    "5": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "handful",
       "ingredient": "black olives",
       "instruction": "pitted and chopped"
     },
-    "6": {
+    {
       "whole": "2",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "fresh chives",
       "instruction": "roughly chopped"
     },
-    "7": {
+    {
       "whole": "1",
       "fraction": "",
       "unit": "handful",
       "ingredient": "fresh basil",
       "instruction": "roughly chopped"
     },
-    "8": {
+    {
       "whole": "",
       "fraction": "1\/2",
       "unit": "",
       "ingredient": "cucumber",
       "instruction": "chopped"
     },
-    "9": {
+    {
       "whole": "4",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "white wine vinegar",
       "instruction": ""
     },
-    "10": {
+    {
       "whole": "7",
       "fraction": "",
       "unit": "tbsp.",
       "ingredient": "extra virgin olive oil",
       "instruction": ""
     },
-    "11": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "sea salt",
       "instruction": ""
     },
-    "12": {
+    {
       "whole": "",
       "fraction": "",
       "unit": "",
       "ingredient": "ground black pepper",
       "instruction": ""
     }
-  },
+  ],
+  "instructions": "1. Cook the pasta and garlic cloves together until the pasta is al dente\r\n2. Drain under cold water to cool\r\n3. Remove the garlic and save\r\n4. Add the pasta, tomatoes, olives, chives, basil, and cucumber to a bowl.\r\n5. Squeeze garlic from it's skin in a mortor\r\n6. Add olive oil, vinegar and seasoning and bash\r\n7. Mix with the salad",
   "modified": "Thu, 08 Sep 2011 21:00:59 -0400",
-  "created": "Thu, 08 Sep 2011 21:00:59 -0400"
+  "name": "pasta salad",
+  "prep_time": "30",
+  "servings": "4",
+  "tags": "Italian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e6fd227bad4a2e81a000000"),
@@ -1915,7 +1922,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. Blanche asparagus\r\n2. Blanche snap peas\r\n3. Cook the pasta in the blanching water.\r\n4. While the pasta is cooking melt the butter in a large pot.\r\n5. Add the asparagus, snap peas, garlic, and season with salt and pepper.\r\n6. Cook until the veggies are a nice shiny green. about 2 minutes\r\n7. Add the last of the butter, cooked pasta, avocado, herbs, cheese, and reserved pasta water. Toss to combine. Season.\r\n8. Toast pine nuts if you have them\r\nReserve a cup of the pasta water\r\n",
   "modified": ISODate("2011-09-24T16:45:42.361Z"),
-  "name": "Avocado Pasta",
+  "name": "avocado pasta",
   "prep_time": "15",
   "servings": "4",
   "tags": "Avocado, Pasta"
@@ -2000,7 +2007,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. Pre-heat oven to 325\r\n2. Thaw out the Quorn grounds\r\n3. Toast the bread twice\r\n4. Mix the spices together in a large bowl\r\n5. Break up the bread into crumbs and mix in the bowl\r\n6. Mix in the Quorn grounds\r\n7. Mix in everything else and make sure its mixed well\r\n8. Spoon it into a loaf pan and pack it in tightly. The more densely you pack it the better your meatloaf will hold together.\r\n9. Coat the top liberally with ketchup\r\n10. Bake for 2 hours or until internal temp is 155",
   "modified": ISODate("2011-09-24T16:46:40.361Z"),
-  "name": "Bombdiggity Meatloaf",
+  "name": "bombdiggity meatloaf",
   "prep_time": "30",
   "servings": "4",
   "tags": "Hearty, Protein"
@@ -2106,7 +2113,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. To prepare sauce: Whisk water, peanut butter, rice vinegar, soy sauce, honey, ginger and garlic in a small bowl.\r\n2. Fry the mushrooms until tender and put aside\r\n3. To prepare Chik'n: fry in oil until browned\r\n4. Add the spinach in small bunches and cook until wilted\r\n5. Add the peanut sauce, scallions and mushrooms. Heat through and mix well. ",
   "modified": ISODate("2011-09-24T16:47:28.163Z"),
-  "name": "Chik'n with Peanut-Ginger Sauce",
+  "name": "chik'n with peanut-ginger sauce",
   "prep_time": "15",
   "servings": "4",
   "tags": "Asian, Protein, Quorn, Chik'n"
@@ -2212,7 +2219,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. Preheat the oven to 350\r\n2. Coat the thawed Quorn chunks in olive oil, salt, and pepper.\r\n3. Combine the mayonnaise, wine, chutney, curry powder, and 1 1\/2 teaspoons of salt in a food processor \r\n4. Combine the chicken with enough dressing to make it moist. Add the celery, scallions, and raisins. Refrigerate for a few hours.\r\n5. Mix in the cashews.\r\n6. Cook the tortillas\r\n7. Make the wraps",
   "modified": ISODate("2011-09-24T16:49:12.698Z"),
-  "name": "Curried Chicken Wraps",
+  "name": "curried chicken wraps",
   "prep_time": "15",
   "servings": "4",
   "tags": "Protein"
@@ -2311,7 +2318,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. Cook the rice according to instructions\r\n2. Heat oil in a large skillet on medium high.\r\n3. Saute onions and bell peppers for 3-4 minutes\r\n4. Add garlic and cook for another minute\r\n5. Add the black beans, vinegar, and Tabasco or cayenne.\r\n6. Bring to a boil, reduce heat, cover and simmer for 5 minutes.\r\n7. Stir in rice and oregano. Add salt and pepper to taste",
   "modified": ISODate("2011-09-24T16:50:30.654Z"),
-  "name": "Easy Black Beans and Rice",
+  "name": "easy black beans and rice",
   "prep_time": "15",
   "servings": "4",
   "tags": "Protein"
@@ -2459,7 +2466,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. In a small bowl combine yogurt, cucumber, dill, salt, pepper and mayonnaise. Chill for at least 30 minutes.\r\n2. In a large bowl mash chickpeas until thin and pasty; dont use a blender.\r\n3. In a blender process onion, parsley, and garlic until smooth. Stir into mashed chickpeas.\r\n4. In a small bowl combine egg, cumin, coriander, salt, pepper, cayenne, lemon juice and baking powder. \r\n5. Stir into chickpeas along with olive oil.\r\n6. Slowly stir in breadcrumbs until mixture will hold together but is not sticky.\r\n7. Form 8 balls and flatten into patties.\r\n8. Heat an inch of oil in a pan and fry patties until golden brown on both sides.\r\n\r\n",
   "modified": ISODate("2011-09-24T16:51:14.467Z"),
-  "name": "Falafel and Cucumber Sauce",
+  "name": "falafel and cucumber sauce",
   "prep_time": "15",
   "servings": "4",
   "tags": ""
@@ -2516,7 +2523,7 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. Place the oil, crushed red pepper, and garlic into a cold pan and turn the burner on low\r\n2. Cook the pasta\r\n3. About a minute before the pasta is done drop the broccoli into the water\r\n4. Drain both and put into a bowl\r\n5. Pour the oil mixture over the pasta and broccoli and mix well\r\n6. Plate, garnish with green olives, black pepper, and parmesan cheese",
   "modified": ISODate("2011-09-24T17:00:56.573Z"),
-  "name": "Pasta Olio",
+  "name": "pasta olio",
   "prep_time": "15",
   "servings": "4",
   "tags": "Italian"
@@ -2587,14 +2594,14 @@ db.getCollection("recipes").insert({
   ],
   "instructions": "1. Put the chopped ingredients in a large bowl and toss them together.\r\n2. In a small bowl (or use the large bowl before putting the veggies in it), whisk together the oil, vinegar or lime juice and salt until it thickens.\r\n3. Toss the salad with the dressing to coat.\r\nServe on a bed of lettuce, wrapped in a piece of lettuce or a whole grain wrap or pita, on a veggie burger or just on its own.",
   "modified": ISODate("2011-09-24T17:02:45.146Z"),
-  "name": "Tomato Cucumber Avocado Salad",
+  "name": "tomato cucumber avocado salad",
   "prep_time": "15",
   "servings": "2",
   "tags": "Fresh"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f39e27f8b9a410b000000"),
-  "name": "Basic Scrambled Eggs",
+  "name": "basic scrambled eggs",
   "access": "public",
   "servings": "2",
   "prep_time": "5",
@@ -2644,7 +2651,7 @@ db.getCollection("recipes").insert({
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f41ea7f8b9a410b000005"),
-  "name": "Basic Red Sauce",
+  "name": "basic red sauce",
   "access": "public",
   "servings": "4",
   "prep_time": "15",
@@ -2701,7 +2708,7 @@ db.getCollection("recipes").insert({
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f460a7f8b9a470b000000"),
-  "name": "Veggie Sausage Sandwiches",
+  "name": "veggie sausage sandwiches",
   "access": "public",
   "servings": "2",
   "prep_time": "5",
@@ -2714,7 +2721,7 @@ db.getCollection("recipes").insert({
       "whole": "2",
       "fraction": "",
       "unit": "",
-      "ingredient": "Tofurkey Italian Sausage",
+      "ingredient": "tofurkey italian sausage",
       "instruction": "sliced "
     },
     {
@@ -2772,7 +2779,7 @@ db.getCollection("recipes").insert({
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f4f597f8b9a450b000000"),
-  "name": "Veggie Burger",
+  "name": "veggie burger",
   "access": "public",
   "servings": "1",
   "prep_time": "10",
@@ -2785,7 +2792,7 @@ db.getCollection("recipes").insert({
       "whole": "1",
       "fraction": "",
       "unit": "",
-      "ingredient": "All American Boca Burger",
+      "ingredient": "all american boca burger",
       "instruction": ""
     },
     {
@@ -2850,7 +2857,7 @@ db.getCollection("recipes").insert({
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000000"),
-  "name": "Antipasti of Mozzarella, Chilli, and Lemon Crostini",
+  "name": "antipasti of mozzarella, chilli, and lemon crostini",
   "access": "public",
   "servings": "4",
   "prep_time": "15",
@@ -2923,12 +2930,12 @@ db.getCollection("recipes").insert({
       "instruction": "zested"
     }
   ],
-  "modified": ISODate("2011-10-07T19:25:54.42Z"),
-  "created": ISODate("2011-10-07T19:25:54.43Z")
+  "modified": ISODate("2011-10-07T19:25:54.420Z"),
+  "created": ISODate("2011-10-07T19:25:54.430Z")
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f53eb7f8b9a410b00000c"),
-  "name": "Braised Greens",
+  "name": "braised greens",
   "access": "public",
   "servings": "4",
   "prep_time": "10",
@@ -2941,14 +2948,14 @@ db.getCollection("recipes").insert({
       "whole": "2",
       "fraction": "",
       "unit": "handfills",
-      "ingredient": "Swiss Chard",
+      "ingredient": "swiss chard",
       "instruction": ""
     },
     {
       "whole": "2",
       "fraction": "",
       "unit": "handfills",
-      "ingredient": "Chicory",
+      "ingredient": "chicory",
       "instruction": ""
     },
     {
@@ -3008,41 +3015,41 @@ db.getCollection("recipes").insert({
       "whole": "4",
       "fraction": "",
       "unit": "cloves",
-      "ingredient": "Garlic",
+      "ingredient": "garlic",
       "instruction": "finely sliced"
     },
     {
       "whole": "1",
       "fraction": "",
       "unit": "bunch",
-      "ingredient": "Fresh Basil",
+      "ingredient": "fresh basil",
       "instruction": "torn"
     },
     {
       "whole": "32",
       "fraction": "",
       "unit": "ounces",
-      "ingredient": "Whole Plum Tomatoes",
+      "ingredient": "whole plum tomatoes",
       "instruction": ""
     },
     {
       "whole": "",
       "fraction": "",
       "unit": "",
-      "ingredient": "Sea Salt",
+      "ingredient": "sea salt",
       "instruction": "to taste"
     },
     {
       "whole": "",
       "fraction": "",
       "unit": "",
-      "ingredient": "Black Pepper",
+      "ingredient": "black pepper",
       "instruction": "to taste"
     }
   ],
   "instructions": "I learnt this recipe from my mate and mentor Gennaro Contaldo. It’s a brilliant, basic tomato sauce for using on pizza and it’s also great with pasta or to serve alongside meat or fish – quick, fresh, fragrant and sweet.\r\n\r\nPlace a large non-stick frying pan on the heat and pour in 4 generous glugs of olive oil. Add the garlic, shake the pan around a bit and, once the garlic begins to colour lightly, add the basil and the tomatoes. Using the back of a wooden spoon, mush and squash the tomatoes as much as you can. \r\n\r\nSeason the sauce with salt and pepper. As soon as it comes to the boil, remove the pan from the heat. Strain the sauce through a coarse sieve into a bowl, using your wooden spoon to push any larger bits of tomato through. Discard the basil and garlic that will be left in the sieve, but make sure you scrape any of the tomatoey goodness off the back of the sieve into the bowl. \r\n\r\nPour the sauce back into the pan, bring to the boil, then turn the heat down and simmer for 5 minutes to concentrate the flavours. It will be ready when it’s the perfect consistency for spreading on your pizza. \r\n\r\nStore the sauce in a clean jar in the fridge – it’ll keep for a week or so. Also great to freeze in batches or even in an ice cube tray, so you can defrost exactly the amount you need. But to be honest, it’s so quick to make, you might as well make it on the day you need it. \r\n",
   "modified": ISODate("2011-12-08T00:15:34.217Z"),
-  "name": "Simple Red Sauce",
+  "name": "simple red sauce",
   "prep_time": "15",
   "servings": "2",
   "tags": "Italian"
@@ -3240,8 +3247,8 @@ db.getCollection("tags").insert({
 db.getCollection("tags").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000005"),
   "tag": "Appetizer",
-  "modified": ISODate("2011-10-07T19:25:54.83Z"),
-  "created": ISODate("2011-10-07T19:25:54.83Z")
+  "modified": ISODate("2011-10-07T19:25:54.830Z"),
+  "created": ISODate("2011-10-07T19:25:54.830Z")
 });
 
 /** units records **/
