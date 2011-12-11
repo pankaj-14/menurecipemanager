@@ -47,7 +47,7 @@ class RecipesController extends AppController
     {
         if (!empty($this->data['Recipe']['searchParams']))
         {
-            
+
             $searchParams = $this->getSearchParams();
 
             $conditions[] = array(
@@ -61,7 +61,7 @@ class RecipesController extends AppController
                     '$in' => $searchParams
                 )
             );
-            
+
             $this->paginate['conditions'] = array('$or' => $conditions);
         }
 
@@ -112,6 +112,8 @@ class RecipesController extends AppController
 
             $this->removeEmptyIngredient();
 
+            $this->lowerCaseInput();
+
             if ($this->Recipe->save($this->data))
             {
                 $this->flash(__('Recipe saved.', true), array('action' => 'index'));
@@ -140,6 +142,8 @@ class RecipesController extends AppController
         {
 
             $this->removeEmptyIngredient();
+
+            $this->lowerCaseInput();
 
             if ($this->Recipe->save($this->data))
             {
@@ -287,6 +291,23 @@ class RecipesController extends AppController
     {
         $this->set('rowNum', $this->params['url']['rowCount']);
         $this->render('../elements/recipe_instruction_row', 'ajax');
+    }
+
+    /**
+     * Forces input to lowercase
+     */
+    protected function lowerCaseInput()
+    {
+        $this->data['Recipe']['name'] = strtolower($this->data['Recipe']['name']);
+        $this->data['Recipe']['tags'] = strtolower($this->data['Recipe']['tags']);
+        $this->data['Recipe']['description'] = strtolower($this->data['Recipe']['description']);
+        
+        foreach($this->data['Recipe']['ingredients'] as &$ingredient)
+        {
+            $ingredient['ingredient'] = strtolower($ingredient['ingredient']);
+            $ingredient['instruction'] = strtolower($ingredient['instruction']);
+            $ingredient['unit'] = strtolower($ingredient['unit']);
+        }
     }
 
 }
