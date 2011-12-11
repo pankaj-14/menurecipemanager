@@ -20,9 +20,28 @@ db.getCollection("ingredient_types").ensureIndex({
   
 ]);
 
+/** ingredient_types indexes **/
+db.getCollection("ingredient_types").ensureIndex({
+  "ingredient_type": 1,
+  "unique": true,
+  "dropDups": true
+},[
+  
+]);
+
 /** ingredients indexes **/
 db.getCollection("ingredients").ensureIndex({
   "_id": 1
+},[
+  
+]);
+
+/** ingredients indexes **/
+db.getCollection("ingredients").ensureIndex({
+  "ingredient": 1,
+  "type": 1,
+  "unique": true,
+  "dropDups": true
 },[
   
 ]);
@@ -48,9 +67,28 @@ db.getCollection("tags").ensureIndex({
   
 ]);
 
+/** tags indexes **/
+db.getCollection("tags").ensureIndex({
+  "tag": 1,
+  "unique": true,
+  "dropDups": true
+},[
+  
+]);
+
 /** units indexes **/
 db.getCollection("units").ensureIndex({
   "_id": 1
+},[
+  
+]);
+
+/** units indexes **/
+db.getCollection("units").ensureIndex({
+  "l_name": 1,
+  "s_name": 1,
+  "unique": true,
+  "dropDups": true
 },[
   
 ]);
@@ -1246,6 +1284,27 @@ db.getCollection("ingredients").insert({
   "type": "",
   "modified": ISODate("2011-12-11T12:12:04.290Z"),
   "created": ISODate("2011-12-11T12:12:04.293Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c3c8527cb1933c000006"),
+  "ingredient": "whole wheat flour",
+  "type": "",
+  "modified": ISODate("2011-12-11T14:52:56.534Z"),
+  "created": ISODate("2011-12-11T14:52:56.537Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c3c8527cb1933c000007"),
+  "ingredient": "beet",
+  "type": "",
+  "modified": ISODate("2011-12-11T14:52:56.608Z"),
+  "created": ISODate("2011-12-11T14:52:56.611Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c3c8527cb1933c000008"),
+  "ingredient": "potatoes",
+  "type": "",
+  "modified": ISODate("2011-12-11T14:52:56.659Z"),
+  "created": ISODate("2011-12-11T14:52:56.662Z")
 });
 
 /** menus records **/
@@ -3054,6 +3113,70 @@ db.getCollection("recipes").insert({
   "servings": "2",
   "tags": "italian"
 });
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4ee4c3c8527cb1933c000005"),
+  "name": "beet and potato pancakes",
+  "access": "private",
+  "servings": "4",
+  "prep_time": "10",
+  "cook_time": "10",
+  "tags": "starch, breakfast",
+  "description": "",
+  "instructions": "1. Mix whole wheat flour and water. Add remaining ingredients, and mix well.\r\n\r\n2. Heat oil over medium-high heat in a large pan.  Form beet\/potato mixture into pancakes with your hands (they will hold together when cooked).\r\n\r\n3. Fry, flipping often, over medium-high heat for about 5 minutes.\r\n\r\nServe with salsa and sour supreme, syrup, or whatever you'd normally top potato pancakes with.",
+  "ingredients": [
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "cup",
+      "ingredient": "whole wheat flour",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "c",
+      "ingredient": "water",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "beet",
+      "instruction": "grated"
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "potatoes",
+      "instruction": "grated"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "onion",
+      "instruction": "chopped finely"
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "fresh ground black pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-11T14:52:56.478Z"),
+  "created": ISODate("2011-12-11T14:52:56.481Z")
+});
 
 /** system.indexes records **/
 db.getCollection("system.indexes").insert({
@@ -3128,6 +3251,48 @@ db.getCollection("system.indexes").insert({
   "ns": "recipe_manager.users",
   "name": "_id_"
 });
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "ingredient": 1,
+    "type": 1,
+    "unique": true,
+    "dropDups": true
+  },
+  "ns": "recipe_manager.ingredients",
+  "name": "ingredient_1_type_1_unique__dropDups_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "tag": 1,
+    "unique": true,
+    "dropDups": true
+  },
+  "ns": "recipe_manager.tags",
+  "name": "tag_1_unique__dropDups_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "l_name": 1,
+    "s_name": 1,
+    "unique": true,
+    "dropDups": true
+  },
+  "ns": "recipe_manager.units",
+  "name": "l_name_1_s_name_1_unique__dropDups_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "ingredient_type": 1,
+    "unique": true,
+    "dropDups": true
+  },
+  "ns": "recipe_manager.ingredient_types",
+  "name": "ingredient_type_1_unique__dropDups_"
+});
 
 /** tags records **/
 db.getCollection("tags").insert({
@@ -3197,12 +3362,6 @@ db.getCollection("tags").insert({
   "created": "Wed, 07 Sep 2011 15:52:01 -0400"
 });
 db.getCollection("tags").insert({
-  "_id": ObjectId("4e67d0a9bad4a2bc1b00000e"),
-  "tag": "dinner\r\n",
-  "modified": "Wed, 07 Sep 2011 16:14:33 -0400",
-  "created": "Wed, 07 Sep 2011 16:14:33 -0400"
-});
-db.getCollection("tags").insert({
   "_id": ObjectId("4e67df25bad4a2c415000007"),
   "tag": "fresh",
   "modified": "Wed, 07 Sep 2011 17:16:21 -0400",
@@ -3243,12 +3402,6 @@ db.getCollection("tags").insert({
   "tag": "appetizer",
   "modified": ISODate("2011-10-07T19:25:54.830Z"),
   "created": ISODate("2011-10-07T19:25:54.830Z")
-});
-db.getCollection("tags").insert({
-  "_id": ObjectId("4ee4bd89527cb1a03c000001"),
-  "tag": "",
-  "modified": ISODate("2011-12-11T14:26:17.589Z"),
-  "created": ISODate("2011-12-11T14:26:17.592Z")
 });
 
 /** units records **/
@@ -3367,12 +3520,6 @@ db.getCollection("units").insert({
   "created": "Thu, 08 Sep 2011 21:00:59 -0400"
 });
 db.getCollection("units").insert({
-  "_id": ObjectId("4e7e09367f8b9a480b000001"),
-  "l_name": "cup ",
-  "s_name": "cup ",
-  "created": ISODate("2011-09-24T16:45:42.442Z")
-});
-db.getCollection("units").insert({
   "_id": ObjectId("4e8f39e27f8b9a410b000003"),
   "l_name": "whole",
   "s_name": "whole",
@@ -3397,16 +3544,9 @@ db.getCollection("units").insert({
   "created": ISODate("2011-10-07T19:25:54.122Z")
 });
 db.getCollection("units").insert({
-  "_id": ObjectId("4e8f53eb7f8b9a410b000011"),
-  "l_name": "handfills",
-  "s_name": "handfills",
-  "created": ISODate("2011-10-07T19:32:59.173Z")
-});
-db.getCollection("units").insert({
-  "_id": ObjectId("4e8f53eb7f8b9a410b000012"),
-  "l_name": "handfulls",
-  "s_name": "handfulls",
-  "created": ISODate("2011-10-07T19:32:59.183Z")
+  "_id": ObjectId("4ee4c3c9527cb1933c00000a"),
+  "l_name": "large",
+  "s_name": "large"
 });
 
 /** users records **/
