@@ -37,6 +37,47 @@ class AppModel extends Model
 
     public $useDbConfig = 'mongo';
 
+    /**
+     *  Checks for uniqueness with a combination of fields. For some reason the first
+     * label has to be a valid of one of the fields in the form or the rule never triggers
+     * 
+     * 
+     *      public $validate = array(
+     *          'l_name' => array(
+     *           'rule' => 'multiFieldUnique', 'fields' => array('l_name', 's_name'),
+     *           'message' => 'Unit can only be used once'
+     *           )
+     *       );
+     * 
+     * 
+     * @param array $check
+     * @param array $params
+     * @return boolean 
+     */
+    public function multiFieldUnique($check, $params)
+    {
+        $and = array();
+        foreach ($params['fields'] as $field)
+        {
+            $and[] = array($field => $this->data[$this->name][$field]);
+        }
 
+        $q_params = array(
+            'conditions' => array('$and' => $and)
+        );
+
+        $result = $this->find('all', $q_params);
+
+        if (count($result) > 0)
+        {
+            foreach ($params['fields'] as $field)
+            {
+                $this->validationErrors[$field] = $params['message'];
+            }
+            return false;
+        }
+
+        return true;
+    }
 
 }
