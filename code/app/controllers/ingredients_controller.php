@@ -302,7 +302,7 @@ class IngredientsController extends AppController
     public function createindex()
     {
         $mongo = ConnectionManager::getDataSource($this->Ingredient->useDbConfig);
-        $mongo->ensureIndex($this->Ingredient, array('title' => 1));
+        $mongo->ensureIndex($this->Ingredient, array('ingredient' => 1));
     }
 
     public function getIngredients()
