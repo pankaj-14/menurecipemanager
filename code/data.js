@@ -3132,121 +3132,115 @@ db.getCollection("system.indexes").insert({
 /** tags records **/
 db.getCollection("tags").insert({
   "_id": ObjectId("4d50187b3d3f95800e000026"),
-  "tag": "Italian",
+  "tag": "italian",
   "modified": "Mon, 07 Feb 2011 11:06:19 -0500",
   "created": "Mon, 07 Feb 2011 11:06:19 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d5018973d3f95e80100000f"),
-  "tag": "Lunch",
+  "tag": "lunch",
   "modified": "Mon, 07 Feb 2011 11:06:47 -0500",
   "created": "Mon, 07 Feb 2011 11:06:47 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d504c0b3d3f95900d00001f"),
-  "tag": "Asian",
+  "tag": "asian",
   "modified": "Mon, 07 Feb 2011 14:46:19 -0500",
   "created": "Mon, 07 Feb 2011 14:46:19 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d504c0b3d3f95900d000020"),
-  "tag": "Dinner",
+  "tag": "dinner",
   "modified": "Mon, 07 Feb 2011 14:46:19 -0500",
   "created": "Mon, 07 Feb 2011 14:46:19 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d56b81f3d3f951c0a000002"),
-  "tag": "Basic",
+  "tag": "basic",
   "modified": "Sat, 12 Feb 2011 11:41:03 -0500",
   "created": "Sat, 12 Feb 2011 11:41:03 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d56c37d3d3f95a40c00000a"),
-  "tag": "Hearty",
+  "tag": "hearty",
   "modified": "Sat, 12 Feb 2011 12:29:33 -0500",
   "created": "Sat, 12 Feb 2011 12:29:33 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d56c37d3d3f95a40c00000b"),
-  "tag": "Protein",
+  "tag": "protein",
   "modified": "Sat, 12 Feb 2011 12:29:33 -0500",
   "created": "Sat, 12 Feb 2011 12:29:33 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d5822763d3f951c0a00001c"),
-  "tag": "Quorn",
+  "tag": "quorn",
   "modified": "Sun, 13 Feb 2011 13:27:02 -0500",
   "created": "Sun, 13 Feb 2011 13:27:02 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4d5822763d3f951c0a00001d"),
-  "tag": "Chik'n",
+  "tag": "chik'n",
   "modified": "Sun, 13 Feb 2011 13:27:02 -0500",
   "created": "Sun, 13 Feb 2011 13:27:02 -0500"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e67cb61bad4a2bc1b000001"),
-  "tag": "Veggie",
+  "tag": "veggie",
   "modified": "Wed, 07 Sep 2011 15:52:01 -0400",
   "created": "Wed, 07 Sep 2011 15:52:01 -0400"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e67cb61bad4a2bc1b000002"),
-  "tag": "Pasta",
+  "tag": "pasta",
   "modified": "Wed, 07 Sep 2011 15:52:01 -0400",
   "created": "Wed, 07 Sep 2011 15:52:01 -0400"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e67d0a9bad4a2bc1b00000e"),
-  "tag": "Dinner\r\n",
+  "tag": "dinner\r\n",
   "modified": "Wed, 07 Sep 2011 16:14:33 -0400",
   "created": "Wed, 07 Sep 2011 16:14:33 -0400"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e67df25bad4a2c415000007"),
-  "tag": "Fresh",
+  "tag": "fresh",
   "modified": "Wed, 07 Sep 2011 17:16:21 -0400",
   "created": "Wed, 07 Sep 2011 17:16:21 -0400"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e6961a3bad4a2841a000007"),
-  "tag": "Indian",
+  "tag": "indian",
   "modified": "Thu, 08 Sep 2011 20:45:23 -0400",
   "created": "Thu, 08 Sep 2011 20:45:23 -0400"
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e69678abad4a2bc2100000d"),
-  "tag": "Starch",
+  "tag": "starch",
   "modified": "Thu, 08 Sep 2011 21:10:34 -0400",
   "created": "Thu, 08 Sep 2011 21:10:34 -0400"
 });
 db.getCollection("tags").insert({
-  "_id": ObjectId("4e6fd227bad4a2e81a000006"),
-  "tag": "",
-  "modified": "Tue, 13 Sep 2011 17:59:03 -0400",
-  "created": "Tue, 13 Sep 2011 17:59:03 -0400"
-});
-db.getCollection("tags").insert({
   "_id": ObjectId("4e7e09367f8b9a480b000000"),
-  "tag": "Avocado",
+  "tag": "avocado",
   "modified": ISODate("2011-09-24T16:45:42.396Z"),
   "created": ISODate("2011-09-24T16:45:42.396Z")
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e8f39e27f8b9a410b000002"),
-  "tag": "Breakfast",
+  "tag": "breakfast",
   "modified": ISODate("2011-10-07T17:41:54.752Z"),
   "created": ISODate("2011-10-07T17:41:54.752Z")
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e8f43167f8b9a410b00000b"),
-  "tag": "Carbohydrates",
+  "tag": "carbohydrates",
   "modified": ISODate("2011-10-07T18:21:10.968Z"),
   "created": ISODate("2011-10-07T18:21:10.969Z")
 });
 db.getCollection("tags").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000005"),
-  "tag": "Appetizer",
+  "tag": "appetizer",
   "modified": ISODate("2011-10-07T19:25:54.830Z"),
   "created": ISODate("2011-10-07T19:25:54.830Z")
 });
