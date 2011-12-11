@@ -17,6 +17,7 @@ class TagsController extends AppController
             'Tag.tag' => 'asc'
         )
     );
+
     /**
      * name property
      *
@@ -54,13 +55,17 @@ class TagsController extends AppController
         {
 
             $this->Tag->create();
-            if ($this->Tag->save($this->data))
-            {
-                $this->flash(__('Tag saved.', true), array('action' => 'index'));
-            }
-            else
-            {
 
+            if ($this->Tag->validates())
+            {
+                if ($this->Tag->save($this->data, array('validate' => false)))
+                {
+                    $this->flash(__('Tag saved.', true), array('action' => 'index'));
+                }
+                else
+                {
+                    
+                }
             }
         }
     }
@@ -87,7 +92,7 @@ class TagsController extends AppController
             }
             else
             {
-
+                
             }
         }
         if (empty($this->data))

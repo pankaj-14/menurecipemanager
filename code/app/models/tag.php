@@ -15,5 +15,14 @@ class Tag extends AppModel
             )
         )
     );
+    public $validate = array(
+        'tag' => array(
+            'isUnique' => array(
+                'rule' => 'isUnique',
+                'required' => true,
+                'message' => 'Duplicate Tag',
+            )
+        )
+    );
 
 }
