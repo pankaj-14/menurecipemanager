@@ -17,6 +17,7 @@ class UnitsController extends AppController
             'Unit.l_name' => 'asc'
         )
     );
+
     /**
      * name property
      *
@@ -60,7 +61,7 @@ class UnitsController extends AppController
             }
             else
             {
-
+                
             }
         }
     }
@@ -87,7 +88,7 @@ class UnitsController extends AppController
             }
             else
             {
-
+                
             }
         }
         if (empty($this->data))
@@ -164,7 +165,14 @@ class UnitsController extends AppController
     public function createindex()
     {
         $mongo = ConnectionManager::getDataSource($this->Unit->useDbConfig);
-        $mongo->ensureIndex($this->Unit, array('title' => 1));
+        $mongo->ensureIndex(
+                $this->Unit, array(
+            'l_name' => 1, 's_name'
+                ), array(
+            'unique' => true,
+            'dropDups' => true
+                )
+        );
     }
 
     public function getUnits()
