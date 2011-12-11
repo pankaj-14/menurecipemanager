@@ -9,5 +9,11 @@ class IngredientType extends AppModel
         'created' => array('type' => 'datetime'),
         'modified' => array('type' => 'datetime'),
     );
+    public $actsAs = array('StringManipulation' => array(
+            'fields' => array(
+                'lowercase' => array('ingredient_type')
+            )
+        )
+    );
 
 }
