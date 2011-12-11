@@ -1,7 +1,7 @@
 TODO
 
 1. Fix the shopping list layout to take up less space
-2. Force all input to lower case
+
 3. Show text with correct case from lower case
 4. Input auto suggests must only once per page
 6. Add nutritional information
