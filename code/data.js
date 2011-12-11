@@ -1297,7 +1297,7 @@ db.getCollection("recipes").insert({
   "name": "baked new potatoes with sea salt and rosemary",
   "prep_time": "45",
   "servings": "4",
-  "tags": "Starch"
+  "tags": "starch"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d56b81f3d3f951c0a000000"),
@@ -1326,7 +1326,7 @@ db.getCollection("recipes").insert({
   "name": "grilled cheese",
   "prep_time": "5",
   "servings": "2",
-  "tags": "Basic"
+  "tags": "basic"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f43167f8b9a410b00000a"),
@@ -1335,7 +1335,7 @@ db.getCollection("recipes").insert({
   "servings": "2",
   "prep_time": "5",
   "cook_time": "15",
-  "tags": "Italian, Carbohydrates",
+  "tags": "italian, carbohydrates",
   "description": "",
   "instructions": "1. Bring a large pot of salted water to a rolling boil\r\n2. Add pasta and cook until al dente. The time to do this depends in the thickness of the pasta. Read the directions",
   "ingredients": [
@@ -1480,7 +1480,7 @@ db.getCollection("recipes").insert({
   "name": "fresh vegetable pasta",
   "prep_time": "30",
   "servings": "4",
-  "tags": "Veggie, Pasta"
+  "tags": "veggie, pasta"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e67d0a9bad4a2bc1b00000d"),
@@ -1570,7 +1570,7 @@ db.getCollection("recipes").insert({
   "name": "spaghetti with wild mushrooms",
   "prep_time": "25",
   "servings": "4",
-  "tags": "Italian, Dinner\r\n"
+  "tags": "italian, dinner\r\n"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e67df25bad4a2c415000001"),
@@ -1646,7 +1646,7 @@ db.getCollection("recipes").insert({
   "name": "squashed cherry tomato and smashed olive pasta",
   "prep_time": "10",
   "servings": "6",
-  "tags": "Fresh, Italian"
+  "tags": "fresh, italian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e6961a3bad4a2841a000000"),
@@ -1722,7 +1722,7 @@ db.getCollection("recipes").insert({
   "name": "lemon rice",
   "prep_time": "15",
   "servings": "4",
-  "tags": "Indian"
+  "tags": "indian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e69654bbad4a2bc21000001"),
@@ -1819,7 +1819,7 @@ db.getCollection("recipes").insert({
   "name": "pasta salad",
   "prep_time": "30",
   "servings": "4",
-  "tags": "Italian"
+  "tags": "italian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e6fd227bad4a2e81a000000"),
@@ -1925,7 +1925,7 @@ db.getCollection("recipes").insert({
   "name": "avocado pasta",
   "prep_time": "15",
   "servings": "4",
-  "tags": "Avocado, Pasta"
+  "tags": "avocado, pasta"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d56c37d3d3f95a40c000000"),
@@ -2010,7 +2010,7 @@ db.getCollection("recipes").insert({
   "name": "bombdiggity meatloaf",
   "prep_time": "30",
   "servings": "4",
-  "tags": "Hearty, Protein"
+  "tags": "hearty, protein"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d5822753d3f951c0a000013"),
@@ -2116,7 +2116,7 @@ db.getCollection("recipes").insert({
   "name": "chik'n with peanut-ginger sauce",
   "prep_time": "15",
   "servings": "4",
-  "tags": "Asian, Protein, Quorn, Chik'n"
+  "tags": "asian, protein, quorn, chik'n"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d5732a43d3f951c0a000005"),
@@ -2222,7 +2222,7 @@ db.getCollection("recipes").insert({
   "name": "curried chicken wraps",
   "prep_time": "15",
   "servings": "4",
-  "tags": "Protein"
+  "tags": "protein"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d5735283d3f95880a000011"),
@@ -2321,7 +2321,7 @@ db.getCollection("recipes").insert({
   "name": "easy black beans and rice",
   "prep_time": "15",
   "servings": "4",
-  "tags": "Protein"
+  "tags": "protein"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4d581ab23d3f95480a000000"),
@@ -2526,7 +2526,7 @@ db.getCollection("recipes").insert({
   "name": "pasta olio",
   "prep_time": "15",
   "servings": "4",
-  "tags": "Italian"
+  "tags": "italian"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e71e013bad4a2401b000000"),
@@ -2597,7 +2597,7 @@ db.getCollection("recipes").insert({
   "name": "tomato cucumber avocado salad",
   "prep_time": "15",
   "servings": "2",
-  "tags": "Fresh"
+  "tags": "fresh"
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4e8f39e27f8b9a410b000000"),
@@ -2606,7 +2606,7 @@ db.getCollection("recipes").insert({
   "servings": "2",
   "prep_time": "5",
   "cook_time": "5",
-  "tags": "Breakfast, Protein",
+  "tags": "breakfast, protein",
   "description": "",
   "instructions": "1. Heat butter in a pan\r\n2. Crack 3 eggs into a bowl\r\n3. Add milk, salt and pepper\r\n4. Beat until frothy\r\n5. Pour egg mixtures into the pan\r\n6. Wait until the bottom of it solidifies a little and then push it around with a spatula\r\n7. Repeat until cooked through",
   "ingredients": [
@@ -2656,7 +2656,7 @@ db.getCollection("recipes").insert({
   "servings": "4",
   "prep_time": "15",
   "cook_time": "10",
-  "tags": "Italian",
+  "tags": "italian",
   "description": "A really nice basic red sauce that be used on pasta",
   "instructions": "1. Heat olive oil in a large pot\r\n2. Add garlic, cook until the color changes\r\n3. Add the basil and tomatoes\r\n4. Season with salt and pepper\r\n5. Smash the tomatoes while they cook, really mush the whole mixture\r\n6. When the mixture boils remove it from the heat and strain it through a sieve. Make sure to really push everything through. Also scrape all the good stuff off the underside of the sieve.\r\n7. Simmer the sauce in a pot for 5 minutes and season to taste",
   "ingredients": [
@@ -2862,7 +2862,7 @@ db.getCollection("recipes").insert({
   "servings": "4",
   "prep_time": "15",
   "cook_time": "",
-  "tags": "Italian, Appetizer",
+  "tags": "italian, appetizer",
   "description": "",
   "instructions": "Heat a griddle pan until it’s really smoking hot, then griddle each slice of ciabatta for a couple of minutes on each side until they are nicely charred. \r\n\r\nCut the garlic clove in half, rub each ciabatta slice with garlic and drizzle with a little olive oil. Tear the mozzarella evenly over the 8 crostini. Season well with salt and pepper, sprinkle over the sliced chilli and basil leaves and grate over the lemon zest. Finish with another drizzle of olive oil.",
   "ingredients": [
@@ -3052,7 +3052,7 @@ db.getCollection("recipes").insert({
   "name": "simple red sauce",
   "prep_time": "15",
   "servings": "2",
-  "tags": "Italian"
+  "tags": "italian"
 });
 
 /** system.indexes records **/
@@ -3243,6 +3243,12 @@ db.getCollection("tags").insert({
   "tag": "appetizer",
   "modified": ISODate("2011-10-07T19:25:54.830Z"),
   "created": ISODate("2011-10-07T19:25:54.830Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4ee4bd89527cb1a03c000001"),
+  "tag": "",
+  "modified": ISODate("2011-12-11T14:26:17.589Z"),
+  "created": ISODate("2011-12-11T14:26:17.592Z")
 });
 
 /** units records **/
