@@ -28,6 +28,12 @@ echo $this->Form->input('cook_time', array(
     'maxlength' => 3,
     'label' => 'Cook Time (minutes)')
 );
+echo $this->Form->input('source', array(
+    'class' => 'ui-widget-content',
+    'size' => 32,
+    'maxlength' => 64,
+    'label' => 'Source')
+);
 echo $this->Form->input('tags', array(
     'type' => 'textarea',
     'class' => 'ui-widget-content',

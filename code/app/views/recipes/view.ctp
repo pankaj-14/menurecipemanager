@@ -9,6 +9,8 @@
     <div><?php echo $Recipe['prep_time']; ?></div>
     <label>Cook Time (minutes)</label>
     <div><?php echo $Recipe['cook_time']; ?></div>
+    <label>Source</label>
+    <div><?php echo $Recipe['source']; ?></div>
     <label>Description</label>
     <div><?php echo ucfirst($Recipe['description']); ?></div>
     <label>Tags</label>
