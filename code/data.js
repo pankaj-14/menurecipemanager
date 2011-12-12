@@ -69,12 +69,10 @@ db.getCollection("tags").ensureIndex({
 
 /** tags indexes **/
 db.getCollection("tags").ensureIndex({
-  "tag": 1,
-  "unique": true,
-  "dropDups": true
-},[
-  
-]);
+  "tag": 1
+},{
+  "unique": true
+});
 
 /** units indexes **/
 db.getCollection("units").ensureIndex({
@@ -92,6 +90,14 @@ db.getCollection("units").ensureIndex({
 },[
   
 ]);
+
+/** units indexes **/
+db.getCollection("units").ensureIndex({
+  "l_name": 1,
+  "0": "s_name"
+},{
+  "unique": true
+});
 
 /** users indexes **/
 db.getCollection("users").ensureIndex({
@@ -371,6 +377,24 @@ db.getCollection("ingredient_instructions").insert({
   "instruction": "torn",
   "modified": ISODate("2011-12-08T00:14:01.320Z"),
   "created": ISODate("2011-12-08T00:14:01.320Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000007"),
+  "instruction": "halved and chopped",
+  "modified": ISODate("2011-12-11T15:16:21.859Z"),
+  "created": ISODate("2011-12-11T15:16:21.862Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4ee4c946527cb1923c000008"),
+  "instruction": "toasted",
+  "modified": ISODate("2011-12-11T15:16:22.46Z"),
+  "created": ISODate("2011-12-11T15:16:22.49Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4ee67d48527cb1c508000005"),
+  "instruction": "crushed",
+  "modified": ISODate("2011-12-12T22:16:40.470Z"),
+  "created": ISODate("2011-12-12T22:16:40.473Z")
 });
 
 /** ingredient_types records **/
@@ -1174,13 +1198,6 @@ db.getCollection("ingredients").insert({
   "type": "produce"
 });
 db.getCollection("ingredients").insert({
-  "_id": ObjectId("4e8f53eb7f8b9a410b00000f"),
-  "created": ISODate("2011-10-07T19:32:59.145Z"),
-  "ingredient": "arugala",
-  "modified": ISODate("2011-12-10T16:05:37.190Z"),
-  "type": "produce"
-});
-db.getCollection("ingredients").insert({
   "_id": ObjectId("4e8f52427f8b9a460b000002"),
   "created": ISODate("2011-10-07T19:25:54.590Z"),
   "ingredient": "buffalo mozzarella",
@@ -1306,8 +1323,105 @@ db.getCollection("ingredients").insert({
   "modified": ISODate("2011-12-11T14:52:56.659Z"),
   "created": ISODate("2011-12-11T14:52:56.662Z")
 });
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000002"),
+  "ingredient": "peanut oil",
+  "type": "",
+  "modified": ISODate("2011-12-11T15:16:21.440Z"),
+  "created": ISODate("2011-12-11T15:16:21.444Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000004"),
+  "ingredient": "green onions",
+  "type": "",
+  "modified": ISODate("2011-12-11T15:16:21.659Z"),
+  "created": ISODate("2011-12-11T15:16:21.662Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000005"),
+  "ingredient": "sesame seeds",
+  "type": "",
+  "modified": ISODate("2011-12-11T15:16:21.710Z"),
+  "created": ISODate("2011-12-11T15:16:21.713Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000003"),
+  "created": ISODate("2011-12-11T15:16:21.609Z"),
+  "ingredient": "miso paste",
+  "modified": ISODate("2011-12-11T15:17:45.851Z"),
+  "type": "asian"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4d9c4527cb19f3c000003"),
+  "ingredient": "arugala",
+  "type": "produce",
+  "modified": ISODate("2011-12-11T16:26:44.850Z"),
+  "created": ISODate("2011-12-11T16:26:44.853Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee53cd1527cb1913c000009"),
+  "ingredient": "test",
+  "type": "",
+  "modified": ISODate("2011-12-11T23:29:21.353Z"),
+  "created": ISODate("2011-12-11T23:29:21.357Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee67d48527cb1c508000001"),
+  "ingredient": "balsamic vinegar",
+  "type": "",
+  "modified": ISODate("2011-12-12T22:16:39.994Z"),
+  "created": ISODate("2011-12-12T22:16:39.997Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee67d48527cb1c508000002"),
+  "ingredient": "mahi mahi",
+  "type": "",
+  "modified": ISODate("2011-12-12T22:16:40.114Z"),
+  "created": ISODate("2011-12-12T22:16:40.117Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee67d48527cb1c508000003"),
+  "ingredient": "vegetable oil",
+  "type": "",
+  "modified": ISODate("2011-12-12T22:16:40.212Z"),
+  "created": ISODate("2011-12-12T22:16:40.215Z")
+});
 
 /** menus records **/
+db.getCollection("menus").insert({
+  "_id": ObjectId("4ee4c9b5527cb1913c000005"),
+  "created": ISODate("2011-12-11T15:18:13.100Z"),
+  "description": "",
+  "modified": ISODate("2011-12-11T23:42:42.905Z"),
+  "name": "test",
+  "recipes": {
+    "1": {
+      "name": "4ee4c945527cb1923c000001",
+      "servings": "2",
+      "description": ""
+    },
+    "2": {
+      "name": "4e6961a3bad4a2841a000000",
+      "servings": "2",
+      "description": ""
+    },
+    "3": {
+      "name": "4d56c37d3d3f95a40c000000",
+      "servings": "2",
+      "description": ""
+    },
+    "4": {
+      "name": "4e8f43167f8b9a410b00000a",
+      "servings": "2",
+      "description": ""
+    },
+    "5": {
+      "name": "4e8f39e27f8b9a410b000000",
+      "servings": "2",
+      "description": "breakfast"
+    }
+  }
+});
 
 /** recipes records **/
 db.getCollection("recipes").insert({
@@ -3177,6 +3291,180 @@ db.getCollection("recipes").insert({
   "modified": ISODate("2011-12-11T14:52:56.478Z"),
   "created": ISODate("2011-12-11T14:52:56.481Z")
 });
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000001"),
+  "name": "miso vegetable saute",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "5",
+  "cook_time": "10",
+  "tags": "asian, ",
+  "description": "",
+  "instructions": "1. Heat sesame or peanut oil to cover bottom of pan. When warm, stir in zucchinis and mushrooms.\r\n\r\n2. When they are starting to soften, stir in pepper flakes, soy sauce, miso and water. \r\n\r\n3. When the veggies are soft, stir in onions and seeds to coat.  Serve hot.\r\n\r\nGreat as a side dish or serve over rice.",
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "peanut oil",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "zucchini",
+      "instruction": "halved and chopped"
+    },
+    {
+      "whole": "6",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "mushrooms",
+      "instruction": "sliced "
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "splash",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "tsp.",
+      "ingredient": "crushed red pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "water",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "miso paste",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "green onions",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "sesame seeds",
+      "instruction": "toasted"
+    }
+  ],
+  "modified": ISODate("2011-12-11T15:16:21.383Z"),
+  "created": ISODate("2011-12-11T15:16:21.386Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4ee67d47527cb1c508000000"),
+  "access": "private",
+  "cook_time": "12",
+  "created": ISODate("2011-12-12T22:16:39.890Z"),
+  "description": "this ginger glazed mahi mahi is bursting with flavor and combines both sweet and sour taste sensations. the 30 minute prep time includes 20 minutes to marinate. this recipe is a snap and so delicious. you'll love it",
+  "ingredients": [
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "olive oil",
+      "instruction": ""
+    },
+    {
+      "whole": "24",
+      "fraction": "",
+      "unit": "ounces",
+      "ingredient": "mahi mahi",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "vegetable oil",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "honey",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "ginger",
+      "instruction": "grated"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "clove",
+      "ingredient": "garlic",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "balsamic vinegar",
+      "instruction": ""
+    }
+  ],
+  "instructions": "1.    In a shallow glass dish, stir together the honey, soy sauce, balsamic vinegar, ginger, garlic and olive oil. Season fish fillets with salt and pepper, and place them into the dish. If the fillets have skin on them, place them skin side down. Cover, and refrigerate for 20 minutes to marinate.\r\n\r\n2.    Heat vegetable oil in a large skillet over medium-high heat. Remove fish from the dish, and reserve marinade. Fry fish for 4 to 6 minutes on each side, turning only once, until fish flakes easily with a fork. Remove fillets to a serving platter and keep warm.\r\n\r\n3.    Pour reserved marinade into the skillet, and heat over medium heat until the mixture reduces to a glaze consistently. Spoon glaze over fish, and serve immediately.\r\n",
+  "modified": ISODate("2011-12-12T22:55:10.747Z"),
+  "name": "ginger glazed mahi mahi",
+  "nutrional_info": null,
+  "nutritional_info": {
+    "calories": "259",
+    "total_fat": "7g",
+    "cholesterol": "124mg",
+    "sodium": "830mg",
+    "total_carbs": "16g",
+    "dietary_fiber": "0.2g",
+    "protein": "32.4g"
+  },
+  "prep_time": "5",
+  "servings": "4",
+  "source": "http:\/\/allrecipes.com\/recipe\/ginger-glazed-mahi-mahi\/",
+  "tags": "protein, fish"
+});
 
 /** system.indexes records **/
 db.getCollection("system.indexes").insert({
@@ -3265,16 +3553,6 @@ db.getCollection("system.indexes").insert({
 db.getCollection("system.indexes").insert({
   "v": 1,
   "key": {
-    "tag": 1,
-    "unique": true,
-    "dropDups": true
-  },
-  "ns": "recipe_manager.tags",
-  "name": "tag_1_unique__dropDups_"
-});
-db.getCollection("system.indexes").insert({
-  "v": 1,
-  "key": {
     "l_name": 1,
     "s_name": 1,
     "unique": true,
@@ -3292,6 +3570,27 @@ db.getCollection("system.indexes").insert({
   },
   "ns": "recipe_manager.ingredient_types",
   "name": "ingredient_type_1_unique__dropDups_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "tag": 1
+  },
+  "unique": true,
+  "ns": "recipe_manager.tags",
+  "name": "tag_1",
+  "dropDups": true
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "l_name": 1,
+    "0": "s_name"
+  },
+  "unique": true,
+  "ns": "recipe_manager.units",
+  "dropDups": true,
+  "name": "l_name_1_0_s_name"
 });
 
 /** tags records **/
@@ -3386,12 +3685,6 @@ db.getCollection("tags").insert({
   "created": ISODate("2011-09-24T16:45:42.396Z")
 });
 db.getCollection("tags").insert({
-  "_id": ObjectId("4e8f39e27f8b9a410b000002"),
-  "tag": "breakfast",
-  "modified": ISODate("2011-10-07T17:41:54.752Z"),
-  "created": ISODate("2011-10-07T17:41:54.752Z")
-});
-db.getCollection("tags").insert({
   "_id": ObjectId("4e8f43167f8b9a410b00000b"),
   "tag": "carbohydrates",
   "modified": ISODate("2011-10-07T18:21:10.968Z"),
@@ -3402,6 +3695,24 @@ db.getCollection("tags").insert({
   "tag": "appetizer",
   "modified": ISODate("2011-10-07T19:25:54.830Z"),
   "created": ISODate("2011-10-07T19:25:54.830Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4ee4cbea527cb1923c000009"),
+  "tag": "breakfast",
+  "modified": ISODate("2011-12-11T15:27:38.551Z"),
+  "created": ISODate("2011-12-11T15:27:38.554Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4ee53c07527cb12b13000003"),
+  "tag": "test",
+  "modified": ISODate("2011-12-11T23:25:59.482Z"),
+  "created": ISODate("2011-12-11T23:25:59.485Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4ee67d48527cb1c508000004"),
+  "tag": "fish",
+  "modified": ISODate("2011-12-12T22:16:40.327Z"),
+  "created": ISODate("2011-12-12T22:16:40.330Z")
 });
 
 /** units records **/
