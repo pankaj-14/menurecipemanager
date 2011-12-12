@@ -20,7 +20,11 @@ td.ui-widget-content { padding:2px; }
 .center { margin : auto; }
 .column{ margin: 0 5px 0 5px; }
 #recipe-header{}
-#recipe-header div{display: inline;}
+#recipe-header div{display: inline; float:left; margin:0 40px 20px 0;}
+#nutritional-information{}
+#nutritional-information div{display: inline; float:left; margin:0 40px 20px 0;}
+#recipe-instructions{}
+#recipe-instructions div{display: inline; float:left; margin:0 40px 20px 0;}
 #shopping-list .ingredient { width:40%; }
 #shopping-list .amount { width:20%; }
 #shopping-list .amount { width:20%; }

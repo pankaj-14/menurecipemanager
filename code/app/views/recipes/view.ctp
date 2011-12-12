@@ -1,40 +1,29 @@
 <?php $Recipe = $this->data['Recipe']; ?>
 
-<div id="recipe-header" class="grid_3">
-    <label>Name</label>
-    <div><?php echo ucwords($Recipe['name']); ?></div>
-    <label>Servings</label>
-    <div><?php echo $Recipe['servings']; ?></div>
-    <label>Prep Time (minutes)</label>
-    <div><?php echo $Recipe['prep_time']; ?></div>
-    <label>Cook Time (minutes)</label>
-    <div><?php echo $Recipe['cook_time']; ?></div>
-    <label>Source</label>
-    <div><?php echo $Recipe['source']; ?></div>
+<div id="recipe-header" class="grid_12">
+   <div> <label>Name</label>
+    <?php echo ucwords($Recipe['name']); ?></div>
+   <div> <label>Servings</label>
+    <?php echo $Recipe['servings']; ?></div>
+  <div>  <label>Prep Time (minutes)</label>
+    <?php echo $Recipe['prep_time']; ?></div>
+ <div>   <label>Cook Time (minutes)</label>
+    <?php echo $Recipe['cook_time']; ?></div>
 </div>
-<div class="grid_6">
-    <label>Description</label>
-    <div><?php echo ucfirst($Recipe['description']); ?></div>
-</div>
-<div class="grid_3">
-    <?php foreach($Recipe['nutritional_info'] as $k => $v): ?>
-        <label><?php echo $k; ?></label>
-        <div><?php echo $v; ?></div>
-    <?php endforeach; ?>
-</div>
-
-
-
 <div class="clear"></div>
 
-<div class="grid_6">
+<div id="recipe-instructions" class="grid_6">
+    <label>Description</label>
+    <div><?php echo ucfirst($Recipe['description']); ?></div>
     <label>Instructions</label>
     <div><?php echo nl2br($Recipe['instructions']); ?></div>
     <label>Tags</label>
     <div><?php echo ucwords($Recipe['tags']); ?></div>
+    <label>Source</label>
+    <div><?php echo $Recipe['source']; ?></div>
 </div>
 
-<div class="grid_6">
+<div id="recipe-ingredient-list" class="grid_6">
         <label>Ingredient List</label>
         <table class="ui-widget grid">
             <thead>
@@ -57,4 +46,10 @@
             </tbody>
         </table>
 </div>    
-<?php //var_dump($Recipe); ?>
+<div class="clear"></div>
+<div id="nutritional-information"class="grid_6">
+    <?php foreach($Recipe['nutritional_info'] as $k => $v): ?>
+        <div><label><?php echo $k; ?></label>
+        <?php echo $v; ?></div>
+    <?php endforeach; ?>
+</div>
