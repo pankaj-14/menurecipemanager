@@ -19,6 +19,7 @@ class Recipe extends AppModel
         'instructions' => array('type' => 'string'),
         'ingredients' => array('type' => 'array'),
         'source' => array('type' => 'string'),
+        'nutritional_info' => array('type' => 'array'),
         'access' => array('type' => 'string'),
         'created' => array('type' => 'datetime'),
         'modified' => array('type' => 'datetime')

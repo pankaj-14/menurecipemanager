@@ -19,6 +19,8 @@ label { display:block; font-weight:bold; }
 td.ui-widget-content { padding:2px; }
 .center { margin : auto; }
 .column{ margin: 0 5px 0 5px; }
+#recipe-header{}
+#recipe-header div{display: inline;}
 #shopping-list .ingredient { width:40%; }
 #shopping-list .amount { width:20%; }
 #shopping-list .amount { width:20%; }

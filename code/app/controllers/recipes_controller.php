@@ -308,6 +308,12 @@ class RecipesController extends AppController
             $ingredient['instruction'] = strtolower($ingredient['instruction']);
             $ingredient['unit'] = strtolower($ingredient['unit']);
         }
+        
+        foreach($this->data['Recipe']['nutritional_info'] as &$info)
+        {
+            $info = strtolower($info);
+        }
+        
     }
 
 }

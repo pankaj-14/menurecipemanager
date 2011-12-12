@@ -1,6 +1,6 @@
-<div class="grid_12 ui-widget">
+<?php echo $this->Form->create(); ?>
+<div class="grid_3 ui-widget">
     <?php
-    echo $this->Form->create();
     echo $this->Form->input('name', array(
         'class' => 'ui-widget-content',
         'size' => 32,
@@ -35,26 +35,82 @@
         'maxlength' => 64,
         'label' => 'Source')
     );
-    echo $this->Form->input('tags', array(
-        'type' => 'textarea',
-        'class' => 'ui-widget-content',
-        'rows' => 2)
-    );
+?>
+</div>
+<div class="grid_6 ui-widget">
+<?php
+    
     echo $this->Form->input('description', array(
         'type' => 'textarea',
         'class' => 'ui-widget-content',
-        'rows' => 2)
+        'rows' => 2,
+        'cols' => 65)
     );
     echo $this->Form->input('instructions', array(
     'type' => 'textarea',
     'class' => 'ui-widget-content',
-    'rows' => 10,
-    'cols' => 100)
+    'rows' => 8,
+    'cols' => 65)
     );
-    ?>
+     echo $this->Form->input('tags', array(
+        'type' => 'textarea',
+        'class' => 'ui-widget-content',
+        'rows' => 1,
+        'cols' => 65)
+    );   
+?>
+</div>
+<div class="grid_3 ui-widget">
+<?php
+    $nutrional_length = 12;
+    echo $this->Form->input('Recipe.nutritional_info.calories', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Calories')
+    );
+    echo $this->Form->input('Recipe.nutritional_info.total_fat', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Total Fat')
+    );
+    echo $this->Form->input('Recipe.nutritional_info.cholesterol', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Cholesterol')
+    );
+    echo $this->Form->input('Recipe.nutritional_info.sodium', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Sodium')
+    );
+    echo $this->Form->input('Recipe.nutritional_info.total_carbs', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Total Carbs')
+    );
+    echo $this->Form->input('Recipe.nutritional_info.dietary_fiber', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Dietary Fiber')
+    );
+    echo $this->Form->input('Recipe.nutritional_info.protein', array(
+    'class' => 'ui-widget-content',
+    'size' => $nutrional_length,
+    'maxlength' => $nutrional_length,
+    'label' => 'Protein')
+    );
+?>
+</div>
 
+<div class="clear"></div>
 
-
+<div class="grid_12 ui-widget">
     <label>Ingredients List</label>
     <table class="ui-widget grid">
         <?php echo $this->element('ingredient_row_header'); ?>
@@ -76,9 +132,9 @@
         </tfoot>
     </table>
     <?php
-                    echo $this->Form->button('Add Recipe', array(
-                        'class' => 'ui-button ui-widget ui-state-default')
-                    );
-                    echo $this->Form->end();
+    echo $this->Form->button('Add Recipe', array(
+        'class' => 'ui-button ui-widget ui-state-default')
+    );
     ?>
 </div>
+<?php echo $this->Form->end(); ?>

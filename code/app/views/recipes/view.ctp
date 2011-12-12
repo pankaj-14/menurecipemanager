@@ -1,6 +1,6 @@
-<div class="grid_12">
-    <?php $Recipe = $this->data['Recipe']; ?>
+<?php $Recipe = $this->data['Recipe']; ?>
 
+<div id="recipe-header" class="grid_3">
     <label>Name</label>
     <div><?php echo ucwords($Recipe['name']); ?></div>
     <label>Servings</label>
@@ -11,12 +11,30 @@
     <div><?php echo $Recipe['cook_time']; ?></div>
     <label>Source</label>
     <div><?php echo $Recipe['source']; ?></div>
+</div>
+<div class="grid_6">
     <label>Description</label>
     <div><?php echo ucfirst($Recipe['description']); ?></div>
-    <label>Tags</label>
-    <div><?php echo ucwords($Recipe['tags']); ?></div>
+</div>
+<div class="grid_3">
+    <?php foreach($Recipe['nutritional_info'] as $k => $v): ?>
+        <label><?php echo $k; ?></label>
+        <div><?php echo $v; ?></div>
+    <?php endforeach; ?>
+</div>
+
+
+
+<div class="clear"></div>
+
+<div class="grid_6">
     <label>Instructions</label>
     <div><?php echo nl2br($Recipe['instructions']); ?></div>
+    <label>Tags</label>
+    <div><?php echo ucwords($Recipe['tags']); ?></div>
+</div>
+
+<div class="grid_6">
         <label>Ingredient List</label>
         <table class="ui-widget grid">
             <thead>
@@ -38,5 +56,5 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-    </div>    
+</div>    
 <?php //var_dump($Recipe); ?>
