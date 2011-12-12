@@ -48,6 +48,7 @@
 </div>    
 <div class="clear"></div>
 <div id="nutritional-information"class="grid_6">
+    <label>Nutritional Info</label>
     <?php foreach($Recipe['nutritional_info'] as $k => $v): ?>
         <div><label><?php echo $k; ?></label>
         <?php echo $v; ?></div>
