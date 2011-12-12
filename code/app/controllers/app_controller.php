@@ -15,8 +15,6 @@ class AppController extends Controller
 
     public function __construct()
     {
-
-
         parent::__construct();
     }
 
@@ -25,16 +23,16 @@ class AppController extends Controller
         parent::beforeFilter();
         Security::setHash('md5');
         $this->Auth->loginRedirect = array('controller' => 'recipes', 'action' => 'index');
-        /*
-         * Convenience var so that I can dynamically set the model for the search
-         * form
-         */
-        $this->set('modelName', $this->modelClass);
     }
 
     public function beforeRender()
     {
         $this->set('Auth', $this->Session->read('Auth'));
+        /*
+         * Convenience var so that I can dynamically set the model for the search
+         * form
+         */
+        $this->set('modelName', $this->modelClass);
     }
 
     public function ajaxMessage($args)
@@ -161,18 +159,18 @@ class AppController extends Controller
         foreach ($result as $item)
         {
             $params = array(
-                    'conditions' => array($this->modelClass . '.' . $field => $item[$this->modelClass][$field]), //array of conditions
+                'conditions' => array($this->modelClass . '.' . $field => $item[$this->modelClass][$field]), //array of conditions
             );
             $r = $this->{$this->modelClass}->find('all', $params);
 
-            if(count($r) == 2)
+            if (count($r) == 2)
             {
-                 while(count($r) > 1)
-                 {
-                     $t = array_pop($r);
-                     var_dump($t[$this->modelClass]['_id']);
-                     $this->{$this->modelClass}->delete($t[$this->modelClass]['_id']);
-                 }
+                while (count($r) > 1)
+                {
+                    $t = array_pop($r);
+                    var_dump($t[$this->modelClass]['_id']);
+                    $this->{$this->modelClass}->delete($t[$this->modelClass]['_id']);
+                }
             }
         }
 
