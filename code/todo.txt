@@ -1,7 +1,7 @@
 TODO
 
 1. Fix the shopping list layout to take up less space
-
+2. When adding a recipe to a menu the Servings input should default to the servings defined in the recipe
 3. Show text with correct case from lower case
 4. Input auto suggests must only once per page
 6. Add nutritional information
