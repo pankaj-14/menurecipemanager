@@ -45,38 +45,44 @@ class RecipesController extends AppController
      */
     public function index()
     {
-        if (!empty($this->data['Recipe']['searchParams']))
+        if (!empty($this->data['Recipe']['criteria']))
         {
-
-            $searchParams = $this->getSearchParams();
-
-            $conditions[] = array(
-                'ingredients.ingredient' => array(
-                    '$in' => $searchParams
-                )
-            );
-
-            $conditions[] = array(
-                'Recipe.name' => array(
-                    '$in' => $searchParams
-                )
-            );
-
-            $this->paginate['conditions'] = array('$or' => $conditions);
+            $this->paginate['conditions'] = $this->getSearchParams();
         }
-
         $results = $this->paginate('Recipe');
         $this->set(compact('results'));
     }
 
     private function getSearchParams()
     {
-        $searchParams = array();
-        $ar = explode(',', $this->data['Recipe']['searchParams']);
+
+        //$this->data['Recipe']['criteria'] = 'gar, gin';
+        //$this->data['Recipe']['modelSelect'] = 'Recipe';
+
+        $criteria = array();
+        $model = null;
+        $op = '$or'; // $and | $or
+
+
+        $ar = explode(',', $this->data['Recipe']['criteria']);
         foreach ($ar as $a)
         {
-            $searchParams[] = trim($a);
+            $criteria[] = trim($a);
         }
+
+        $model = $this->data['Recipe']['modelSelect'];
+
+        $searchParams = array();
+
+        foreach ($criteria as $item)
+        {
+            $searchParams["$op"][] = array(
+                'Recipe.ingredients.ingredient' => array(
+                    '$regex' => new MongoRegex('/^' . $item . '/i')
+                )
+            );
+        }
+
         return $searchParams;
     }
 
@@ -301,19 +307,18 @@ class RecipesController extends AppController
         $this->data['Recipe']['name'] = strtolower($this->data['Recipe']['name']);
         $this->data['Recipe']['tags'] = strtolower($this->data['Recipe']['tags']);
         $this->data['Recipe']['description'] = strtolower($this->data['Recipe']['description']);
-        
-        foreach($this->data['Recipe']['ingredients'] as &$ingredient)
+
+        foreach ($this->data['Recipe']['ingredients'] as &$ingredient)
         {
             $ingredient['ingredient'] = strtolower($ingredient['ingredient']);
             $ingredient['instruction'] = strtolower($ingredient['instruction']);
             $ingredient['unit'] = strtolower($ingredient['unit']);
         }
-        
-        foreach($this->data['Recipe']['nutritional_info'] as &$info)
+
+        foreach ($this->data['Recipe']['nutritional_info'] as &$info)
         {
             $info = strtolower($info);
         }
-        
     }
 
 }

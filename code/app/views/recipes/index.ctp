@@ -1,5 +1,5 @@
 <div class="grid_12">
-    <?php echo $this->element('search'); ?>
+    <?php echo $this->element('search', array('selected' => 'recipeName', 'showModelSelect' => true)); ?>
 </div>
 <div class="grid_12">
     <table class="ui-widget grid">

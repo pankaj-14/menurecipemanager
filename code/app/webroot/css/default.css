@@ -30,7 +30,7 @@ td.ui-widget-content { padding:2px; }
 #shopping-list .amount { width:20%; }
 #shopping-list .control { width:20%; }
 #search { width:100%; vertical-align: middle; }
-#search textarea  { width:85%; }
+#search textarea  { width:75%; }
 #search textarea, #search .submit  {  display:inline; vertical-align: middle; margin: 0 auto 0 auto; }
 /* FORMS */
 td.ui-widget-content input{ border:none; width:100%; }
