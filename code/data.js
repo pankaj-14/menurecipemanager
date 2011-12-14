@@ -387,8 +387,8 @@ db.getCollection("ingredient_instructions").insert({
 db.getCollection("ingredient_instructions").insert({
   "_id": ObjectId("4ee4c946527cb1923c000008"),
   "instruction": "toasted",
-  "modified": ISODate("2011-12-11T15:16:22.46Z"),
-  "created": ISODate("2011-12-11T15:16:22.49Z")
+  "modified": ISODate("2011-12-11T15:16:22.460Z"),
+  "created": ISODate("2011-12-11T15:16:22.490Z")
 });
 db.getCollection("ingredient_instructions").insert({
   "_id": ObjectId("4ee67d48527cb1c508000005"),
@@ -1385,6 +1385,69 @@ db.getCollection("ingredients").insert({
   "type": "",
   "modified": ISODate("2011-12-12T22:16:40.212Z"),
   "created": ISODate("2011-12-12T22:16:40.215Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c71099bef79906000003"),
+  "ingredient": "celery stalks",
+  "type": "",
+  "modified": ISODate("2011-12-14T15:56:00.98Z"),
+  "created": ISODate("2011-12-14T15:56:00.98Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c71099bef79906000004"),
+  "ingredient": "veggie broth",
+  "type": "",
+  "modified": ISODate("2011-12-14T15:56:00.132Z"),
+  "created": ISODate("2011-12-14T15:56:00.133Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c71099bef79906000005"),
+  "ingredient": "red potatoes",
+  "type": "",
+  "modified": ISODate("2011-12-14T15:56:00.139Z"),
+  "created": ISODate("2011-12-14T15:56:00.139Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c71099bef79906000006"),
+  "ingredient": "quinoa",
+  "type": "",
+  "modified": ISODate("2011-12-14T15:56:00.143Z"),
+  "created": ISODate("2011-12-14T15:56:00.144Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c71099bef79906000007"),
+  "ingredient": "bay leaves",
+  "type": "",
+  "modified": ISODate("2011-12-14T15:56:00.155Z"),
+  "created": ISODate("2011-12-14T15:56:00.156Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c8e099bef79706000003"),
+  "ingredient": "pita breads",
+  "type": "",
+  "modified": ISODate("2011-12-14T16:03:44.773Z"),
+  "created": ISODate("2011-12-14T16:03:44.774Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c8e099bef79706000004"),
+  "ingredient": "hummus",
+  "type": "",
+  "modified": ISODate("2011-12-14T16:03:44.778Z"),
+  "created": ISODate("2011-12-14T16:03:44.779Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c8e099bef79706000005"),
+  "ingredient": "sour cream",
+  "type": "",
+  "modified": ISODate("2011-12-14T16:03:44.795Z"),
+  "created": ISODate("2011-12-14T16:03:44.796Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee8c8e099bef79706000006"),
+  "ingredient": "garlic powder",
+  "type": "",
+  "modified": ISODate("2011-12-14T16:03:44.800Z"),
+  "created": ISODate("2011-12-14T16:03:44.801Z")
 });
 
 /** menus records **/
@@ -3465,6 +3528,252 @@ db.getCollection("recipes").insert({
   "source": "http:\/\/allrecipes.com\/recipe\/ginger-glazed-mahi-mahi\/",
   "tags": "protein, fish"
 });
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4ee8c71099bef79906000002"),
+  "name": "earthy stew",
+  "access": "private",
+  "servings": "12",
+  "prep_time": "30",
+  "cook_time": "30",
+  "source": "http:\/\/vegweb.com\/",
+  "description": "",
+  "instructions": "1. Saute onion and celery for about 5 minutes. Add mushrooms and crumbles to saute for about 3 minutes, then add spinach until it wilts. \r\n\r\n2. Add broth, water, potatoes, quinoa, rosemary, soy sauce, salt and pepper and bay leaves. Cook about 25-30 minutes until quinoa is done and potatoes are soft, but not falling apart. ",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "onion",
+      "instruction": "diced"
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "celery stalks",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "8",
+      "fraction": "",
+      "unit": "ounces",
+      "ingredient": "mushrooms",
+      "instruction": "sliced"
+    },
+    {
+      "whole": "6",
+      "fraction": "",
+      "unit": "ounces",
+      "ingredient": "quorn grounds",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "c",
+      "ingredient": "baby spinach",
+      "instruction": ""
+    },
+    {
+      "whole": "4",
+      "fraction": "",
+      "unit": "c",
+      "ingredient": "veggie broth",
+      "instruction": ""
+    },
+    {
+      "whole": "4",
+      "fraction": "",
+      "unit": "c",
+      "ingredient": "water",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "red potatoes",
+      "instruction": "diced"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "c",
+      "ingredient": "quinoa",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "sprigs",
+      "ingredient": "fresh rosemary",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "bay leaves",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-14T15:56:00.91Z"),
+  "created": ISODate("2011-12-14T15:56:00.91Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4ee8c8e099bef79706000002"),
+  "name": "fresh folds with balsamic reduction",
+  "access": "private",
+  "servings": "4",
+  "prep_time": "5",
+  "cook_time": "30",
+  "source": "http:\/\/vegweb.com\/",
+  "description": "",
+  "instructions": "1. For the onions, saute sliced onions in olive oil.  When they are starting to sweat, turn the heat down to medium-low. Stir every few minutes for about 20 minutes until they are golden and sweet.  \r\n\r\n2. Pour in the balsamic vinegar and stir well. Allow to simmer until vinegar is more of a syrupy glaze, about 5 minutes. While the onions are cooking, grill the zucchini and red pepper (I use a panini press). \r\n\r\n3. For sour cream sauce, add parsley to a bowl with the sour cream, and sprinkle in garlic powder, salt, and pepper. Warm pita\/flat bread. \r\n\r\n4. Spread 1 side of bread with hummus and the other with the sour cream mix. Really slather it on, no one likes a dry wrap! Load grilled and fresh veggies down the middle and top with hot onions.  Wrap up and devour! ",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "extra virgin olive oil",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "onion",
+      "instruction": "sliced"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/3",
+      "unit": "c",
+      "ingredient": "balsamic vinegar",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "zucchini",
+      "instruction": "sliced"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "red pepper",
+      "instruction": "sliced"
+    },
+    {
+      "whole": "4",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "pita breads",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "1\/2",
+      "unit": "c",
+      "ingredient": "hummus",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "c",
+      "ingredient": "baby spinach",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "c",
+      "ingredient": "fresh parsley",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "c",
+      "ingredient": "sour cream",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "tsp.",
+      "ingredient": "garlic powder",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "avocado",
+      "instruction": "sliced"
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "ground black pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-14T16:03:44.760Z"),
+  "created": ISODate("2011-12-14T16:03:44.760Z")
+});
 
 /** system.indexes records **/
 db.getCollection("system.indexes").insert({
@@ -3494,10 +3803,31 @@ db.getCollection("system.indexes").insert({
 db.getCollection("system.indexes").insert({
   "v": 1,
   "key": {
+    "ingredient_type": 1,
+    "unique": true,
+    "dropDups": true
+  },
+  "ns": "recipe_manager.ingredient_types",
+  "name": "ingredient_type_1_unique__dropDups_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
     "_id": 1
   },
   "ns": "recipe_manager.ingredients",
   "name": "_id_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "ingredient": 1,
+    "type": 1,
+    "unique": true,
+    "dropDups": true
+  },
+  "ns": "recipe_manager.ingredients",
+  "name": "ingredient_1_type_1_unique__dropDups_"
 });
 db.getCollection("system.indexes").insert({
   "v": 1,
@@ -3526,29 +3856,19 @@ db.getCollection("system.indexes").insert({
 db.getCollection("system.indexes").insert({
   "v": 1,
   "key": {
+    "tag": 1
+  },
+  "unique": true,
+  "ns": "recipe_manager.tags",
+  "name": "tag_1"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
     "_id": 1
   },
   "ns": "recipe_manager.units",
   "name": "_id_"
-});
-db.getCollection("system.indexes").insert({
-  "v": 1,
-  "key": {
-    "_id": 1
-  },
-  "ns": "recipe_manager.users",
-  "name": "_id_"
-});
-db.getCollection("system.indexes").insert({
-  "v": 1,
-  "key": {
-    "ingredient": 1,
-    "type": 1,
-    "unique": true,
-    "dropDups": true
-  },
-  "ns": "recipe_manager.ingredients",
-  "name": "ingredient_1_type_1_unique__dropDups_"
 });
 db.getCollection("system.indexes").insert({
   "v": 1,
@@ -3564,33 +3884,20 @@ db.getCollection("system.indexes").insert({
 db.getCollection("system.indexes").insert({
   "v": 1,
   "key": {
-    "ingredient_type": 1,
-    "unique": true,
-    "dropDups": true
-  },
-  "ns": "recipe_manager.ingredient_types",
-  "name": "ingredient_type_1_unique__dropDups_"
-});
-db.getCollection("system.indexes").insert({
-  "v": 1,
-  "key": {
-    "tag": 1
-  },
-  "unique": true,
-  "ns": "recipe_manager.tags",
-  "name": "tag_1",
-  "dropDups": true
-});
-db.getCollection("system.indexes").insert({
-  "v": 1,
-  "key": {
     "l_name": 1,
     "0": "s_name"
   },
   "unique": true,
   "ns": "recipe_manager.units",
-  "dropDups": true,
-  "name": "l_name_1_0_s_name"
+  "name": "l_name_1_0_"
+});
+db.getCollection("system.indexes").insert({
+  "v": 1,
+  "key": {
+    "_id": 1
+  },
+  "ns": "recipe_manager.users",
+  "name": "_id_"
 });
 
 /** tags records **/
@@ -3713,6 +4020,12 @@ db.getCollection("tags").insert({
   "tag": "fish",
   "modified": ISODate("2011-12-12T22:16:40.327Z"),
   "created": ISODate("2011-12-12T22:16:40.330Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4ee8c71099bef79906000008"),
+  "tag": "",
+  "modified": ISODate("2011-12-14T15:56:00.252Z"),
+  "created": ISODate("2011-12-14T15:56:00.252Z")
 });
 
 /** units records **/
@@ -3858,6 +4171,18 @@ db.getCollection("units").insert({
   "_id": ObjectId("4ee4c3c9527cb1933c00000a"),
   "l_name": "large",
   "s_name": "large"
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4ee8c71099bef79906000009"),
+  "l_name": "c",
+  "s_name": "c",
+  "created": ISODate("2011-12-14T15:56:00.332Z")
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4ee8c71099bef7990600000a"),
+  "l_name": "sprigs",
+  "s_name": "sprigs",
+  "created": ISODate("2011-12-14T15:56:00.348Z")
 });
 
 /** users records **/
