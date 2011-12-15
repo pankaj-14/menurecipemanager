@@ -44,19 +44,19 @@
         'type' => 'textarea',
         'class' => 'ui-widget-content',
         'rows' => 2,
-        'cols' => 65)
+        'cols' => 45)
     );
     echo $this->Form->input('instructions', array(
     'type' => 'textarea',
     'class' => 'ui-widget-content',
     'rows' => 8,
-    'cols' => 65)
+    'cols' => 45)
     );
      echo $this->Form->input('tags', array(
         'type' => 'textarea',
         'class' => 'ui-widget-content',
         'rows' => 1,
-        'cols' => 65)
+        'cols' => 45)
     );   
 ?>
 </div>

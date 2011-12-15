@@ -1,6 +1,6 @@
     <tfoot>
         <tr>
-            <td colspan="<?php echo $colspan; ?>" class="ui-widget-header">
+            <td colspan="<?php echo $colspan; ?>" class="ui-widget-content">
                 <ul class="paginate">
                     <li><?php echo $paginator->prev('Previous ', null, null, array('class' => 'disabled')); ?></li>
                     <li><?php echo $paginator->numbers(); ?></li>

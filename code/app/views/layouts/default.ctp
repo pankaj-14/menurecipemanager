@@ -7,9 +7,9 @@
         echo $html->css('reset');
         echo $html->css('text');
         echo $html->css('960');
-        echo $html->css('ui-lightness/jquery-ui-1.8.9.custom');
+        echo $html->css('cupertino/jquery-ui-1.8.16.custom');
         echo $html->css('default');
-        echo $javascript->link('jquery-1.5.min');
+        echo $javascript->link('http://code.jquery.com/jquery-1.7.1.min.js');
         echo $javascript->link('jquery-ui-1.8.9.custom.min');
         echo $javascript->link('jquery.jeditable.mini');
         echo $javascript->link('jquery.jqprint.0.3');
