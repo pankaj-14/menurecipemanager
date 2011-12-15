@@ -13,7 +13,7 @@
     }
 
     echo $this->Form->textarea('criteria', array('class' => 'ui-widget-content searchInput', 'rows' => 1));
-    echo $this->Form->button('Clear', array('type' => 'reset', 'div' => false));
+    echo $this->Form->button('Clear', array('type'=>'reset'));
     echo $this->Form->submit('Filter', array('div' => false));
     echo $this->Form->end();
     ?>
