@@ -70,14 +70,23 @@ class RecipesController extends AppController
             $criteria[] = trim($a);
         }
 
-        $model = $this->data['Recipe']['modelSelect'];
+        switch ($this->data['Recipe']['modelSelect'])
+        {
+            case 'ingredients':
+                $field = 'Recipe.ingredients.ingredient';
+                break;
+            case 'recipe':
+                $field = 'Recipe.name';
+                break;
+        }
+
 
         $searchParams = array();
 
         foreach ($criteria as $item)
         {
             $searchParams["$op"][] = array(
-                'Recipe.ingredients.ingredient' => array(
+                $field => array(
                     '$regex' => new MongoRegex('/^' . $item . '/i')
                 )
             );

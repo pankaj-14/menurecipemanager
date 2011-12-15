@@ -4,7 +4,7 @@
     if (!empty($showModelSelect))
     {
         echo $this->Form->select('modelSelect', array(
-            'recipeName' => 'Recipe Name',
+            'recipe' => 'Recipe Name',
             'ingredients' => 'Ingredients'
                 ), $selected, array(
             'empty' => false
