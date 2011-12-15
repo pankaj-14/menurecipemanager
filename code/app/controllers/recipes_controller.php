@@ -61,9 +61,15 @@ class RecipesController extends AppController
 
         $criteria = array();
         $model = null;
+        
         $op = '$or'; // $and | $or
+        if(!empty($this->data['Recipe']['opSelect']))
+        {
+            $op = $this->data['Recipe']['opSelect'];
+        }
 
-
+        $this->set('selectedOp', $op);
+        
         $ar = explode(',', $this->data['Recipe']['criteria']);
         foreach ($ar as $a)
         {
@@ -80,6 +86,8 @@ class RecipesController extends AppController
                 break;
         }
 
+        $this->set('selectedModel', $this->data['Recipe']['modelSelect']);
+        
 
         $searchParams = array();
 
