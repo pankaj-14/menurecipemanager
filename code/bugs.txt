@@ -1,10 +1,11 @@
 1. If you save a recipe without adding any ingredients when you edit the recipe 
 you cannot add an ingredient because you cant add an ingredient row.
-2. The check boxes to exclude items from the shopping list appear to be broken
+
+
 3. Ingredient row type ahead selection does not seem to happen if the list has 
     two values per line such as "lbs. | pounds"
-4. When adding a new ingredient, or editing an existing ingredient. If there is a duplicate then handle it
-    because we only want one of every ingredient
+
+
 5. Check that the following adds and edits dont create duplicates
     ingredient
     tags
