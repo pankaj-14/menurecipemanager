@@ -45,61 +45,92 @@ class RecipesController extends AppController
      */
     public function index()
     {
-        if (!empty($this->data['Recipe']['criteria']))
+        // Only accept the following criteria for search params
+        $validCriteria = array('modelSelect', 'criteria', 'opSelect');
+
+        /*
+         *  See if the user passed seach criteria. If so, then assign it to the
+         * session so we can retrieve it on the next request. If there is not 
+         * criteria then delete it from the session
+         */
+        foreach ($validCriteria as $crit)
         {
-            $this->paginate['conditions'] = $this->getSearchParams();
+            if (!empty($this->data['Recipe'][$crit]))
+            {
+                $this->Session->write('Pager.Recipe.' . $crit, $this->data['Recipe'][$crit]);
+            }
+            else
+            {
+                $this->Session->delete('Pager.Recipe.' . $crit);
+            }
         }
+        
+        /*
+         * If there is search criteria in Session then assign it back to the 
+         * Controller's data property so that its available to the view and we
+         * can then extract it to form the search conditions.
+         */
+        foreach ($validCriteria as $crit)
+        {
+            if ($this->Session->check('Pager.Recipe.' . $crit))
+            {
+                $this->data['Recipe'][$crit] = $this->Session->read('Pager.Recipe.' . $crit);
+            }
+        }
+
+        $this->paginate['conditions'] = $this->extractSearchParams();
         $results = $this->paginate('Recipe');
         $this->set(compact('results'));
     }
 
-    private function getSearchParams()
+    /**
+     * 
+     * @return array 
+     */
+    private function extractSearchParams()
     {
 
-        //$this->data['Recipe']['criteria'] = 'gar, gin';
-        //$this->data['Recipe']['modelSelect'] = 'Recipe';
-
-        $criteria = array();
-        $model = null;
-        
-        $op = '$or'; // $and | $or
-        if(!empty($this->data['Recipe']['opSelect']))
-        {
-            $op = $this->data['Recipe']['opSelect'];
-        }
-
-        $this->set('selectedOp', $op);
-        
-        $ar = explode(',', $this->data['Recipe']['criteria']);
-        foreach ($ar as $a)
-        {
-            $criteria[] = trim($a);
-        }
-
-        switch ($this->data['Recipe']['modelSelect'])
-        {
-            case 'ingredients':
-                $field = 'Recipe.ingredients.ingredient';
-                break;
-            case 'recipe':
-                $field = 'Recipe.name';
-                break;
-        }
-
-        $this->set('selectedModel', $this->data['Recipe']['modelSelect']);
-        
-
         $searchParams = array();
-
-        foreach ($criteria as $item)
+        if (!empty($this->data['Recipe']['criteria']))
         {
-            $searchParams["$op"][] = array(
-                $field => array(
-                    '$regex' => new MongoRegex('/^' . $item . '/i')
-                )
-            );
-        }
+            $criteria = array();
+            $model = null;
 
+            $op = '$or'; // $and | $or
+            if (!empty($this->data['Recipe']['opSelect']))
+            {
+                $op = $this->data['Recipe']['opSelect'];
+            }
+
+            $this->set('selectedOp', $op);
+
+            $ar = explode(',', $this->data['Recipe']['criteria']);
+            foreach ($ar as $a)
+            {
+                $criteria[] = trim($a);
+            }
+
+            switch ($this->data['Recipe']['modelSelect'])
+            {
+                case 'ingredients':
+                    $field = 'Recipe.ingredients.ingredient';
+                    break;
+                case 'recipe':
+                    $field = 'Recipe.name';
+                    break;
+            }
+
+            $this->set('selectedModel', $this->data['Recipe']['modelSelect']);
+
+            foreach ($criteria as $item)
+            {
+                $searchParams["$op"][] = array(
+                    $field => array(
+                        '$regex' => new MongoRegex('/^' . $item . '/i')
+                    )
+                );
+            }
+        }
         return $searchParams;
     }
 
@@ -180,7 +211,7 @@ class RecipesController extends AppController
         if (empty($this->data))
         {
             $this->data = $this->Recipe->read(null, $id);
-            //$this->data = $this->Recipe->find('first', array('conditions' => array('_id' => $id)));
+//$this->data = $this->Recipe->find('first', array('conditions' => array('_id' => $id)));
         }
 
         $this->set('tags', $this->Recipe->Tag->find('list'));
