@@ -190,7 +190,12 @@ class UnitsController extends AppController
         {
             $r = new stdClass();
             $r->value = $s_name;
-            $r->label = $s_name . ' | ' . $l_name;
+            /*
+             * @todo add a parameter to the users account to let them decide 
+             * if they want to see short names or long names.
+             */
+            //$r->label = $s_name . ' | ' . $l_name;
+            $r->label = $l_name;
             $response[$l_name] = $r;
         }
         ksort($response);
