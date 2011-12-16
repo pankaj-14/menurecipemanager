@@ -57,7 +57,7 @@ function colHeader()
                     <th class="ui-widget-header ingredient">Ingredient</th>
                     <th class="ui-widget-header amount">Amount</th>
                     <th class="ui-widget-header unit">Unit</th>
-                    <th class="ui-widget-header control"></th>
+                    <th class="ui-widget-header control">Exclude</th>
                 </tr>
             </thead>
     </table>';
