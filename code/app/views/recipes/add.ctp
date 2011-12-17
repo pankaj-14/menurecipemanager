@@ -3,7 +3,7 @@
     <?php
     echo $this->Form->input('name', array(
         'class' => 'ui-widget-content',
-        'size' => 32,
+        'size' => 26,
         'maxlength' => 128)
     );
     echo $this->Form->input('access', array(
@@ -25,13 +25,13 @@
     );
     echo $this->Form->input('cook_time', array(
         'class' => 'ui-widget-content',
-        'size' => 32,
+        'size' => 12,
         'maxlength' => 3,
         'label' => 'Cook Time (minutes)')
     );
     echo $this->Form->input('source', array(
         'class' => 'ui-widget-content',
-        'size' => 32,
+        'size' => 26,
         'maxlength' => 64,
         'label' => 'Source')
     );
@@ -43,20 +43,17 @@
     echo $this->Form->input('description', array(
         'type' => 'textarea',
         'class' => 'ui-widget-content',
-        'rows' => 2,
-        'cols' => 45)
+        'rows' => 2)
     );
     echo $this->Form->input('instructions', array(
     'type' => 'textarea',
     'class' => 'ui-widget-content',
-    'rows' => 8,
-    'cols' => 45)
+    'rows' => 8)
     );
      echo $this->Form->input('tags', array(
         'type' => 'textarea',
         'class' => 'ui-widget-content',
-        'rows' => 1,
-        'cols' => 45)
+        'rows' => 1)
     );   
 ?>
 </div>

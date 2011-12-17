@@ -3,7 +3,6 @@
     <?php
     echo $this->Form->input('name', array(
         'class' => 'ui-widget-content',
-        'size' => 32,
         'maxlength' => 128)
     );
     echo $this->Form->input('access', array(
@@ -25,14 +24,13 @@
     );
     echo $this->Form->input('cook_time', array(
         'class' => 'ui-widget-content',
-        'size' => 32,
+        'size' => 12,
         'maxlength' => 3,
         'label' => 'Cook Time (minutes)')
     );
     echo $this->Form->input('source', array(
         'class' => 'ui-widget-content',
         'size' => 32,
-        'maxlength' => 64,
         'label' => 'Source')
     );
 ?>
