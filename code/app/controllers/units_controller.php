@@ -189,7 +189,7 @@ class UnitsController extends AppController
         foreach ($units as $l_name => $s_name)
         {
             $r = new stdClass();
-            $r->value = $s_name;
+            $r->value = $l_name;
             /*
              * @todo add a parameter to the users account to let them decide 
              * if they want to see short names or long names.

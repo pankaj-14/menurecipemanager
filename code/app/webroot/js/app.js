@@ -217,7 +217,7 @@ jQuery(document).ready( function() {
         $.createUnits = function() {
             $( ".unitsInput" ).autocomplete({
                 position : {
-                    collision:"flip"
+                    collision:"fit"
                 },
                 source: function (request, response) {
                     if(typeof(unitsList) == 'undefined') {
