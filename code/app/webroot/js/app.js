@@ -196,6 +196,9 @@ jQuery(document).ready( function() {
         var recipeList;
         $.createRecipeInput = function() {
             $( ".recipeInput" ).autocomplete({
+                position: {
+                    collision :"fit"
+                },
                 source: function (request, response) {
                     if(typeof(recipleList) == 'undefined'){
                         $.getJSON('/recipes/getRecipes', function(data){
@@ -217,6 +220,8 @@ jQuery(document).ready( function() {
         $.createUnits = function() {
             $( ".unitsInput" ).autocomplete({
                 position : {
+                    my:"left",
+                    at:"right",
                     collision:"fit"
                 },
                 source: function (request, response) {
@@ -244,7 +249,9 @@ jQuery(document).ready( function() {
                 delay: 0,
                 source: ingredientList,
                 position : {
-                    collision:"flip"
+                    my:"left",
+                    at:"right",
+                    collision:"fit"
                 }
             });
         });
@@ -256,7 +263,9 @@ jQuery(document).ready( function() {
             $( ".ingredientInstructionInput" ).autocomplete({
                 source: ingredientInstructionList,
                 position : {
-                    collision:"flip"
+                    my:"right",
+                    at:"left",
+                    collision:"fit"
                 }
             });
         });
