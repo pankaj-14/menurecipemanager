@@ -17,6 +17,7 @@ class MenusController extends AppController
             'Menu.menu' => 'asc'
         )
     );
+
     /**
      * name property
      *
@@ -45,8 +46,7 @@ class MenusController extends AppController
     public function shoppingList($id = null)
     {
         $recipes = array();
-        $ingredientsToType = $this->Menu->Recipe->Ingredient->find('list',
-                        array('fields' => array('ingredient', 'type'))
+        $ingredientsToType = $this->Menu->Recipe->Ingredient->find('list', array('fields' => array('ingredient', 'type'))
         );
         /*
          * Fetch the fractionsToDecimal conversions
@@ -145,10 +145,21 @@ class MenusController extends AppController
             }
             else
             {
-
+                
             }
         }
 
+        /*
+         * @TODO getting a recipe row should probably involve something like:
+         * 
+         * 1. create an element that self renders by getting from this method.
+         * 2. this should happen on every request for a recipe including the time
+         *  the add menu is on screen.
+         */
+        $params = array(
+            'order' => array('name' => 1)
+        );
+        
         $this->set('recipes', $this->Menu->Recipe->find('list'));
     }
 
@@ -173,7 +184,7 @@ class MenusController extends AppController
             }
             else
             {
-
+                
             }
         }
         if (empty($this->data))
@@ -260,7 +271,17 @@ class MenusController extends AppController
 
     public function getNewRecipeRow()
     {
-        $this->set('recipes', $this->Menu->Recipe->find('list'));
+        /*
+         * @TODO getting a recipe row should probably involve something like:
+         * 
+         * 1. create an element that self renders by getting from this method.
+         * 2. this should happen on every request for a recipe including the time
+         *  the add menu is on screen.
+         */
+        $params = array(
+            'order' => array('name' => 1)
+        );
+        $this->set('recipes', $this->Menu->Recipe->find('list', $params));
         $this->set('rowNum', $this->params['url']['rowCount']);
         $this->render('../elements/recipe_row', 'ajax');
     }
