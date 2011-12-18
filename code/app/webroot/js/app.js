@@ -191,7 +191,10 @@ jQuery(document).ready( function() {
             });
         }
     });
-
+    
+    /**
+     * @TODO this appears to do nothing why is it here?
+     */
     if($( "#RecipeName" ).length > 0) {
         var recipeList;
         $.createRecipeInput = function() {
@@ -240,38 +243,38 @@ jQuery(document).ready( function() {
         $.createUnits();
     }
 
-
-
-
-    $.createIngredientsInput = function() {
-        $.getJSON('/ingredients/getIngredients', function(ingredientList){
-            $( ".ingredientsInput" ).catcomplete({
-                delay: 0,
-                source: ingredientList,
-                position : {
-                    my:"left",
-                    at:"right",
-                    collision:"fit"
-                }
+    if($('.ingredientsInput').length > 0){
+        $.createIngredientsInput = function() {
+            $.getJSON('/ingredients/getIngredients', function(ingredientList){
+                $( ".ingredientsInput" ).catcomplete({
+                    delay: 0,
+                    source: ingredientList,
+                    position : {
+                        my:"left",
+                        at:"right",
+                        collision:"fit"
+                    }
+                });
             });
-        });
+        }
+        $.createIngredientsInput();
     }
-    $.createIngredientsInput();
-
-    $.createIngredientDirectionsInput = function()  {
-        $.getJSON('/ingredient_instructions/getIngredientInstructions', function(ingredientInstructionList){
-            $( ".ingredientInstructionInput" ).autocomplete({
-                source: ingredientInstructionList,
-                position : {
-                    my:"right",
-                    at:"left",
-                    collision:"fit"
-                }
+    
+    if($( ".ingredientInstructionInput" ).length > 0){
+        $.createIngredientDirectionsInput = function()  {
+            $.getJSON('/ingredient_instructions/getIngredientInstructions', function(ingredientInstructionList){
+                $( ".ingredientInstructionInput" ).autocomplete({
+                    source: ingredientInstructionList,
+                    position : {
+                        my:"right",
+                        at:"left",
+                        collision:"fit"
+                    }
+                });
             });
-        });
+        }
+        $.createIngredientDirectionsInput();
     }
-    $.createIngredientDirectionsInput();
-
     //var fractionRegExp = /^[0-9]{0,2}\s{1}[0-9]{1}\/{1}[0-9]{1,2}/;
     $.createWholeAmountInput = function() {
         $('.wholeInput').keyup(function(){
@@ -322,6 +325,9 @@ jQuery(document).ready( function() {
         $('.printable').jqprint();
     });
 
+    /**
+     * In place editor for ingredient type in the ingredients list view
+     */
     $('#ingredientList select').change(function(){
         if($(this).val()){
             el = $(this);
