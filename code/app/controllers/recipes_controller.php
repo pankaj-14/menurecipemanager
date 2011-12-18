@@ -137,7 +137,12 @@ class RecipesController extends AppController
     public function getRecipeList()
     {
         $arrayOfObjects = array();
-        $results = $this->Recipe->find('list');
+        
+        $params = array(
+            'order' => array('name' => 1)
+        );
+        
+        $results = $this->Recipe->find('list', $params);
 
         foreach ($results as $k => $v)
         {
@@ -146,7 +151,6 @@ class RecipesController extends AppController
             $obj->label = $v;
             $arrayOfObjects[] = $obj;
         }
-
         $this->set('response', $arrayOfObjects);
         $this->render('../elements/ajax_response', 'ajax');
     }
