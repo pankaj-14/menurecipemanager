@@ -8,3 +8,11 @@ TODO
 8. Create javascript input filter
 
 10. When deleting items from a paged screen you should end up on the same screen once deletion is complete
+
+11. Add the Menu data to the shopping list for reference. Maybe insert a reference column in the list so you know
+    what recipe an ingredient is for.
+
+12. App.js should broken up into sections that only fire when the appropriate view is on screen. In other words, detect
+    what page you are on and fire up page specific variable and handlers. This would be good for things like adding a recipe
+    where you could load all the list for ingredient rows, tags once. Then the AJAX handlers would have access to them
+    without doing another call. This should speed up the loading of the page.
