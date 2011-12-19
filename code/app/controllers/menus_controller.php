@@ -124,8 +124,44 @@ class MenusController extends AppController
         }
 
         ksort($shoppingList);
+        /**
+         * Organize the shopping list into columns to match the printing size
+         */
+        $pages = array();
+        $pageCounter = 1;
+        $colCounter = 1;
+        $colHeight = 0;
+        foreach ($shoppingList as $category => $ingredients)
+        {
+            $colHeight += Configure::read('FEATURE.SHOPPING_LIST.CAT_HEIGHT_PX');
+
+            foreach ($ingredients as $ingredient)
+            {
+                //var_dump($ingredients);
+                $colHeight += Configure::read('FEATURE.SHOPPING_LIST.TR_HEIGHT_PX');
+                $pages[$pageCounter][$colCounter][$category][] = $ingredient;
+                /*
+                 * If we have reached the column height then assign the current
+                 * column to the page and start again with a new column
+                 */
+                if ($colHeight >= Configure::read('FEATURE.SHOPPING_LIST.HEIGHT_PX'))
+                {
+                    // Reset the column height
+                    $colHeight = 0;
+                    // Bump the column
+                    $colCounter++;
+
+                    if ($colCounter > Configure::read('FEATURE.SHOPPING_LIST.COLS'))
+                    {
+                        $pageCounter++;
+                        $colCounter = 1;
+                    }
+                    $column = array();
+                }
+            }
+        }
         $this->layout = 'printable';
-        $this->set('shoppingList', $shoppingList);
+        $this->set('shoppingList', $pages);
     }
 
     /**
@@ -159,7 +195,7 @@ class MenusController extends AppController
         $params = array(
             'order' => array('name' => 1)
         );
-        
+
         $this->set('recipes', $this->Menu->Recipe->find('list'));
     }
 
