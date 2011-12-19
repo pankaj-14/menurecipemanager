@@ -345,5 +345,25 @@ jQuery(document).ready( function() {
             });
         }
     });
+    
+    /**
+     * Handler for a recipe quick view
+     */
+    if($('.recipeQuickView').length > 0)
+    {
+        $('.recipeQuickView').click(function(){
+            
+            $('#dialog').load($(this).attr('href'), function(response, textStatus){
+                
+                $('#dialog').dialog('option', 'title', 'Recipe Quick View');
+                $('#dialog').dialog('option', 'height', 400);
+                $('#dialog').dialog('option', 'width', 700);
+                $('#dialog').dialog("open");
+            });
+            
+            return false;
+        });
+            
+    }
 
 });
