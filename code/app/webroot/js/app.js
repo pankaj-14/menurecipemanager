@@ -1,9 +1,10 @@
 jQuery(document).ready( function() {
    
     if($('#shopping-list').length > 0) {
+        /*
         $('#shopping-list').columnize({
             columns: 3
-        });
+        });*/
     }
     /*
      * InplaceEdit for IngredientType

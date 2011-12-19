@@ -27,6 +27,20 @@
         ?>
     </td>
     <td class="ui-widget-content">
+        <?php
+        echo $html->link('view',
+                array(
+                    'controller'=>'recipes', 
+                    'action' => 'view',
+                    $this->data['Menu']['recipes'][$rowNum]['name']
+                ), // should be id
+                array(
+                    'class' => 'recipeQuickView'
+             )
+        );
+        ?>
+    </td>
+    <td class="ui-widget-content">
         <div class = "ui-icon ui-icon-close deleteRow"></div>
     </td>
 </tr>
