@@ -160,8 +160,16 @@ class MenusController extends AppController
                 }
             }
         }
+        
+        $recipeList = array();
+        foreach($recipes as $recipe)
+        {
+            $recipeList[] = $recipe['Recipe']['name'];
+        }
+        
         $this->layout = 'printable';
         $this->set('shoppingList', $pages);
+        $this->set('recipeList', $recipeList);
     }
 
     /**

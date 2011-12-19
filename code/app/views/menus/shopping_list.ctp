@@ -2,6 +2,14 @@
     <input type="button" id="print" value="Print" name="Print" class="ui-widget-content"/>
 </div>
 <div id="shopping-list" class="printable">
+    <label>Recipes</label>
+    <ul>
+        <?php foreach ($recipeList as $recipe): ?>
+            <li>
+                <?php echo $recipe; ?>
+                </;i>
+            <?php endforeach; ?>
+    </ul>
 
     <?php foreach ($shoppingList as $index => $page): ?>
         <table style="width: <?php echo Configure::read('FEATURE.SHOPPING_LIST.WIDTH_PX'); ?>px" id="<?php echo 'page_' . $index; ?>">
