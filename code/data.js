@@ -396,6 +396,36 @@ db.getCollection("ingredient_instructions").insert({
   "modified": ISODate("2011-12-12T22:16:40.470Z"),
   "created": ISODate("2011-12-12T22:16:40.473Z")
 });
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4eecdb77527cb1ad08000017"),
+  "instruction": "toasted, ground find",
+  "modified": ISODate("2011-12-17T18:12:07.598Z"),
+  "created": ISODate("2011-12-17T18:12:07.601Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4eee883b527cb1b317000002"),
+  "instruction": "sliced into spears",
+  "modified": ISODate("2011-12-19T00:41:31.596Z"),
+  "created": ISODate("2011-12-19T00:41:31.599Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4eee883b527cb1b317000003"),
+  "instruction": "juice",
+  "modified": ISODate("2011-12-19T00:41:31.653Z"),
+  "created": ISODate("2011-12-19T00:41:31.656Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000007"),
+  "instruction": "peeled, parboiled and cut into cubes",
+  "modified": ISODate("2011-12-19T01:07:45.933Z"),
+  "created": ISODate("2011-12-19T01:07:45.936Z")
+});
+db.getCollection("ingredient_instructions").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000008"),
+  "instruction": "cored and diced",
+  "modified": ISODate("2011-12-19T01:07:45.965Z"),
+  "created": ISODate("2011-12-19T01:07:45.967Z")
+});
 
 /** ingredient_types records **/
 db.getCollection("ingredient_types").insert({
@@ -1296,55 +1326,6 @@ db.getCollection("ingredients").insert({
   "type": "bakery"
 });
 db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee49e14527cb1943c000008"),
-  "ingredient": "black pepper",
-  "type": "",
-  "modified": ISODate("2011-12-11T12:12:04.290Z"),
-  "created": ISODate("2011-12-11T12:12:04.293Z")
-});
-db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee4c3c8527cb1933c000006"),
-  "ingredient": "whole wheat flour",
-  "type": "",
-  "modified": ISODate("2011-12-11T14:52:56.534Z"),
-  "created": ISODate("2011-12-11T14:52:56.537Z")
-});
-db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee4c3c8527cb1933c000007"),
-  "ingredient": "beet",
-  "type": "",
-  "modified": ISODate("2011-12-11T14:52:56.608Z"),
-  "created": ISODate("2011-12-11T14:52:56.611Z")
-});
-db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee4c3c8527cb1933c000008"),
-  "ingredient": "potatoes",
-  "type": "",
-  "modified": ISODate("2011-12-11T14:52:56.659Z"),
-  "created": ISODate("2011-12-11T14:52:56.662Z")
-});
-db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee4c945527cb1923c000002"),
-  "ingredient": "peanut oil",
-  "type": "",
-  "modified": ISODate("2011-12-11T15:16:21.440Z"),
-  "created": ISODate("2011-12-11T15:16:21.444Z")
-});
-db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee4c945527cb1923c000004"),
-  "ingredient": "green onions",
-  "type": "",
-  "modified": ISODate("2011-12-11T15:16:21.659Z"),
-  "created": ISODate("2011-12-11T15:16:21.662Z")
-});
-db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee4c945527cb1923c000005"),
-  "ingredient": "sesame seeds",
-  "type": "",
-  "modified": ISODate("2011-12-11T15:16:21.710Z"),
-  "created": ISODate("2011-12-11T15:16:21.713Z")
-});
-db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee4c945527cb1923c000003"),
   "created": ISODate("2011-12-11T15:16:21.609Z"),
   "ingredient": "miso paste",
@@ -1359,129 +1340,406 @@ db.getCollection("ingredients").insert({
   "created": ISODate("2011-12-11T16:26:44.853Z")
 });
 db.getCollection("ingredients").insert({
-  "_id": ObjectId("4ee53cd1527cb1913c000009"),
-  "ingredient": "test",
-  "type": "",
-  "modified": ISODate("2011-12-11T23:29:21.353Z"),
-  "created": ISODate("2011-12-11T23:29:21.357Z")
+  "_id": ObjectId("4ee4c3c8527cb1933c000006"),
+  "created": ISODate("2011-12-11T14:52:56.537Z"),
+  "ingredient": "whole wheat flour",
+  "modified": ISODate("2011-12-17T16:41:55.904Z"),
+  "type": "baking supplies"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c3c8527cb1933c000007"),
+  "created": ISODate("2011-12-11T14:52:56.611Z"),
+  "ingredient": "beet",
+  "modified": ISODate("2011-12-17T16:42:04.364Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c3c8527cb1933c000008"),
+  "created": ISODate("2011-12-11T14:52:56.662Z"),
+  "ingredient": "potatoes",
+  "modified": ISODate("2011-12-17T16:42:12.540Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000002"),
+  "created": ISODate("2011-12-11T15:16:21.444Z"),
+  "ingredient": "peanut oil",
+  "modified": ISODate("2011-12-17T16:42:18.259Z"),
+  "type": "oils and vinegars"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000004"),
+  "created": ISODate("2011-12-11T15:16:21.662Z"),
+  "ingredient": "green onions",
+  "modified": ISODate("2011-12-17T16:42:25.618Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4ee4c945527cb1923c000005"),
+  "created": ISODate("2011-12-11T15:16:21.713Z"),
+  "ingredient": "sesame seeds",
+  "modified": ISODate("2011-12-17T16:42:33.31Z"),
+  "type": "dried herbs and spices"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee67d48527cb1c508000001"),
+  "created": ISODate("2011-12-12T22:16:39.997Z"),
   "ingredient": "balsamic vinegar",
-  "type": "",
-  "modified": ISODate("2011-12-12T22:16:39.994Z"),
-  "created": ISODate("2011-12-12T22:16:39.997Z")
+  "modified": ISODate("2011-12-17T16:42:51.56Z"),
+  "type": "oils and vinegars"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee67d48527cb1c508000002"),
+  "created": ISODate("2011-12-12T22:16:40.117Z"),
   "ingredient": "mahi mahi",
-  "type": "",
-  "modified": ISODate("2011-12-12T22:16:40.114Z"),
-  "created": ISODate("2011-12-12T22:16:40.117Z")
+  "modified": ISODate("2011-12-17T16:42:57.177Z"),
+  "type": "seafood"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee67d48527cb1c508000003"),
+  "created": ISODate("2011-12-12T22:16:40.215Z"),
   "ingredient": "vegetable oil",
-  "type": "",
-  "modified": ISODate("2011-12-12T22:16:40.212Z"),
-  "created": ISODate("2011-12-12T22:16:40.215Z")
+  "modified": ISODate("2011-12-17T16:43:04.333Z"),
+  "type": "oils and vinegars"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c71099bef79906000003"),
+  "created": ISODate("2011-12-14T15:56:00.980Z"),
   "ingredient": "celery stalks",
-  "type": "",
-  "modified": ISODate("2011-12-14T15:56:00.98Z"),
-  "created": ISODate("2011-12-14T15:56:00.98Z")
+  "modified": ISODate("2011-12-17T16:43:13.357Z"),
+  "type": "produce"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c71099bef79906000004"),
+  "created": ISODate("2011-12-14T15:56:00.133Z"),
   "ingredient": "veggie broth",
-  "type": "",
-  "modified": ISODate("2011-12-14T15:56:00.132Z"),
-  "created": ISODate("2011-12-14T15:56:00.133Z")
+  "modified": ISODate("2011-12-17T16:43:27.836Z"),
+  "type": "other"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c71099bef79906000005"),
+  "created": ISODate("2011-12-14T15:56:00.139Z"),
   "ingredient": "red potatoes",
-  "type": "",
-  "modified": ISODate("2011-12-14T15:56:00.139Z"),
-  "created": ISODate("2011-12-14T15:56:00.139Z")
+  "modified": ISODate("2011-12-17T16:43:33.845Z"),
+  "type": "produce"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c71099bef79906000006"),
+  "created": ISODate("2011-12-14T15:56:00.144Z"),
   "ingredient": "quinoa",
-  "type": "",
-  "modified": ISODate("2011-12-14T15:56:00.143Z"),
-  "created": ISODate("2011-12-14T15:56:00.144Z")
+  "modified": ISODate("2011-12-17T16:43:41.55Z"),
+  "type": "grains and pasta"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c71099bef79906000007"),
+  "created": ISODate("2011-12-14T15:56:00.156Z"),
   "ingredient": "bay leaves",
-  "type": "",
-  "modified": ISODate("2011-12-14T15:56:00.155Z"),
-  "created": ISODate("2011-12-14T15:56:00.156Z")
+  "modified": ISODate("2011-12-17T16:43:49.697Z"),
+  "type": "dried herbs and spices"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c8e099bef79706000003"),
+  "created": ISODate("2011-12-14T16:03:44.774Z"),
   "ingredient": "pita breads",
-  "type": "",
-  "modified": ISODate("2011-12-14T16:03:44.773Z"),
-  "created": ISODate("2011-12-14T16:03:44.774Z")
+  "modified": ISODate("2011-12-17T16:43:56.202Z"),
+  "type": "bakery"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c8e099bef79706000004"),
+  "created": ISODate("2011-12-14T16:03:44.779Z"),
   "ingredient": "hummus",
-  "type": "",
-  "modified": ISODate("2011-12-14T16:03:44.778Z"),
-  "created": ISODate("2011-12-14T16:03:44.779Z")
+  "modified": ISODate("2011-12-17T16:44:11.635Z"),
+  "type": "other"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c8e099bef79706000005"),
+  "created": ISODate("2011-12-14T16:03:44.796Z"),
   "ingredient": "sour cream",
-  "type": "",
-  "modified": ISODate("2011-12-14T16:03:44.795Z"),
-  "created": ISODate("2011-12-14T16:03:44.796Z")
+  "modified": ISODate("2011-12-17T16:44:17.608Z"),
+  "type": "dairy"
 });
 db.getCollection("ingredients").insert({
   "_id": ObjectId("4ee8c8e099bef79706000006"),
+  "created": ISODate("2011-12-14T16:03:44.801Z"),
   "ingredient": "garlic powder",
+  "modified": ISODate("2011-12-17T16:44:27.834Z"),
+  "type": "dried herbs and spices"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecbcfc527cb1ad08000001"),
+  "created": ISODate("2011-12-17T16:02:04.725Z"),
+  "ingredient": "tuna steaks",
+  "modified": ISODate("2011-12-17T16:44:35.743Z"),
+  "type": "seafood"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecc3f0527cb1ac08000001"),
+  "created": ISODate("2011-12-17T16:31:44.815Z"),
+  "ingredient": "lemon zest",
+  "modified": ISODate("2011-12-17T16:44:41.696Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecc3f0527cb1ac08000002"),
+  "created": ISODate("2011-12-17T16:31:44.870Z"),
+  "ingredient": "sugar",
+  "modified": ISODate("2011-12-17T16:44:50.706Z"),
+  "type": "baking supplies"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecc483527cb1ac08000004"),
+  "created": ISODate("2011-12-17T16:34:11.847Z"),
+  "ingredient": "toasted sesame oil",
+  "modified": ISODate("2011-12-17T16:45:06.307Z"),
+  "type": "asian"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecc5a2527cb1ab08000001"),
+  "created": ISODate("2011-12-17T16:38:58.464Z"),
+  "ingredient": "brown sugar",
+  "modified": ISODate("2011-12-17T16:45:13.453Z"),
+  "type": "baking supplies"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b6527cb1ad08000005"),
+  "created": ISODate("2011-12-17T17:51:50.920Z"),
+  "ingredient": "lime",
+  "modified": ISODate("2011-12-18T20:57:38.500Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b6527cb1ad08000006"),
+  "created": ISODate("2011-12-17T17:51:50.951Z"),
+  "ingredient": "grape tomatoes",
+  "modified": ISODate("2011-12-18T20:57:47.665Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b6527cb1ad08000007"),
+  "created": ISODate("2011-12-17T17:51:50.992Z"),
+  "ingredient": "jalapeno",
+  "modified": ISODate("2011-12-18T20:57:57.212Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad08000008"),
+  "created": ISODate("2011-12-17T17:51:51.23Z"),
+  "ingredient": "sweet onion",
+  "modified": ISODate("2011-12-18T20:58:11.790Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad08000009"),
+  "created": ISODate("2011-12-17T17:51:51.65Z"),
+  "ingredient": "plain nonfat greek yogurt",
+  "modified": ISODate("2011-12-18T20:58:27.455Z"),
+  "type": "dairy"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad0800000a"),
+  "created": ISODate("2011-12-17T17:51:51.107Z"),
+  "ingredient": "green cabbage",
+  "modified": ISODate("2011-12-18T20:58:38.300Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad0800000b"),
+  "created": ISODate("2011-12-17T17:51:51.149Z"),
+  "ingredient": "tilapia filets",
+  "modified": ISODate("2011-12-18T20:59:00.419Z"),
+  "type": "seafood"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad0800000c"),
+  "created": ISODate("2011-12-17T17:51:51.202Z"),
+  "ingredient": "whole wheat tortillas",
+  "modified": ISODate("2011-12-18T20:58:47.255Z"),
+  "type": "bakery"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd8bf527cb1ad08000010"),
+  "created": ISODate("2011-12-17T18:00:31.2Z"),
+  "ingredient": "fresh lemon juce",
+  "modified": ISODate("2011-12-18T20:59:10.210Z"),
+  "type": "produce"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd8bf527cb1ad08000011"),
+  "created": ISODate("2011-12-17T18:00:31.33Z"),
+  "ingredient": "dried basil",
+  "modified": ISODate("2011-12-18T20:59:24.50Z"),
+  "type": "dried herbs and spices"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecd8bf527cb1ad08000012"),
+  "created": ISODate("2011-12-17T18:00:31.75Z"),
+  "ingredient": "celery salt",
+  "modified": ISODate("2011-12-18T20:59:33.12Z"),
+  "type": "dried herbs and spices"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecda58527cb1aa08000001"),
+  "created": ISODate("2011-12-17T18:07:20.882Z"),
+  "ingredient": "heavy whipping cream",
+  "modified": ISODate("2011-12-18T20:59:42.280Z"),
+  "type": "dairy"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecda58527cb1aa08000002"),
+  "created": ISODate("2011-12-17T18:07:20.924Z"),
+  "ingredient": "unsalted butter",
+  "modified": ISODate("2011-12-18T20:59:51.70Z"),
+  "type": "dairy"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecda58527cb1aa08000003"),
+  "created": ISODate("2011-12-17T18:07:20.978Z"),
+  "ingredient": "white pepper",
+  "modified": ISODate("2011-12-18T21:00:00.497Z"),
+  "type": "dried herbs and spices"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecdb77527cb1ad08000014"),
+  "created": ISODate("2011-12-17T18:12:07.429Z"),
+  "ingredient": "mahi mahi filets",
+  "modified": ISODate("2011-12-18T21:00:08.387Z"),
+  "type": "seafood"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecdb77527cb1ad08000015"),
+  "created": ISODate("2011-12-17T18:12:07.482Z"),
+  "ingredient": "macadamia nuts",
+  "modified": ISODate("2011-12-18T21:00:55.503Z"),
+  "type": "other"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eecdb77527cb1ad08000016"),
+  "created": ISODate("2011-12-17T18:12:07.513Z"),
+  "ingredient": "panko",
+  "modified": ISODate("2011-12-18T21:01:22.684Z"),
+  "type": "asian"
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000001"),
+  "ingredient": "sunflower oil",
   "type": "",
-  "modified": ISODate("2011-12-14T16:03:44.800Z"),
-  "created": ISODate("2011-12-14T16:03:44.801Z")
+  "modified": ISODate("2011-12-19T01:07:45.562Z"),
+  "created": ISODate("2011-12-19T01:07:45.565Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000002"),
+  "ingredient": "turmeric",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:07:45.617Z"),
+  "created": ISODate("2011-12-19T01:07:45.620Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000003"),
+  "ingredient": "garam masala",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:07:45.659Z"),
+  "created": ISODate("2011-12-19T01:07:45.662Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000004"),
+  "ingredient": "fresh ginger",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:07:45.701Z"),
+  "created": ISODate("2011-12-19T01:07:45.704Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000005"),
+  "ingredient": "tomatoes",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:07:45.756Z"),
+  "created": ISODate("2011-12-19T01:07:45.758Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000006"),
+  "ingredient": "fresh coriander",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:07:45.787Z"),
+  "created": ISODate("2011-12-19T01:07:45.790Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee9160527cb1b317000006"),
+  "ingredient": "seasoned rice vinegar",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:20:32.577Z"),
+  "created": ISODate("2011-12-19T01:20:32.580Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee9160527cb1b317000007"),
+  "ingredient": "lite soy sauce",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:20:32.644Z"),
+  "created": ISODate("2011-12-19T01:20:32.647Z")
+});
+db.getCollection("ingredients").insert({
+  "_id": ObjectId("4eee9160527cb1b317000008"),
+  "ingredient": "sesame oil",
+  "type": "",
+  "modified": ISODate("2011-12-19T01:20:32.675Z"),
+  "created": ISODate("2011-12-19T01:20:32.678Z")
 });
 
 /** menus records **/
 db.getCollection("menus").insert({
-  "_id": ObjectId("4ee4c9b5527cb1913c000005"),
-  "created": ISODate("2011-12-11T15:18:13.100Z"),
+  "_id": ObjectId("4eeddb5e527cb1b517000000"),
+  "created": ISODate("2011-12-18T12:23:58.476Z"),
   "description": "",
-  "modified": ISODate("2011-12-11T23:42:42.905Z"),
-  "name": "test",
+  "modified": ISODate("2011-12-19T00:42:35.230Z"),
+  "name": "weekly 1",
   "recipes": {
     "1": {
-      "name": "4ee4c945527cb1923c000001",
-      "servings": "2",
-      "description": ""
-    },
-    "2": {
-      "name": "4e6961a3bad4a2841a000000",
-      "servings": "2",
-      "description": ""
-    },
-    "3": {
-      "name": "4d56c37d3d3f95a40c000000",
-      "servings": "2",
-      "description": ""
-    },
-    "4": {
       "name": "4e8f43167f8b9a410b00000a",
       "servings": "2",
-      "description": ""
+      "description": "Monday dinner"
+    },
+    "2": {
+      "name": "4e8f41ea7f8b9a410b000005",
+      "servings": "2",
+      "description": "Monday dinner"
+    },
+    "3": {
+      "name": "4d5822753d3f951c0a000013",
+      "servings": "2",
+      "description": "Wednesday dinner"
+    },
+    "4": {
+      "name": "4ee67d47527cb1c508000000",
+      "servings": "2",
+      "description": "Thursday dinner"
     },
     "5": {
-      "name": "4e8f39e27f8b9a410b000000",
+      "name": "4eecc2fb527cb1ad08000003",
       "servings": "2",
-      "description": "breakfast"
+      "description": "Thursday dinner"
+    },
+    "6": {
+      "name": "4e69678abad4a2bc2100000a",
+      "servings": "2",
+      "description": "Thursday dinner"
+    },
+    "7": {
+      "name": "4e67d0a9bad4a2bc1b00000d",
+      "servings": "2",
+      "description": "Friday dinner"
+    },
+    "8": {
+      "name": "4eecd8be527cb1ad0800000f",
+      "servings": "2",
+      "description": "Tuesday dinner"
+    },
+    "9": {
+      "name": "4ee4c3c8527cb1933c000005",
+      "servings": "2",
+      "description": "Tuesday dinner"
+    },
+    "10": {
+      "name": "4eee883b527cb1b317000000",
+      "servings": "2",
+      "description": "Tuesday dinner"
     }
   }
 });
@@ -3648,8 +3906,8 @@ db.getCollection("recipes").insert({
       "instruction": ""
     }
   ],
-  "modified": ISODate("2011-12-14T15:56:00.91Z"),
-  "created": ISODate("2011-12-14T15:56:00.91Z")
+  "modified": ISODate("2011-12-14T15:56:00.910Z"),
+  "created": ISODate("2011-12-14T15:56:00.910Z")
 });
 db.getCollection("recipes").insert({
   "_id": ObjectId("4ee8c8e099bef79706000002"),
@@ -3773,6 +4031,968 @@ db.getCollection("recipes").insert({
   ],
   "modified": ISODate("2011-12-14T16:03:44.760Z"),
   "created": ISODate("2011-12-14T16:03:44.760Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecbcfc527cb1ad08000000"),
+  "name": "tuna steaks",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "10",
+  "cook_time": "10",
+  "source": "",
+  "description": "simple tuna steak recipe",
+  "instructions": "1. Start a grill pan heating, you want it hot\r\n2. Wash and pat dry two tuna steaks\r\n3. Rub sea salt, black pepper and a little olive oil into the meat.\r\n4. When the grill pan is hot put the tuna steaks on\r\n5. Use how much brown rising up from the bottom edge you see to gauge when to turn it over.\r\n6. Do the same for the other side\r\n7. Serve immediately",
+  "tags": "protein, seafood, fish",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "tuna steaks",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "olive oil",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "sea salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "fresh ground black pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-17T16:02:04.693Z"),
+  "created": ISODate("2011-12-17T16:02:04.696Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecc2fb527cb1ad08000003"),
+  "name": "quick sauteed spinach with garlic",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "15",
+  "cook_time": "4",
+  "source": "Food Network",
+  "description": "",
+  "instructions": "1. Heat oil until very hot in large pot\r\n2. Add the spinach in large handfuls stirring and cooking down slightly before adding the next handful.\r\n3. When all the spinach is in the pot add the garlic and red pepper flakes\r\n4. Cook a few minutes more, then squeeze half the lemon over it and serve\r\n5. Sprinkle with black pepper",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "olive oil",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "1\/4",
+      "unit": "pounds",
+      "ingredient": "baby spinach",
+      "instruction": ""
+    },
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "cloves",
+      "ingredient": "garlic",
+      "instruction": "sliced thinly"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "lemon",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "pinch",
+      "ingredient": "crushed red pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "sea salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "fresh ground black pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-17T16:27:39.637Z"),
+  "created": ISODate("2011-12-17T16:27:39.640Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecc3f0527cb1ac08000000"),
+  "name": "lemon stir fry sauce",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "5",
+  "cook_time": "",
+  "source": "",
+  "description": "",
+  "instructions": "Combine all ingredients in a bowl",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "lemon juice",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "lemon zest",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "veggie broth",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "sugar",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-17T16:31:44.771Z"),
+  "created": ISODate("2011-12-17T16:31:44.774Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecc483527cb1ac08000003"),
+  "name": "soy sesame stir fry sauce",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "5",
+  "cook_time": "",
+  "source": "",
+  "description": "",
+  "instructions": "Mix all ingredients in a bowl",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "veggie broth",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "c",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "rice vinegar",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "toasted sesame oil",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "crushed red pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "sugar",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-17T16:34:11.782Z"),
+  "created": ISODate("2011-12-17T16:34:11.785Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecc510527cb1a708000000"),
+  "name": "fresh herb stir fry sauce",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "10",
+  "cook_time": "",
+  "source": "",
+  "description": "",
+  "instructions": "Mix all ingredients in a bowl",
+  "tags": "asian, sauce",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "veggie broth",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tsp.",
+      "ingredient": "rice vinegar",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "tsp",
+      "ingredient": "sugar",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "fresh basil leaves",
+      "instruction": "shredded"
+    }
+  ],
+  "modified": ISODate("2011-12-17T16:36:32.664Z"),
+  "created": ISODate("2011-12-17T16:36:32.667Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecc5a2527cb1ab08000000"),
+  "name": "sweet and sour stir fry sauce",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "5",
+  "cook_time": "",
+  "source": "",
+  "description": "",
+  "instructions": "Mix all ingredients in a bowl",
+  "tags": "asian, sauce, ",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "veggie broth",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "reduced-sodium soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "balsamic vinegar",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tbsp.",
+      "ingredient": "brown sugar",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "tsp.",
+      "ingredient": "crushed red pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-17T16:38:58.396Z"),
+  "created": ISODate("2011-12-17T16:38:58.399Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecd526527cb1a908000000"),
+  "access": "private",
+  "cook_time": "5",
+  "created": ISODate("2011-12-17T17:45:10.79Z"),
+  "description": "",
+  "ingredients": [
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "lime",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "cup",
+      "ingredient": "grape tomatoes",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "cup",
+      "ingredient": "cilantro",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "",
+      "ingredient": "jalapeno",
+      "instruction": "seeded and finely chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "teaspoon",
+      "ingredient": "sweet onion",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "teaspoon",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "cup",
+      "ingredient": "plain nonfat greek yogurt",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tablespoons",
+      "ingredient": "mayonnaise",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "cups",
+      "ingredient": "green cabbage",
+      "instruction": "chopped"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tablespoon",
+      "ingredient": "vegetable oil",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "pound",
+      "ingredient": "tilapia filets",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "teaspoon",
+      "ingredient": "chili powder",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "teaspoon",
+      "ingredient": "ground black pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "8",
+      "fraction": "",
+      "unit": "small",
+      "ingredient": "whole wheat tortillas",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "avocado",
+      "instruction": "sliced "
+    }
+  ],
+  "instructions": "1. Cut the lime in half, Squeeze juice from half and slice other half into 4 thin wedges. In a bowl combine tomatoes, cilantro, jalapeno,, onion, 1\/4 teaspoon salt, and half the lime juice. \r\n\r\n2. In another bowl mix together yogurt, mayonnaise, and remaining lime juice. Combine cabbage and 2 tablespoons of yogurt sauce in an other bowl; reserve extra sauce.\r\n\r\n3. Heat olive oil in a large pan. Sprinkle tilapia with chili powder, black pepper, and remaining 1\/4 salt; cook 3 minutes, Turn; cook 2 minutes more\r\n\r\n4. Place 2 tortillas, 1 lime wedge, an 1.4 of the tilapia on each plate. Serve with salsa, cabbage, avocado, and sauce. ",
+  "modified": ISODate("2011-12-17T17:51:50.892Z"),
+  "name": "tilapia tacos",
+  "nutritional_info": {
+    "calories": "278",
+    "total_fat": "12g",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "23g",
+    "dietary_fiber": "5",
+    "protein": "22g"
+  },
+  "prep_time": "15",
+  "servings": "4",
+  "source": "Fitness magazine",
+  "tags": "fish, seafood, "
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecd8be527cb1ad0800000f"),
+  "access": "private",
+  "cook_time": "10",
+  "created": ISODate("2011-12-17T18:00:30.941Z"),
+  "description": "",
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/8",
+      "unit": "cup",
+      "ingredient": "butter",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "1\/2",
+      "unit": "tablespoons",
+      "ingredient": "mayonnaise",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tablespoon",
+      "ingredient": "fresh lemon juce",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "teaspoon",
+      "ingredient": "dried basil",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/8",
+      "unit": "teaspoon",
+      "ingredient": "fresh ground black pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/8",
+      "unit": "teaspoon",
+      "ingredient": "celery salt",
+      "instruction": ""
+    }
+  ],
+  "instructions": "1. Preheat a broiler\r\n2. In a small bowl mix the Parmesan cheese, butter, mayonnaise and lemon juice. Season it with dried basil, pepper, onion powder, and celery salt. \r\n\r\n3. Arrange filets in a single layer on a greased baking pan. Broil for about 2 to 3 minutes and then flip and do the same. Its done when the fish flakes easily but is not dry.",
+  "modified": ISODate("2011-12-17T18:01:11.341Z"),
+  "name": "broiled tilapia parmesan",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "prep_time": "5",
+  "servings": "4",
+  "source": "All Recipes ",
+  "tags": "seafood, fish,"
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecda58527cb1aa08000000"),
+  "access": "private",
+  "cook_time": "15",
+  "created": ISODate("2011-12-17T18:07:20.842Z"),
+  "description": "a miso and cream reduction good for mahi mahi steaks",
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "heavy whipping cream",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tablespoon",
+      "ingredient": "miso paste",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "cup ",
+      "ingredient": "unsalted butter",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "lime juice",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "white pepper",
+      "instruction": ""
+    }
+  ],
+  "instructions": "1. Reduce the wine by 1\/3\r\n2. Add cream and reduce by a 1\/3\r\n3. Over a low heat stir in the miso paste\r\n4. Slowly add butter incorporating one cube at a time. Be careful not to heat too much or the sauce will break.\r\n5. Finish seasoning with lime juice, salt and pepper. Not too much salt as the miso is salty.",
+  "modified": ISODate("2011-12-17T18:13:37.856Z"),
+  "name": "miso sauce",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "prep_time": "5",
+  "servings": "4",
+  "source": "",
+  "tags": ""
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eecdb77527cb1ad08000013"),
+  "access": "private",
+  "cook_time": "10",
+  "created": ISODate("2011-12-17T18:12:07.401Z"),
+  "description": "",
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "cup",
+      "ingredient": "macadamia nuts",
+      "instruction": "toasted, ground find"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "panko",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tablespoons",
+      "ingredient": "olive oil",
+      "instruction": ""
+    }
+  ],
+  "instructions": "1. Season each filet with salt and pepper\r\n2. Mix the toasted macadamia nut into softer butter\r\n3. Add in the panko, salt and pepper\r\n4. Spread top of fish with the crust\r\n5. Sear quickly in two tablespoons of olive oil in a hot saute pan on both sides.",
+  "modified": ISODate("2011-12-17T18:12:56.830Z"),
+  "name": "macadamia nut mahi steaks",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "prep_time": "10",
+  "servings": "2",
+  "source": "Food Network",
+  "tags": "protein, fish"
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eee883b527cb1b317000000"),
+  "name": "broccoli, parmesan and lemon",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "15",
+  "cook_time": "20",
+  "source": "Food Network",
+  "description": "",
+  "instructions": "1. Cut the broccoli into spears\r\n2. Drizzle with olive oil, black pepper and salt\r\n3. Mix to coat\r\n4. Arrange on a cook sheet\r\n5. Roast for 10 minutes\r\n6. Sprinkle cheese on top of broccoli and bake until melted\r\n7. Sprinkle with lemon juice and serve",
+  "tags": "side",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "1",
+      "fraction": "1\/2",
+      "unit": "head",
+      "ingredient": "broccoli",
+      "instruction": "sliced into spears"
+    },
+    {
+      "whole": "1",
+      "fraction": "1\/2",
+      "unit": "tablespoons",
+      "ingredient": "olive oil",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "cup",
+      "ingredient": "parmesan cheese",
+      "instruction": "grated"
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "",
+      "ingredient": "lemon",
+      "instruction": "juice"
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "salt",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "fresh ground black pepper",
+      "instruction": ""
+    }
+  ],
+  "modified": ISODate("2011-12-19T00:41:31.451Z"),
+  "created": ISODate("2011-12-19T00:41:31.454Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eee8e61527cb1b417000000"),
+  "name": "bombay potatoes",
+  "access": "private",
+  "servings": "6",
+  "prep_time": "15",
+  "cook_time": "35",
+  "source": "Jamie Oliver",
+  "description": "",
+  "instructions": "1. Heat the oil in the pan and fry the spices for a few minutes\r\n2. Add the butter\r\n3. Add the potatoes make sure they are completely coated in the spicy mixture\r\n4. Cook for about 10 to 15 minutes\r\n5. Stir in the tomatoes and the coriander",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "3",
+      "fraction": "",
+      "unit": "tablespoons",
+      "ingredient": "sunflower oil",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "mustard seeds",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "",
+      "unit": "pinch",
+      "ingredient": "ground cumin",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "turmeric",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "ground coriander",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "garam masala",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "chili powder",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "knob ",
+      "ingredient": "fresh ginger",
+      "instruction": "grated"
+    },
+    {
+      "whole": "4",
+      "fraction": "",
+      "unit": "knobs",
+      "ingredient": "butter",
+      "instruction": ""
+    },
+    {
+      "whole": "6",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "potatoes",
+      "instruction": "peeled, parboiled and cut into cubes"
+    },
+    {
+      "whole": "4",
+      "fraction": "",
+      "unit": "",
+      "ingredient": "tomatoes",
+      "instruction": "cored and diced"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "handful",
+      "ingredient": "fresh coriander",
+      "instruction": "roughly chopped"
+    }
+  ],
+  "modified": ISODate("2011-12-19T01:07:45.534Z"),
+  "created": ISODate("2011-12-19T01:07:45.537Z")
+});
+db.getCollection("recipes").insert({
+  "_id": ObjectId("4eee9160527cb1b317000005"),
+  "name": "asian cucumber salad",
+  "access": "private",
+  "servings": "2",
+  "prep_time": "15",
+  "cook_time": "60",
+  "source": "My Recipes",
+  "description": "",
+  "instructions": "1. Stir together first 7 ingredients in a large bowl\r\n2. Add cucumbers tossing to coat\r\n3. Cover and chill 1 hour\r\n4. Add sesame seeds toss\r\n5. Serve",
+  "tags": "",
+  "nutritional_info": {
+    "calories": "",
+    "total_fat": "",
+    "cholesterol": "",
+    "sodium": "",
+    "total_carbs": "",
+    "dietary_fiber": "",
+    "protein": ""
+  },
+  "ingredients": [
+    {
+      "whole": "",
+      "fraction": "3\/4",
+      "unit": "cup",
+      "ingredient": "seasoned rice vinegar",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/4",
+      "unit": "cup",
+      "ingredient": "water",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tablespoon",
+      "ingredient": "sugar",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tablespoon",
+      "ingredient": "garlic",
+      "instruction": "minced"
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "tablespoon",
+      "ingredient": "lite soy sauce",
+      "instruction": ""
+    },
+    {
+      "whole": "1",
+      "fraction": "",
+      "unit": "teaspoon",
+      "ingredient": "sesame oil",
+      "instruction": ""
+    },
+    {
+      "whole": "",
+      "fraction": "1\/2",
+      "unit": "teaspoon",
+      "ingredient": "fresh ground black pepper",
+      "instruction": ""
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "large",
+      "ingredient": "cucumber",
+      "instruction": "peeled and sliced"
+    },
+    {
+      "whole": "2",
+      "fraction": "",
+      "unit": "tablespoons",
+      "ingredient": "sesame seeds",
+      "instruction": "toasted"
+    }
+  ],
+  "modified": ISODate("2011-12-19T01:20:32.549Z"),
+  "created": ISODate("2011-12-19T01:20:32.552Z")
 });
 
 /** system.indexes records **/
@@ -4027,6 +5247,30 @@ db.getCollection("tags").insert({
   "modified": ISODate("2011-12-14T15:56:00.252Z"),
   "created": ISODate("2011-12-14T15:56:00.252Z")
 });
+db.getCollection("tags").insert({
+  "_id": ObjectId("4eecbcfc527cb1ad08000002"),
+  "tag": "seafood",
+  "modified": ISODate("2011-12-17T16:02:04.815Z"),
+  "created": ISODate("2011-12-17T16:02:04.818Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4eecc510527cb1a708000001"),
+  "tag": "sauce",
+  "modified": ISODate("2011-12-17T16:36:32.777Z"),
+  "created": ISODate("2011-12-17T16:36:32.780Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4eecd8e7527cb1a808000000"),
+  "tag": "fish,",
+  "modified": ISODate("2011-12-17T18:01:11.461Z"),
+  "created": ISODate("2011-12-17T18:01:11.464Z")
+});
+db.getCollection("tags").insert({
+  "_id": ObjectId("4eee883b527cb1b317000001"),
+  "tag": "side",
+  "modified": ISODate("2011-12-19T00:41:31.565Z"),
+  "created": ISODate("2011-12-19T00:41:31.568Z")
+});
 
 /** units records **/
 db.getCollection("units").insert({
@@ -4052,12 +5296,6 @@ db.getCollection("units").insert({
   "l_name": "fluid ounce",
   "s_name": "fl. oz.",
   "metric_val": "29.57"
-});
-db.getCollection("units").insert({
-  "_id": ObjectId("4d4eb5c13d3f95800e00000c"),
-  "l_name": "cup",
-  "s_name": "C",
-  "metric_val": "236.59"
 });
 db.getCollection("units").insert({
   "_id": ObjectId("4d56e1613d3f95880a000003"),
@@ -4127,9 +5365,9 @@ db.getCollection("units").insert({
 });
 db.getCollection("units").insert({
   "_id": ObjectId("4e6960a8bad4a2bc21000000"),
+  "created": "Thu, 08 Sep 2011 20:41:12 -0400",
   "l_name": "pound",
-  "s_name": "lbs.",
-  "created": "Thu, 08 Sep 2011 20:41:12 -0400"
+  "s_name": "lb."
 });
 db.getCollection("units").insert({
   "_id": ObjectId("4e6961a3bad4a2841a000009"),
@@ -4173,16 +5411,51 @@ db.getCollection("units").insert({
   "s_name": "large"
 });
 db.getCollection("units").insert({
-  "_id": ObjectId("4ee8c71099bef79906000009"),
-  "l_name": "c",
-  "s_name": "c",
-  "created": ISODate("2011-12-14T15:56:00.332Z")
-});
-db.getCollection("units").insert({
   "_id": ObjectId("4ee8c71099bef7990600000a"),
   "l_name": "sprigs",
   "s_name": "sprigs",
   "created": ISODate("2011-12-14T15:56:00.348Z")
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eecc2fb527cb1ad08000004"),
+  "l_name": "pounds",
+  "s_name": "lbs."
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4ee8c71099bef79906000009"),
+  "created": ISODate("2011-12-14T15:56:00.332Z"),
+  "l_name": "cup",
+  "s_name": "c"
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad0800000d"),
+  "l_name": "tablespoons",
+  "s_name": "tablespoons"
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eecd6b7527cb1ad0800000e"),
+  "l_name": "cups",
+  "s_name": "cups"
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eecda59527cb1aa08000004"),
+  "l_name": "cup ",
+  "s_name": "cup "
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eee883b527cb1b317000004"),
+  "l_name": "head",
+  "s_name": "head"
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eee8e62527cb1b417000009"),
+  "l_name": "knob ",
+  "s_name": "knob "
+});
+db.getCollection("units").insert({
+  "_id": ObjectId("4eee8e62527cb1b41700000a"),
+  "l_name": "knobs",
+  "s_name": "knobs"
 });
 
 /** users records **/
