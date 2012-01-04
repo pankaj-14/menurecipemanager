@@ -8,6 +8,10 @@ TODO
 3. Show text with correct case from lower case
 4. Input auto suggests must only load once per page
 
+5. Update searches to do a match anywhere in the string. For instance the term 'soy' should find
+    'lite soy sauce', 'reduced-sodium soy sauce', and 'soya sauce'
+
+
 10. When deleting items from a paged screen you should end up on the same screen once deletion is complete
 
 11. Add the Menu data to the shopping list for reference. Maybe insert a reference column in the list so you know
