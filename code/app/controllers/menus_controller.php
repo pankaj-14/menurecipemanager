@@ -308,22 +308,36 @@ class MenusController extends AppController
         $mongo->ensureIndex($this->Menu, array('title' => 1));
     }
 
-    public function addRecipeToMenu()
+    public function addRecipeToMenu($id = null)
     {
-        /**
-         * First step gives us an ID to get a recipe for
-         */
-        if (!empty($this->params['named']['id']))
+        if (!$id && empty($this->data))
         {
-            // Get the recipe for the id
-            $this->set('recipe', $this->data = $this->Menu->Recipe->read(null, $this->params['named']['id']));
-            // Get a list of menus
-            $this->set('menus', $this->Menu->find('list'));
-
-            $this->render('../elements/recipe_to_menu', 'ajax');
+            $this->flash(__('Invalid Recipe', true), array('action' => 'index'));
         }
-        var_dump($this->params['data']);
-        
+        if (!empty($this->data))
+        {
+            /*
+             * Compile the complete menu here before inserting
+             * 
+             */
+
+            if ($this->Menu->save($this->data))
+            {
+                $this->flash(__('The Menu has been saved.', true), array('action' => 'index'));
+            }
+            else
+            {
+                
+            }
+        }
+
+        if (empty($this->data))
+        {
+            $this->set('recipe',$this->Menu->Recipe->read(null, $id));
+            $this->set('menus', $this->Menu->find('list'));
+        }
+
+        $this->render('../elements/recipe_to_menu', 'ajax');
     }
 
     public function getNewRecipeRow()
