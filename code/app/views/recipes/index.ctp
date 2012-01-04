@@ -21,12 +21,13 @@
                         <?php
                             echo $html->link('add',
                             array('controller' => 'menus', 'action' => 'addRecipeToMenu/' . $res['Recipe']['_id']),
-                            array('class' => 'ui-icon ui-icon-add addRecipeToMenu')
+                            array('class' => 'ui-icon ui-icon-add addRecipeToMenu', 'title' => 'Add recipe to a menu')
                     );
                     ?></td>
                     <td class="ui-widget-content"><?php
                 echo $html->link(ucwords ($res['Recipe']['name']),
-                        array('action' => 'view/' . $res['Recipe']['_id'])
+                        array('action' => 'view/' . $res['Recipe']['_id']),
+                        array('title' => 'View recipe')
                 );
             ?></td>
                 <td class="ui-widget-content"><?php echo $res['Recipe']['servings']; ?></td>
