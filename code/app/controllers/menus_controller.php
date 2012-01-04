@@ -320,20 +320,41 @@ class MenusController extends AppController
              * Compile the complete menu here before inserting
              * 
              */
+            $menu = $this->Menu->read(null, $this->data['Menu']['menu_id']);
+
+            $row = array(
+                'name' => $this->data['Recipe']['id'],
+                'servings' => $this->data['Menu']['servings'],
+                'description' => $this->data['Menu']['description'],
+            );
+
+            $menu['Menu']['recipes'][] = $row;
+
+            $this->data = $menu;
 
             if ($this->Menu->save($this->data))
             {
-                $this->flash(__('The Menu has been saved.', true), array('action' => 'index'));
+                $args = array(
+                    'title' => 'Success',
+                    'status' => 'success',
+                    'msg' => 'The recipe has been added to the menu'
+                );
             }
             else
             {
-                
+                $args = array(
+                    'title' => 'Error',
+                    'status' => 'error',
+                    'msg' => 'There was an error'
+                );
             }
+
+            $this->ajaxMessage($args);
         }
 
         if (empty($this->data))
         {
-            $this->set('recipe',$this->Menu->Recipe->read(null, $id));
+            $this->set('recipe', $this->Menu->Recipe->read(null, $id));
             $this->set('menus', $this->Menu->find('list'));
         }
 

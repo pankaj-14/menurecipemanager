@@ -365,20 +365,19 @@ jQuery(document).ready( function() {
     if($('.addRecipeToMenu').length > 0)
     {
         $('.addRecipeToMenu').click(function(){
-            
             $('#dialog').load($(this).attr('href'), function(response, textStatus){
-                
                 $('#dialog').dialog('option', 'title', 'Add Recipe To Menu');
-                $('#dialog').dialog('option', 'height', 400);
-                $('#dialog').dialog('option', 'width', 700);
+                $('#dialog').dialog('option', 'height', 300);
+                $('#dialog').dialog('option', 'width', 400);
                 $('#dialog').dialog("open");
             });
-            
             return false;
         });
         
-        $('#addRecipeToMenu').live('click', function(){
-            alert('YourMom');
+        $('#MenuAddRecipeToMenuForm').live('submit', function(){
+            $.post('/menus/addRecipeToMenu', $(this).serialize(), function(response){
+                $.popDialog(response, null);
+            });
             return false;
         });
         

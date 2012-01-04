@@ -20,7 +20,7 @@
                     <td class="ui-widget-content control">
                         <?php
                             echo $html->link('add',
-                            array('controller' => 'menus', 'action' => 'addRecipeToMenu/id:' . $res['Recipe']['_id']),
+                            array('controller' => 'menus', 'action' => 'addRecipeToMenu/' . $res['Recipe']['_id']),
                             array('class' => 'ui-icon ui-icon-add addRecipeToMenu')
                     );
                     ?></td>
