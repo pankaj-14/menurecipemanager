@@ -1,11 +1,12 @@
 TODO
 
-1. Fix the shopping list layout to take up less space
+
+1. Add a javascript function that attaches to every delete button that asks for confirmation before deletion
+    of an item.
+
 2. When adding a recipe to a menu the Servings input should default to the servings defined in the recipe
 3. Show text with correct case from lower case
 4. Input auto suggests must only load once per page
-
-8. Create javascript input filter
 
 10. When deleting items from a paged screen you should end up on the same screen once deletion is complete
 
