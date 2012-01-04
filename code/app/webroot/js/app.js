@@ -358,7 +358,29 @@ jQuery(document).ready( function() {
             
             return false;
         });
-            
     }
-
+    /**
+     * Handler for adding a recipe to a menu through a dialog
+     */
+    if($('.addRecipeToMenu').length > 0)
+    {
+        $('.addRecipeToMenu').click(function(){
+            
+            $('#dialog').load($(this).attr('href'), function(response, textStatus){
+                
+                $('#dialog').dialog('option', 'title', 'Add Recipe To Menu');
+                $('#dialog').dialog('option', 'height', 400);
+                $('#dialog').dialog('option', 'width', 700);
+                $('#dialog').dialog("open");
+            });
+            
+            return false;
+        });
+        
+        $('#addRecipeToMenu').live('click', function(){
+            alert('YourMom');
+            return false;
+        });
+        
+    }
 });

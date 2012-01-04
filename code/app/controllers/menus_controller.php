@@ -160,13 +160,13 @@ class MenusController extends AppController
                 }
             }
         }
-        
+
         $recipeList = array();
-        foreach($recipes as $recipe)
+        foreach ($recipes as $recipe)
         {
             $recipeList[] = $recipe['Recipe']['name'];
         }
-        
+
         $this->layout = 'printable';
         $this->set('shoppingList', $pages);
         $this->set('recipeList', $recipeList);
@@ -310,7 +310,20 @@ class MenusController extends AppController
 
     public function addRecipeToMenu()
     {
-        $recipe_id = $this->params[''];
+        /**
+         * First step gives us an ID to get a recipe for
+         */
+        if (!empty($this->params['named']['id']))
+        {
+            // Get the recipe for the id
+            $this->set('recipe', $this->data = $this->Menu->Recipe->read(null, $this->params['named']['id']));
+            // Get a list of menus
+            $this->set('menus', $this->Menu->find('list'));
+
+            $this->render('../elements/recipe_to_menu', 'ajax');
+        }
+        var_dump($this->params['data']);
+        
     }
 
     public function getNewRecipeRow()

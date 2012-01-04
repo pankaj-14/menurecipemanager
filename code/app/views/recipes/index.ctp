@@ -5,6 +5,7 @@
     <table class="ui-widget grid">
         <thead>
             <tr>
+                <th class="ui-widget-header"></th>
                 <th class="ui-widget-header"><?php echo $paginator->sort('Name', 'name'); ?></th>
                 <th class="ui-widget-header"><?php echo $paginator->sort('Servings', 'servings'); ?></th>
                 <th class="ui-widget-header"><?php echo $paginator->sort('Prep Time', 'prep_time'); ?></th>
@@ -16,6 +17,13 @@
         <tbody>
             <?php foreach ($results as $res): ?>
                 <tr>
+                    <td class="ui-widget-content control">
+                        <?php
+                            echo $html->link('add',
+                            array('controller' => 'menus', 'action' => 'addRecipeToMenu/id:' . $res['Recipe']['_id']),
+                            array('class' => 'ui-icon ui-icon-add addRecipeToMenu')
+                    );
+                    ?></td>
                     <td class="ui-widget-content"><?php
                 echo $html->link(ucwords ($res['Recipe']['name']),
                         array('action' => 'view/' . $res['Recipe']['_id'])
