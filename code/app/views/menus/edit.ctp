@@ -37,3 +37,6 @@
                     echo $this->Form->end();
     ?>
 </div>
+
+
+<?php var_dump($this->data); ?>

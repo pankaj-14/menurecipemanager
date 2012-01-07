@@ -86,9 +86,6 @@ class MealsController extends AppController
             $this->flash(__('Invalid Meal', true), array('action' => 'index'));
         }
 
-        var_dump($this->data);
-
-
         if (!empty($this->data))
         {
             if ($this->Meal->save($this->data))

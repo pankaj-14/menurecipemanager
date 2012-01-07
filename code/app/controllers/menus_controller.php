@@ -361,6 +361,61 @@ class MenusController extends AppController
         $this->render('../elements/recipe_to_menu', 'ajax');
     }
 
+    public function addMealToMenu($id = null)
+    {
+        if (!$id && empty($this->data))
+        {
+            $this->flash(__('Invalid Recipe', true), array('controller' => 'meals', 'action' => 'index'));
+        }
+        if (!empty($this->data))
+        {
+            /*
+             * Compile the complete menu here before inserting
+             */
+            // Get the menu
+            $menu = $this->Menu->read(null, $this->data['Menu']['menu_id']);
+            // Get the meal
+            $meal = $this->Menu->Meal->read(null, $this->data['Meal']['id']);
+
+            if (!empty($meal['Meal']['recipes']))
+            {
+                foreach ($meal['Meal']['recipes'] as $recipe)
+                {
+                    $menu['Menu']['recipes'][] = $recipe;
+                }
+            }
+
+            $this->data = $menu;
+
+            if ($this->Menu->save($this->data))
+            {
+                $args = array(
+                    'title' => 'Success',
+                    'status' => 'success',
+                    'msg' => 'The meal has been added to the menu'
+                );
+            }
+            else
+            {
+                $args = array(
+                    'title' => 'Error',
+                    'status' => 'error',
+                    'msg' => 'There was an error'
+                );
+            }
+
+            $this->ajaxMessage($args);
+        }
+
+        if (empty($this->data))
+        {
+            $this->set('meal', $this->Menu->Meal->read(null, $id));
+            $this->set('menus', $this->Menu->find('list'));
+        }
+
+        $this->render('../elements/meal_to_menu', 'ajax');
+    }
+
     public function getNewRecipeRow()
     {
         /*

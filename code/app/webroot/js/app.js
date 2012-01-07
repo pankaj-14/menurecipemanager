@@ -406,4 +406,27 @@ jQuery(document).ready( function() {
         });
         
     }
+    /**
+     * Handler for adding a meal to a menu through a dialog
+     */
+    if($('.addMealToMenu').length > 0)
+    {
+        $('.addMealToMenu').click(function(){
+            $('#dialog').load($(this).attr('href'), function(response, textStatus){
+                $('#dialog').dialog('option', 'title', 'Add Meal To Menu');
+                $('#dialog').dialog('option', 'height', 300);
+                $('#dialog').dialog('option', 'width', 400);
+                $('#dialog').dialog("open");
+            });
+            return false;
+        });
+        
+        $('#MenuAddMealToMenuForm').live('submit', function(){
+            $.post('/menus/addMealToMenu', $(this).serialize(), function(response){
+                $.popDialog(response, null);
+            });
+            return false;
+        });
+        
+    }
 });

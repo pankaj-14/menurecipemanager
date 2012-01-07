@@ -5,6 +5,7 @@ class Menu extends AppModel
 
     public $hasMany = array(
         'Recipe' => array('className' => 'Recipe'),
+        'Meal' => array('className' => 'Meal'),
         'FractionToDecimal' => array('className' => 'FractionToDecimal')
     );
     var $mongoSchema = array(
