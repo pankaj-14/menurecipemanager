@@ -97,13 +97,26 @@ jQuery(document).ready( function() {
     });
     /*
      * Recipe Row Handler
+     * 
+     * A menu starts with 0 rows for recipes so take that into account when
+     * adding new rows to the table.
      */
     $('#addRecipeRow').click(function(){
-        rowCount = ($('.recipeRow').length);
+        var rowCount;
+        if($('.recipeRow').length > 1){
+            rowCount = ($('.recipeRow').length);
+        }else{
+            rowCount = 0;
+        }
         $.get('/menus/getNewRecipeRow', {
             rowCount: rowCount + 1
         }, function(data){
-            $(data).insertAfter('#row_' + rowCount)
+            
+            if(rowCount == 0){
+                $(data).appendTo('tbody')
+            }else{
+                $(data).insertAfter('#row_' + rowCount)
+            }
         });
         return false;
     });
@@ -378,6 +391,9 @@ jQuery(document).ready( function() {
             $.post('/menus/addRecipeToMenu', $(this).serialize(), function(response){
                 $.popDialog(response, null);
             });
+            /*
+             * @TODO you have submit the form from here and handle the result
+             */
             return false;
         });
         

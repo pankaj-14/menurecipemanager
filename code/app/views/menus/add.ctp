@@ -8,7 +8,7 @@
     <table class="ui-widget grid">
         <?php echo $this->element('recipe_row_header'); ?>
         <tbody>
-            <?php echo $this->element('recipe_row', array('rowNum' => '1')); ?>
+            <?php //echo $this->element('recipe_row', array('rowNum' => '1')); ?>
         </tbody>
         <tfoot>
             <tr>
