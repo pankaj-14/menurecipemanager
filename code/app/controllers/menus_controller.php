@@ -45,6 +45,7 @@ class MenusController extends AppController
 
     public function shoppingList($id = null)
     {
+        $recipeList = array();
         $recipes = array();
         $ingredientsToType = $this->Menu->Recipe->Ingredient->find('list', array('fields' => array('ingredient', 'type'))
         );
@@ -58,6 +59,7 @@ class MenusController extends AppController
          * Get the menu
          */
         $menu = $this->Menu->read(null, $id);
+        //var_dump($menu);
         /*
          * Get the recipes for the menu
          */
@@ -66,8 +68,9 @@ class MenusController extends AppController
             $recipe = $this->Menu->Recipe->read(null, $r['name']);
             $recipe['Recipe']['desired_servings'] = $r['servings'];
             $recipes[] = $recipe;
+            $recipeList[$r['description']][] = $recipe['Recipe']['name'];
         }
-        // var_dump($recipes);
+
         /*
          * divide the ingredient amount by the recipe's servings and
          * multiply the result by the desired number of servings
@@ -160,13 +163,13 @@ class MenusController extends AppController
                 }
             }
         }
-
+/*
         $recipeList = array();
         foreach ($recipes as $recipe)
         {
             $recipeList[] = $recipe['Recipe']['name'];
         }
-
+*/
         $this->layout = 'printable';
         $this->set('shoppingList', $pages);
         $this->set('recipeList', $recipeList);

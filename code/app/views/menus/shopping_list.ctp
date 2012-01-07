@@ -4,11 +4,16 @@
 <div id="shopping-list" class="printable">
     <label>Recipes</label>
     <ul>
-        <?php foreach ($recipeList as $recipe): ?>
+        <?php foreach ($recipeList as $k => $v): ?>
             <li>
-                <?php echo $recipe; ?>
-                </;i>
-            <?php endforeach; ?>
+                <?php echo $k; ?>
+                <ul>
+                    <?php foreach ($v as $r): ?>
+                        <li><?php echo $r; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </li>
+        <?php endforeach; ?>
     </ul>
 
     <?php foreach ($shoppingList as $index => $page): ?>
