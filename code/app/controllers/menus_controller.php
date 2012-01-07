@@ -381,6 +381,7 @@ class MenusController extends AppController
             {
                 foreach ($meal['Meal']['recipes'] as $recipe)
                 {
+                    $recipe['description'] = $this->data['Menu']['description'];
                     $menu['Menu']['recipes'][] = $recipe;
                 }
             }
