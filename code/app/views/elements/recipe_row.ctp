@@ -1,7 +1,7 @@
 <tr class="recipeRow" id="row_<?php echo $rowNum; ?>">
     <td class="ui-widget-content">
         <?php
-        echo $this->Form->input('Menu.recipes.' . $rowNum . '.name',
+        echo $this->Form->input($modelName.'.recipes.' . $rowNum . '.name',
                 array('options' => $recipes,
                     'div' => false,
                     'label' => false,
@@ -10,7 +10,7 @@
     </td>
     <td class="ui-widget-content">
         <?php
-        echo $this->Form->input('Menu.recipes.' . $rowNum . '.servings',
+        echo $this->Form->input($modelName.'.recipes.' . $rowNum . '.servings',
                 array('options' => array( 1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5', 6 => '6' ),
                     'default' => 2,
                     'div' => false,
@@ -20,7 +20,7 @@
     </td>
     <td class="ui-widget-content">
         <?php
-        echo $this->Form->input('Menu.recipes.' . $rowNum . '.description',
+        echo $this->Form->input($modelName.'.recipes.' . $rowNum . '.description',
                 array('div' => false,
                     'label' => false,
                     'class' => 'ui-widget-content'));
@@ -32,7 +32,7 @@
                 array(
                     'controller'=>'recipes', 
                     'action' => 'view',
-                    $this->data['Menu']['recipes'][$rowNum]['name']
+                    $this->data[$modelName]['recipes'][$rowNum]['name']
                 ), // should be id
                 array(
                     'class' => 'recipeQuickView'

@@ -4,6 +4,9 @@
             <?php echo $html->link('Menus', array('controller' => 'menus/index')); ?>
         </li>
         <li class="" >
+            <?php echo $html->link('Meals', array('controller' => 'meals/index')); ?>
+        </li>
+        <li class="" >
             <?php echo $html->link('Recipes', array('controller' => 'recipes/index')); ?>
         </li>
         <li class="" >

@@ -375,6 +375,7 @@ class MenusController extends AppController
         );
         $this->set('recipes', $this->Menu->Recipe->find('list', $params));
         $this->set('rowNum', $this->params['url']['rowCount']);
+        $this->set('modelName', 'Menu');
         $this->render('../elements/recipe_row', 'ajax');
     }
 

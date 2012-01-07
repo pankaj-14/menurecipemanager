@@ -103,12 +103,20 @@ jQuery(document).ready( function() {
      */
     $('#addRecipeRow').click(function(){
         var rowCount;
-        if($('.recipeRow').length > 1){
+        /* 
+         * Parent table ID will have the name of the controller
+         */
+        var controller = $(this).closest('table').attr('id');
+        
+        if($('.recipeRow').length > 0){
             rowCount = ($('.recipeRow').length);
         }else{
             rowCount = 0;
         }
-        $.get('/menus/getNewRecipeRow', {
+        
+        console.log('/'+controller+'/getNewRecipeRow');
+        
+        $.get('/'+controller+'/getNewRecipeRow', {
             rowCount: rowCount + 1
         }, function(data){
             

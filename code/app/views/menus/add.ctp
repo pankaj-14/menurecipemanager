@@ -5,7 +5,7 @@
     echo $this->Form->input('description', array('class' => 'ui-widget-content', 'size' => 32));
     ?>
     <label>Recipes List</label>
-    <table class="ui-widget grid">
+    <table id="menus" class="ui-widget grid">
         <?php echo $this->element('recipe_row_header'); ?>
         <tbody>
             <?php //echo $this->element('recipe_row', array('rowNum' => '1')); ?>
