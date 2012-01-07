@@ -1,6 +1,10 @@
 1. If you save a recipe without adding any ingredients when you edit the recipe 
 you cannot add an ingredient because you cant add an ingredient row.
 
+2. Need to find a new way to display recipe rows. If the recipe list in the Menu collection
+    does not start with 0 then the indexing does not work when iterating the recipes
+    list. The Recipes are correct, the indexing is wrong.
+
 
 3. Ingredient row type ahead selection does not seem to happen if the list has 
     two values per line such as "lbs. | pounds"
