@@ -126,7 +126,7 @@ class RecipesController extends AppController
             {
                 $searchParams["$op"][] = array(
                     $field => array(
-                        '$regex' => new MongoRegex('/^' . $item . '/i')
+                        '$regex' => new MongoRegex('/' . $item . '/i')
                     )
                 );
             }
