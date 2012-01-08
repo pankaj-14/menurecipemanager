@@ -12,7 +12,7 @@
         <tbody>
             <?php foreach ($results as $res): ?>
                 <tr>
-                    <td class="ui-widget-content"><?php echo $res['Menu']['name']; ?></td>
+                    <td class="ui-widget-content"><?php echo ucwords($res['Menu']['name']); ?></td>
                     <td class="ui-widget-content"><?php echo $res['Menu']['description']; ?></td>
                     <td class="ui-widget-content control">
                     <?php

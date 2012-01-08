@@ -17,13 +17,13 @@
                         echo $html->link('add', array('controller' => 'menus', 'action' => 'addMealToMenu/' . $res['Meal']['_id']), array('class' => 'ui-icon ui-icon-add addMealToMenu', 'title' => 'Add meal to a menu')
                         );
                         ?></td>
-                    <td class="ui-widget-content"><?php echo $res['Meal']['name']; ?></td>
+                    <td class="ui-widget-content"><?php echo ucwords($res['Meal']['name']); ?></td>
                     <td class="ui-widget-content"><?php echo $res['Meal']['description']; ?></td>
                     <td class="ui-widget-content control">
-    <?php
-    echo $html->link('delete', array('action' => 'delete/' . $res['Meal']['_id']), array('class' => 'ui-icon ui-icon-close')
-    );
-    ?>
+                        <?php
+                        echo $html->link('delete', array('action' => 'delete/' . $res['Meal']['_id']), array('class' => 'ui-icon ui-icon-close')
+                        );
+                        ?>
                     </td>
                     <td class="ui-widget-content control">
                         <?php
@@ -32,8 +32,8 @@
                         ?>
                     </td>
                 </tr>
-                    <?php endforeach; ?>
+            <?php endforeach; ?>
         </tbody>
-                    <?php echo $this->element('pagination_controls', array('colspan' => 5)); ?>
+        <?php echo $this->element('pagination_controls', array('colspan' => 5)); ?>
     </table>
 </div>
