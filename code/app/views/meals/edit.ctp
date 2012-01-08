@@ -8,13 +8,12 @@
     <table id="meals" class="ui-widget grid">
         <?php echo $this->element('recipe_row_header'); ?>
         <tbody>
-        <?php
-        $recipeRowCount = count($this->data['Meal']['recipes']);
-        for ($rowNum = 0; $rowNum < $recipeRowCount; $rowNum++)
-        {
-            echo $this->element('recipe_row', array('rowNum' => $rowNum + 1));
-        }
-        ?>
+            <?php
+            foreach ($this->data['Meal']['recipes'] as $index => $recipe)
+            {
+                echo $this->element('recipe_row', array('rowNum' => $index));
+            }
+            ?>
         </tbody>
         <tfoot>
             <tr>
@@ -31,9 +30,9 @@
         </tfoot>
     </table>
     <?php
-                    echo $this->Form->button('Edit Meal', array(
-                        'class' => 'ui-button ui-widget ui-state-default')
-                    );
-                    echo $this->Form->end();
+    echo $this->Form->button('Edit Meal', array(
+        'class' => 'ui-button ui-widget ui-state-default')
+    );
+    echo $this->Form->end();
     ?>
 </div>
