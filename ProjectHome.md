@@ -1,0 +1,1 @@
+The Menu Recipe Manager project will provide a way for a user to, create menus from recipes, create recipes from ingredients, and to add ingredients. A user can store any number of recipes and menus. Menus are personal while ingredients and recipes are global.
